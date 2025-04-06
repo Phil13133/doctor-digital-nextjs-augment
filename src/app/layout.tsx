@@ -49,7 +49,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        
+
         {/* Schema.org markup for better SEO */}
         <OrganizationSchema
           name="Doctor Digital"
@@ -83,15 +83,15 @@ export default function RootLayout({
             <div className="flex justify-between items-center">
               {/* Logo */}
               <Link href="/" className="flex items-center text-text-dark">
-                <Image 
-                  src="/images/Doctordigital png-logo.png"
+                <Image
+                  src="/images/Doctordigital SVG-logo.svg"
                   alt="Doctor Digital - Ιατρικό Μάρκετινγκ"
                   width={220}
                   height={60}
                   priority
                 />
               </Link>
-              
+
               {/* Desktop Navigation */}
               <nav className="hidden md:block">
                 <ul className="flex space-x-6 items-center">
@@ -102,7 +102,7 @@ export default function RootLayout({
                   <li><Link href="/epikoinonia" className="btn-primary btn-sm">Επικοινωνία</Link></li>
                 </ul>
               </nav>
-              
+
               {/* Mobile Menu Button */}
               <button className="md:hidden text-text-dark">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
@@ -112,7 +112,7 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        
+
         {/* Mobile Menu (hidden by default) */}
         <div className="hidden bg-white p-4 md:hidden">
           <nav>
@@ -125,10 +125,10 @@ export default function RootLayout({
             </ul>
           </nav>
         </div>
-        
+
         {/* Main Content */}
         <main>{children}</main>
-        
+
         {/* Modern Footer */}
         <footer className="bg-footer text-white pt-16 pb-8">
           <div className="container mx-auto">
@@ -136,7 +136,7 @@ export default function RootLayout({
               {/* Company Info */}
               <div className="col-span-1 lg:col-span-1">
                 <div className="mb-6">
-                  <Image 
+                  <Image
                     src="/images/Doctordigital PNG-light-logo.png"
                     alt="Doctor Digital - Ιατρικό Μάρκετινγκ"
                     width={180}
@@ -148,7 +148,7 @@ export default function RootLayout({
                 </p>
                 {/* Removed social media icons div */}
               </div>
-              
+
               {/* Quick Links */}
               <div>
                 <div className="text-lg font-bold mb-6 text-white relative">
@@ -162,7 +162,7 @@ export default function RootLayout({
                   <li><Link href="/ypiresies/kataskevi-istoselidon-gia-giatrous" className="text-gray-300 hover:text-brand-200 transition-colors">Ιατρικές Ιστοσελίδες</Link></li>
                 </ul>
               </div>
-              
+
               {/* Resources */}
               <div>
                 <div className="text-lg font-bold mb-6 text-white relative">
@@ -177,7 +177,7 @@ export default function RootLayout({
                   <li><Link href="/politiki-aporritou" className="text-gray-300 hover:text-brand-200 transition-colors">Πολιτική Απορρήτου</Link></li>
                 </ul>
               </div>
-              
+
               {/* Contact Info */}
               <div>
                 <div className="text-lg font-bold mb-6 text-white relative">
@@ -187,11 +187,11 @@ export default function RootLayout({
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <EmailIcon className="text-white mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">{SITE.contactEmail}</span>
+                    <a href={`mailto:${SITE.contactEmail}`} className="text-gray-300 hover:text-brand-200 transition-colors">{SITE.contactEmail}</a>
                   </li>
                   <li className="flex items-start">
                     <PhoneIcon className="text-white mr-3 mt-1 flex-shrink-0" size={18} />
-                    <span className="text-gray-300">{SITE.contactPhone}</span>
+                    <a href={`tel:${SITE.contactPhone.replace(/\s+/g, '')}`} className="text-gray-300 hover:text-brand-200 transition-colors">{SITE.contactPhone}</a>
                   </li>
                   <li className="flex items-start">
                     <LocationIcon className="text-white mr-3 mt-1 flex-shrink-0" size={18} />
@@ -200,7 +200,7 @@ export default function RootLayout({
                 </ul>
               </div>
             </div>
-            
+
             {/* Copyright Bar */}
             <div className="pt-8 border-t border-gray-800 text-gray-400 text-sm flex flex-col md:flex-row justify-between items-center">
               <p>&copy; {new Date().getFullYear()} Doctor Digital. Με επιφύλαξη παντός δικαιώματος.</p>
