@@ -45,6 +45,10 @@ export default function RootLayout({
   return (
     <html lang="el" className="scroll-smooth">
       <head>
+        {/* Performance optimizations */}
+        <link rel="preconnect" href="https://images.ctfassets.net" />
+        <link rel="dns-prefetch" href="https://images.ctfassets.net" />
+
         {/* Favicon and PWA icons */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -52,15 +56,15 @@ export default function RootLayout({
 
         {/* Schema.org markup for better SEO */}
         <OrganizationSchema
-          name="Doctor Digital"
-          url="https://doctordigital.gr"
-          logo="https://doctordigital.gr/logo.png"
-          description="Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ για γιατρούς και κλινικές στην Ελλάδα."
+          name={SITE.name}
+          url={SITE.url}
+          logo={`${SITE.url}${SITE.logoPath}`}
+          description={SITE.description}
           sameAs={[
-            'https://facebook.com/doctordigital',
-            'https://instagram.com/doctordigital',
-            'https://twitter.com/doctordigital',
-            'https://linkedin.com/company/doctordigital', // Consider using SITE.socialMedia.linkedin etc. here too
+            SITE.socialMedia.facebook,
+            SITE.socialMedia.instagram,
+            SITE.socialMedia.linkedin,
+            SITE.socialMedia.youtube,
           ]}
           address={{
             streetAddress: SITE.address.street,

@@ -1,6 +1,6 @@
 /**
  * SEO Constants
- * 
+ *
  * This file defines SEO-related constants used across the site.
  * It provides default values and templates for metadata.
  */
@@ -19,7 +19,7 @@ export const DEFAULT_SEO = {
     siteName: SITE.name,
     images: [
       {
-        url: `${SITE.url}/images/og-image.jpg`, // Update with actual OG image
+        url: `${SITE.url}/og/home.jpg`,
         width: 1200,
         height: 630,
         alt: SITE.name,
@@ -27,8 +27,8 @@ export const DEFAULT_SEO = {
     ],
   },
   twitter: {
-    handle: '@DoctorDigitalGR', // Update with actual handle
-    site: '@DoctorDigitalGR', // Update with actual handle
+    handle: '@doctordigitalgr',
+    site: '@doctordigitalgr',
     cardType: 'summary_large_image',
   },
   additionalMetaTags: [

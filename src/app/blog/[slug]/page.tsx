@@ -10,8 +10,9 @@ import type { Document } from '@contentful/rich-text-types';
 // import { el } from 'date-fns/locale';
 
 import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/contentfulApi';
-import BlogPostSchema from '@/components/schema/BlogPostSchema'; // Assuming this path is correct
-import { SITE } from '@/constants/site'; // Assuming this path is correct
+import BlogPostSchema from '@/components/schema/BlogPostSchema';
+import BreadcrumbNav from '@/components/ui/BreadcrumbNav';
+import { SITE } from '@/constants/site';
 
 // Removed formatDate function
 
@@ -108,13 +109,25 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         datePublished="" // Pass empty string to satisfy prop type
         // dateModified={...} // Add if you have a modified date field
         author={{ name: authorName }}
-        publisher={{ name: SITE.name, logo: `${SITE.url}/logo.png` }} // Adjust logo path if needed
+        publisher={{ name: SITE.name, logo: `${SITE.url}${SITE.logoPath}` }}
         url={`${SITE.url}/blog/${post.fields.slug}`}
         // keywords={...} // Add if you have a keywords field
         articleBody={content ? JSON.stringify(content) : undefined} // Pass raw rich text JSON
       />
 
-      <article className="container mx-auto py-12 max-w-3xl">
+      {/* Breadcrumb Navigation */}
+      <div className="container mx-auto py-4 max-w-3xl">
+        <BreadcrumbNav
+          items={[
+            { name: 'Αρχική', url: '/' },
+            { name: 'Blog', url: '/blog' },
+            { name: title, url: `${SITE.url}/blog/${post.fields.slug}` }
+          ]}
+          className="text-sm mb-4"
+        />
+      </div>
+
+      <article className="container mx-auto py-8 max-w-3xl">
         {/* Post Header */}
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>

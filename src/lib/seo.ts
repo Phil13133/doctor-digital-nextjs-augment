@@ -1,6 +1,6 @@
 /**
  * SEO utilities
- * 
+ *
  * This file contains utilities for managing SEO metadata and structured data.
  * It works with Next.js metadata API and JSON-LD for structured data.
  */
@@ -12,14 +12,14 @@ import { PageMeta, SEOData } from '@/types';
 
 /**
  * Creates Next.js metadata object for a page
- * 
+ *
  * @param pageMeta - Page-specific metadata
  * @returns Next.js Metadata object
  */
 export function createMetadata(pageMeta: Partial<PageMeta> = {}): Metadata {
   const title = pageMeta.title || DEFAULT_SEO.title;
   const description = pageMeta.description || DEFAULT_SEO.description;
-  
+
   return {
     title: {
       default: title,
@@ -36,7 +36,7 @@ export function createMetadata(pageMeta: Partial<PageMeta> = {}): Metadata {
       type: 'website',
       images: [
         {
-          url: pageMeta.ogImage || `${SITE.url}/images/og-image.jpg`,
+          url: pageMeta.ogImage || `${SITE.url}/og/home.jpg`,
           width: 1200,
           height: 630,
           alt: title,
@@ -47,7 +47,7 @@ export function createMetadata(pageMeta: Partial<PageMeta> = {}): Metadata {
       card: 'summary_large_image',
       title,
       description,
-      images: [pageMeta.ogImage || `${SITE.url}/images/og-image.jpg`],
+      images: [pageMeta.ogImage || `${SITE.url}/og/home.jpg`],
     },
     robots: {
       index: true,
@@ -61,7 +61,7 @@ export function createMetadata(pageMeta: Partial<PageMeta> = {}): Metadata {
 
 /**
  * Prepares JSON-LD data for structured data
- * 
+ *
  * @param data - The structured data object
  * @returns Stringified JSON-LD data
  */
@@ -71,7 +71,7 @@ export function prepareJsonLd(data: Record<string, any>): string {
 
 /**
  * Creates a breadcrumb schema for JSON-LD
- * 
+ *
  * @param items - Array of breadcrumb items with name and url
  * @returns BreadcrumbList schema object
  */
@@ -92,7 +92,7 @@ export function createBreadcrumbSchema(
 
 /**
  * Creates a Blog Post schema for JSON-LD
- * 
+ *
  * @param post - Blog post data
  * @returns BlogPosting schema object
  */
@@ -135,7 +135,7 @@ export function createBlogPostSchema(post: {
 
 /**
  * Creates a FAQ schema for JSON-LD
- * 
+ *
  * @param questions - Array of question/answer pairs
  * @returns FAQPage schema object
  */
@@ -158,7 +158,7 @@ export function createFAQSchema(
 
 /**
  * Creates a Service schema for JSON-LD
- * 
+ *
  * @param service - Service data
  * @returns Service schema object
  */
@@ -198,7 +198,7 @@ export function createServiceSchema(service: {
 
 /**
  * Creates organization schema for JSON-LD
- * 
+ *
  * @returns Organization schema object
  */
 export function createOrganizationSchema() {
