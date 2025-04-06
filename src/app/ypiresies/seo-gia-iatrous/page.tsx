@@ -5,6 +5,8 @@ import type { Metadata } from 'next';
 import FAQSchema from '@/components/schema/FAQSchema';
 import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'SEO για Ιατρικές Ιστοσελίδες',
@@ -39,6 +41,7 @@ const faqQuestions = [
 export default function SeoForMedicalPages() {
   return (
     <>
+      {/* Service Schema */}
       <ServiceSchema
         name="SEO για Ιατρικές Ιστοσελίδες"
         url="https://doctordigital.gr/ypiresies/seo-gia-iatrous"
@@ -47,15 +50,23 @@ export default function SeoForMedicalPages() {
           name: "Doctor Digital",
           url: "https://doctordigital.gr"
         }}
-        serviceArea={[
-          { name: "Ελλάδα", type: "Country" },
-          { name: "Αθήνα", type: "City" },
-          { name: "Θεσσαλονίκη", type: "City" }
+      />
+
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Αρχική", url: "https://doctordigital.gr/" },
+          { name: "Υπηρεσίες", url: "https://doctordigital.gr/ypiresies" },
+          { name: "SEO για Ιατρούς", url: "https://doctordigital.gr/ypiresies/seo-gia-iatrous" }
         ]}
-        category="Digital Marketing"
       />
       <FAQSchema questions={faqQuestions} />
-      
+
+      {/* Breadcrumbs Navigation */}
+      <div className="container mx-auto pt-6 pb-2 z-10 relative">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-brand-50 to-background overflow-hidden py-16 md:py-24">
         {/* Decorative elements */}
@@ -82,7 +93,7 @@ export default function SeoForMedicalPages() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
@@ -94,7 +105,7 @@ export default function SeoForMedicalPages() {
                   priority
                 />
               </div>
-              
+
               <div className="absolute -bottom-5 -right-5 bg-brand-200 px-4 py-3 rounded-md shadow-lg hidden md:block">
                 <p className="text-white text-sm font-semibold">
                   Αυξήστε Την Οργανική Προβολή
@@ -104,7 +115,7 @@ export default function SeoForMedicalPages() {
           </div>
         </div>
       </section>
-      
+
       {/* What is SEO Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
@@ -152,15 +163,15 @@ export default function SeoForMedicalPages() {
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Υπηρεσίες SEO για Ιατρικές Ιστοσελίδες</h2>
           <p className="text-lg max-w-2xl mx-auto mb-10 text-center">
-            Παρέχουμε εξειδικευμένες υπηρεσίες SEO για επαγγελματίες υγείας που περιλαμβάνουν SEO audit, έρευνα λέξεων-κλειδιών, 
+            Παρέχουμε εξειδικευμένες υπηρεσίες SEO για επαγγελματίες υγείας που περιλαμβάνουν SEO audit, έρευνα λέξεων-κλειδιών,
             on-page και off-page βελτιστοποίηση, τοπικό SEO, δημιουργία περιεχομένου, και τεχνικό SEO.
           </p>
-          
+
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="SEO Audit"
                     width={24}
@@ -173,11 +184,11 @@ export default function SeoForMedicalPages() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="Έρευνα λέξεων-κλειδιών"
                     width={24}
@@ -190,11 +201,11 @@ export default function SeoForMedicalPages() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="Βελτιστοποίηση περιεχομένου"
                     width={24}
@@ -207,11 +218,11 @@ export default function SeoForMedicalPages() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="Τοπικό SEO"
                     width={24}
@@ -224,11 +235,11 @@ export default function SeoForMedicalPages() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="Δημιουργία ιατρικού περιεχομένου"
                     width={24}
@@ -241,11 +252,11 @@ export default function SeoForMedicalPages() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="Backlink building"
                     width={24}
@@ -258,11 +269,11 @@ export default function SeoForMedicalPages() {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-start mb-4">
                 <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
-                  <Image 
+                  <Image
                     src="/images/icons/Γιατί να Επιλέξετε τη Doctor Digital-checkmark.svg"
                     alt="Ανάλυση ανταγωνισμού"
                     width={24}
@@ -276,7 +287,7 @@ export default function SeoForMedicalPages() {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center">
             <Link href="/epikoinonia" className="btn-primary inline-block">
               Επικοινωνήστε για Εξατομικευμένο Πλάνο
@@ -292,13 +303,13 @@ export default function SeoForMedicalPages() {
           <p className="text-lg max-w-2xl mx-auto mb-10 text-center">
             Οι στρατηγικές SEO της Doctor Digital έχουν φέρει μετρήσιμα και σταθερά αποτελέσματα σε ιατρούς και κλινικές σε όλη την Ελλάδα:
           </p>
-          
+
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {/* Case Study 1 */}
             <div className="bg-background p-6 rounded-lg shadow-sm border border-gray-100">
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-4">
-                  <Image 
+                  <Image
                     src="/images/icons/chart.svg"
                     alt="Αύξηση επισκεψιμότητας"
                     width={48}
@@ -311,12 +322,12 @@ export default function SeoForMedicalPages() {
                 </p>
               </div>
             </div>
-            
+
             {/* Case Study 2 */}
             <div className="bg-background p-6 rounded-lg shadow-sm border border-gray-100">
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-4">
-                  <Image 
+                  <Image
                     src="/images/icons/gold-medal.svg"
                     alt="Πρώτη θέση"
                     width={60}
@@ -329,12 +340,12 @@ export default function SeoForMedicalPages() {
                 </p>
               </div>
             </div>
-            
+
             {/* Case Study 3 */}
             <div className="bg-background p-6 rounded-lg shadow-sm border border-gray-100">
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-4">
-                  <Image 
+                  <Image
                     src="/images/icons/appointment.svg"
                     alt="Αύξηση ραντεβού"
                     width={48}
@@ -347,12 +358,12 @@ export default function SeoForMedicalPages() {
                 </p>
               </div>
             </div>
-            
+
             {/* Case Study 4 */}
             <div className="bg-background p-6 rounded-lg shadow-sm border border-gray-100">
               <div className="flex flex-col items-center mb-4">
                 <div className="mb-4">
-                  <Image 
+                  <Image
                     src="/images/icons/google-maps.svg"
                     alt="Local SEO"
                     width={48}
@@ -378,10 +389,13 @@ export default function SeoForMedicalPages() {
               Απαντήσεις στις πιο συχνές ερωτήσεις για το SEO στον ιατρικό κλάδο.
             </p>
           </div>
-          
+
+          {/* FAQ Schema for structured data */}
+          <FAQSchema questions={faqQuestions} />
+
           <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 px-5">
             {faqQuestions.map((faq, index) => (
-              <FAQToggleItem 
+              <FAQToggleItem
                 key={index}
                 question={faq.question}
                 answer={faq.answer}

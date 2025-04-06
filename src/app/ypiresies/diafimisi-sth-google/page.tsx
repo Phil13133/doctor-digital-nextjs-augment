@@ -5,6 +5,8 @@ import type { Metadata } from 'next';
 import FAQSchema from '@/components/schema/FAQSchema';
 import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Διαφήμιση Google για Γιατρούς & Κλινικές',
@@ -37,7 +39,7 @@ const PricingPackage = ({
   features: string[];
   highlighted?: boolean;
 }) => (
-  <div 
+  <div
     className={`rounded-lg p-6 h-full flex flex-col ${
       highlighted
         ? 'border-2 border-brand-200 shadow-lg bg-white relative'
@@ -125,6 +127,20 @@ export default function GoogleAdsPage() {
       />
       <FAQSchema questions={faqQuestions} />
 
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Αρχική", url: "https://doctordigital.gr/" },
+          { name: "Υπηρεσίες", url: "https://doctordigital.gr/ypiresies" },
+          { name: "Διαφήμιση στη Google", url: "https://doctordigital.gr/ypiresies/diafimisi-sth-google" }
+        ]}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="container mx-auto pt-6 pb-2 z-10 relative">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-brand-50 to-background overflow-hidden py-16 md:py-24">
         {/* Decorative elements */}
@@ -148,7 +164,7 @@ export default function GoogleAdsPage() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
@@ -160,7 +176,7 @@ export default function GoogleAdsPage() {
                   priority
                 />
               </div>
-              
+
               <div className="absolute -bottom-5 -right-5 bg-brand-200 px-4 py-3 rounded-md shadow-lg hidden md:block">
                 <p className="text-white text-sm font-semibold">
                   Άμεσα Αποτελέσματα
@@ -202,7 +218,7 @@ export default function GoogleAdsPage() {
               Η διαφήμιση Google προσφέρει μοναδικά πλεονεκτήματα για ιατρούς και κλινικές που θέλουν να προσελκύσουν νέους ασθενείς.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <FeatureItem
               icon={
@@ -213,7 +229,7 @@ export default function GoogleAdsPage() {
               title="Έγκαιρη Προσέγγιση"
               description="Οι ασθενείς αναζητούν γιατρούς και κλινικές τη στιγμή που θέλουν να κλείσουν ραντεβού, όταν έχουν άμεση ανάγκη."
             />
-            
+
             <FeatureItem
               icon={
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -224,7 +240,7 @@ export default function GoogleAdsPage() {
               title="Γεωγραφική Στόχευση"
               description="Στόχευση ειδικότητας και περιοχής με γεωγραφική ακρίβεια, εμφανίζοντας τις διαφημίσεις σας μόνο σε ασθενείς κοντά στο ιατρείο σας."
             />
-            
+
             <FeatureItem
               icon={
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -234,7 +250,7 @@ export default function GoogleAdsPage() {
               title="Έλεγχος Budget"
               description="Απόλυτος έλεγχος στο budget με πληρωμή μόνο όταν γίνεται κλικ. Εσείς καθορίζετε το ημερήσιο ή μηνιαίο όριο δαπανών."
             />
-            
+
             <FeatureItem
               icon={
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -244,7 +260,7 @@ export default function GoogleAdsPage() {
               title="Μετρήσιμα Αποτελέσματα"
               description="Πραγματικά μετρήσιμα αποτελέσματα και προσαρμογή καμπάνιας σε πραγματικό χρόνο με βάση την απόδοση, για συνεχή βελτιστοποίηση."
             />
-            
+
             <FeatureItem
               icon={
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -254,7 +270,7 @@ export default function GoogleAdsPage() {
               title="Νομική Συμμόρφωση"
               description="Συμμόρφωση με το νομικό πλαίσιο διαφήμισης ιατρών στην Ελλάδα, τηρώντας τον κώδικα δεοντολογίας του ιατρικού συλλόγου."
             />
-            
+
             <FeatureItem
               icon={
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +293,7 @@ export default function GoogleAdsPage() {
               Επιλέξτε το πακέτο που ταιριάζει καλύτερα στις ανάγκες του ιατρείου σας και στους στόχους σας.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <PricingPackage
               title="Basic"
@@ -289,7 +305,7 @@ export default function GoogleAdsPage() {
                 "Μηνιαία αναφορά απόδοσης",
               ]}
             />
-            
+
             <PricingPackage
               title="Pro"
               price="500€/μήνα"
@@ -303,7 +319,7 @@ export default function GoogleAdsPage() {
               ]}
               highlighted={true}
             />
-            
+
             <PricingPackage
               title="Custom"
               price="Επικοινωνήστε"
@@ -317,7 +333,7 @@ export default function GoogleAdsPage() {
               ]}
             />
           </div>
-          
+
           <div className="bg-gray-50 p-6 rounded-lg mt-10 max-w-4xl mx-auto">
             <p className="text-center text-text-light">
               <strong>Σημείωση:</strong> Οι παραπάνω τιμές αφορούν στο κόστος διαχείρισης της καμπάνιας. Το διαφημιστικό budget που θα επενδυθεί στην Google είναι επιπλέον και καθορίζεται από εσάς.
@@ -336,7 +352,7 @@ export default function GoogleAdsPage() {
                 Εμπιστευτείτε την online προβολή του ιατρείου σας σε μια ομάδα που κατανοεί τις ιδιαίτερες ανάγκες του ιατρικού κλάδου.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-start">
                 <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -347,7 +363,7 @@ export default function GoogleAdsPage() {
                   <p className="text-text-light text-sm">Αποκλειστική εστίαση σε ιατρικές επιχειρήσεις, με κατανόηση των ιδιαιτεροτήτων κάθε ειδικότητας.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -357,7 +373,7 @@ export default function GoogleAdsPage() {
                   <p className="text-text-light text-sm">Ομάδα με επίσημες πιστοποιήσεις Google, συνεχή εκπαίδευση και πολυετή εμπειρία.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -367,7 +383,7 @@ export default function GoogleAdsPage() {
                   <p className="text-text-light text-sm">Πλήρης συμμόρφωση με τις οδηγίες του Ιατρικού Συλλόγου για τη διαφήμιση ιατρικών υπηρεσιών.</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -391,27 +407,27 @@ export default function GoogleAdsPage() {
               Αποδεδειγμένα αποτελέσματα από πραγματικές καμπάνιες ιατρικών επιχειρήσεων που διαχειριζόμαστε.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <ResultItem
               number="58%"
               title="Μείωση στο κόστος ανά ραντεβού"
               description="Μέσω βελτιστοποίησης Google Ads και landing pages, πετύχαμε μείωση κόστους 58% για οδοντιατρικό κέντρο."
             />
-            
+
             <ResultItem
               number="+200%"
               title="Αύξηση επισκέψεων"
               description="Τριπλασιασμός οργανικών & πληρωμένων επισκέψεων για ορθοπαιδικό ιατρείο σε διάστημα 3 μηνών."
             />
-            
+
             <ResultItem
               number="#1"
               title="Θέση στην Google"
               description="Πρώτη θέση στα αποτελέσματα της Google για το keyword 'ορθοπαιδικός Περιστέρι' σε μόλις 3 μήνες."
             />
           </div>
-          
+
           <div className="bg-brand-200/10 rounded-lg p-8 mt-12 max-w-3xl mx-auto">
             <p className="text-center text-base">
               <span className="font-bold">Γνωρίζατε ότι:</span> Το 86% των ασθενών χρησιμοποιεί την Google όταν αναζητά ιατρικές υπηρεσίες και το 72% επιλέγει από τα πρώτα 3-4 αποτελέσματα της σελίδας;
@@ -429,10 +445,10 @@ export default function GoogleAdsPage() {
               Απαντήσεις στις πιο συχνές ερωτήσεις για τις καμπάνιες Google Ads στον ιατρικό κλάδο.
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 px-5">
             {faqQuestions.map((faq, index) => (
-              <FAQToggleItem 
+              <FAQToggleItem
                 key={index}
                 question={faq.question}
                 answer={faq.answer}
@@ -451,7 +467,7 @@ export default function GoogleAdsPage() {
               <p className="text-text-light max-w-2xl mx-auto mb-8">
                 Αποκτήστε περισσότερους ασθενείς με εξειδικευμένες καμπάνιες Google Ads για τον ιατρικό σας χώρο.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center rounded-full px-8 py-3 flex items-center justify-center">
                   <span className="mr-2">🟢</span>

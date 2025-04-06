@@ -6,6 +6,8 @@ import FAQSchema from '@/components/schema/FAQSchema';
 import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 import { CheckIcon, ArrowRightIcon } from '@/components/icons';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Ιατρικό Λογισμικό | Σύγχρονο Ιατρικό Software Για Γιατρούς',
@@ -38,12 +40,12 @@ const faqQuestions = [
 ];
 
 // Feature card component
-const FeatureCard = ({ 
-  icon, 
-  title, 
+const FeatureCard = ({
+  icon,
+  title,
   children
-}: { 
-  icon: React.ReactNode; 
+}: {
+  icon: React.ReactNode;
   title: string;
   children: React.ReactNode;
 }) => (
@@ -89,7 +91,21 @@ export default function MedicalSoftwarePage() {
         category="Ιατρικό Λογισμικό"
       />
       <FAQSchema questions={faqQuestions} />
-      
+
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Αρχική", url: "https://doctordigital.gr/" },
+          { name: "Υπηρεσίες", url: "https://doctordigital.gr/ypiresies" },
+          { name: "Ιατρικό Λογισμικό", url: "https://doctordigital.gr/ypiresies/iatriko-logismiko" }
+        ]}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="container mx-auto pt-6 pb-2 z-10 relative">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-brand-50 to-background overflow-hidden py-16 md:py-24">
         {/* Decorative elements */}
@@ -116,7 +132,7 @@ export default function MedicalSoftwarePage() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
@@ -128,7 +144,7 @@ export default function MedicalSoftwarePage() {
                   priority
                 />
               </div>
-              
+
               <div className="absolute -bottom-5 -right-5 bg-brand-200 px-4 py-3 rounded-md shadow-lg hidden md:block">
                 <p className="text-white text-sm font-semibold">
                   Ψηφιακή Οργάνωση Ιατρείου
@@ -138,7 +154,7 @@ export default function MedicalSoftwarePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Introduction Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
@@ -148,7 +164,7 @@ export default function MedicalSoftwarePage() {
               Προσφέρουμε εξειδικευμένες λύσεις ιατρικού software που απαντούν στις καθημερινές ανάγκες ιατρών, κλινικών, διαγνωστικών κέντρων και θεραπευτηρίων, βελτιώνοντας την παραγωγικότητα και την εμπειρία των ασθενών σας.
             </p>
           </div>
-          
+
           <div className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-brand-100/30 to-brand-200/20 shadow-lg mb-16">
             <div className="absolute top-0 right-0 opacity-20 pointer-events-none">
               <svg width="320" height="320" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -251,7 +267,7 @@ export default function MedicalSoftwarePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Features Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto">
@@ -261,18 +277,18 @@ export default function MedicalSoftwarePage() {
               Το ιατρικό μας λογισμικό συνδυάζει την ευχρηστία με προηγμένες λειτουργίες που καλύπτουν όλες τις ανάγκες του σύγχρονου ιατρείου.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <FeatureCard 
+            <FeatureCard
               icon={
                 <div className="relative w-16 h-16 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gray-100 rounded-full"></div>
-                  <Image 
-                    src="/images/icons/appointment-2.svg" 
+                  <Image
+                    src="/images/icons/appointment-2.svg"
                     alt="Διαχείριση Ραντεβού"
-                    width={32} 
+                    width={32}
                     height={32}
-                    className="relative" 
+                    className="relative"
                   />
                 </div>
               }
@@ -283,16 +299,16 @@ export default function MedicalSoftwarePage() {
               <FeatureItem text="Στατιστικά ακυρώσεων, αναμονών & πληρότητας" />
               <FeatureItem text="Online Booking ενσωμάτωση με την ιστοσελίδα σας" />
             </FeatureCard>
-            
-            <FeatureCard 
+
+            <FeatureCard
               icon={
                 <div className="relative w-16 h-16 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gray-100 rounded-full"></div>
-                  <Image 
-                    src="/images/icons/folder.svg" 
+                  <Image
+                    src="/images/icons/folder.svg"
                     alt="Ηλεκτρονικός Φάκελος Ασθενή"
-                    width={32} 
-                    height={32} 
+                    width={32}
+                    height={32}
                     className="relative"
                   />
                 </div>
@@ -304,17 +320,17 @@ export default function MedicalSoftwarePage() {
               <FeatureItem text="Διαγνώσεις, εξετάσεις & παραπομπές" />
               <FeatureItem text="Ανέβασμα αρχείων, εικόνων και παραπεμπτικών" />
             </FeatureCard>
-            
-            <FeatureCard 
+
+            <FeatureCard
               icon={
                 <div className="relative w-16 h-16 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gray-100 rounded-full"></div>
-                  <Image 
-                    src="/images/icons/adjust.svg" 
+                  <Image
+                    src="/images/icons/adjust.svg"
                     alt="Λειτουργίες για Πολυϊατρεία"
-                    width={32} 
+                    width={32}
                     height={32}
-                    className="relative" 
+                    className="relative"
                   />
                 </div>
               }
@@ -325,17 +341,17 @@ export default function MedicalSoftwarePage() {
               <FeatureItem text="Ανάλυση απόδοσης ανά ειδικότητα/παροχή" />
               <FeatureItem text="Σύνδεση με λογιστικά και τιμολογιακά συστήματα" />
             </FeatureCard>
-            
-            <FeatureCard 
+
+            <FeatureCard
               icon={
                 <div className="relative w-16 h-16 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gray-100 rounded-full"></div>
-                  <Image 
-                    src="/images/icons/settings.svg" 
+                  <Image
+                    src="/images/icons/settings.svg"
                     alt="Απόλυτη Προσαρμογή"
-                    width={32} 
+                    width={32}
                     height={32}
-                    className="relative" 
+                    className="relative"
                   />
                 </div>
               }
@@ -348,7 +364,7 @@ export default function MedicalSoftwarePage() {
               <FeatureItem text="GDPR compliant" />
             </FeatureCard>
           </div>
-          
+
           <div className="text-center mt-12">
             <Link href="/epikoinonia" className="btn-primary inline-flex items-center">
               Ζητήστε Demo Λογισμικού
@@ -357,14 +373,14 @@ export default function MedicalSoftwarePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Choose Us Section */}
       <section className="py-16 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-full h-full pointer-events-none">
           <div className="absolute top-10 right-10 w-64 h-64 bg-brand-100/20 rounded-full blur-xl opacity-60"></div>
           <div className="absolute bottom-40 left-10 w-96 h-96 bg-brand-200/10 rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -373,12 +389,12 @@ export default function MedicalSoftwarePage() {
               </span>
               <h2 className="text-3xl font-bold mb-6">Γιατί να Επιλέξετε το Ιατρικό Λογισμικό μας;</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-20 h-20 bg-brand-100/30 rounded-full"></div>
                 <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-brand-100/20 rounded-full"></div>
-                
+
                 <h3 className="text-xl font-bold mb-5 relative">Αναπτύχθηκε για τον Ιατρικό Τομέα</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -401,11 +417,11 @@ export default function MedicalSoftwarePage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 border border-gray-100 shadow-md hover:shadow-lg transition-shadow relative overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-20 h-20 bg-brand-100/30 rounded-full"></div>
                 <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-brand-100/20 rounded-full"></div>
-                
+
                 <h3 className="text-xl font-bold mb-5">Ευελιξία & Προσβασιμότητα</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
@@ -432,7 +448,7 @@ export default function MedicalSoftwarePage() {
           </div>
         </div>
       </section>
-      
+
       {/* Integration Section */}
       <section className="py-16 bg-background relative overflow-hidden">
         <div className="container mx-auto">
@@ -442,7 +458,7 @@ export default function MedicalSoftwarePage() {
               Το ιατρικό μας software συνδέεται πλήρως με το σύστημα κρατήσεων και την ιστοσελίδα σας, αυξάνοντας την αποδοτικότητα και την παρακολούθηση του marketing.
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto relative mb-16">
             <div className="absolute inset-0 bg-gradient-to-br from-brand-50 to-brand-100/20 rounded-xl blur-sm"></div>
             <div className="relative bg-white rounded-xl overflow-hidden border border-gray-100 shadow-lg">
@@ -473,18 +489,18 @@ export default function MedicalSoftwarePage() {
                           <feComposite in="SourceGraphic" in2="blur" operator="over" />
                         </filter>
                       </defs>
-                      
+
                       {/* Pulse circle behind app icon */}
                       <circle cx="200" cy="150" r="70" fill="#0078AA" fillOpacity="0.1" />
                       <circle cx="200" cy="150" r="60" fill="#0078AA" fillOpacity="0.05" />
-                      
+
                       {/* App Icon - with medical cross emblem */}
                       <rect x="150" y="100" width="100" height="100" rx="20" fill="url(#appGradient)" filter="url(#shadow)" />
                       <rect x="185" y="115" width="30" height="70" rx="5" fill="white" opacity="0.9" />
                       <rect x="165" y="135" width="70" height="30" rx="5" fill="white" opacity="0.9" />
                       <path d="M170 160H230" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
                       <path d="M170 180H210" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
-                      
+
                       {/* Website Icon - with modern UI elements */}
                       <rect x="50" y="200" width="100" height="100" rx="15" fill="url(#webGradient)" filter="url(#shadow)" />
                       <rect x="65" y="215" width="70" height="12" rx="6" fill="white" opacity="0.9" />
@@ -492,7 +508,7 @@ export default function MedicalSoftwarePage() {
                       <rect x="65" y="250" width="70" height="6" rx="3" fill="white" opacity="0.7" />
                       <rect x="65" y="265" width="55" height="6" rx="3" fill="white" opacity="0.7" />
                       <rect x="65" y="280" width="25" height="8" rx="4" fill="white" opacity="0.9" />
-                      
+
                       {/* Marketing Icon - with analytics chart */}
                       <rect x="250" y="200" width="100" height="100" rx="15" fill="url(#marketingGradient)" filter="url(#shadow)" />
                       <path d="M270 270L285 240L300 255L330 225" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" filter="url(#glow)" />
@@ -500,28 +516,28 @@ export default function MedicalSoftwarePage() {
                       <circle cx="300" cy="255" r="4" fill="white" />
                       <circle cx="330" cy="225" r="4" fill="white" />
                       <path d="M270 280L330 280" stroke="white" strokeWidth="2" strokeDasharray="4 2" />
-                      
+
                       {/* Connection Lines - with animated dash pattern and direction arrows */}
                       <path d="M195 200L125 200" stroke="url(#appGradient)" strokeWidth="2.5" strokeDasharray="6 3" />
                       <path d="M205 200L275 200" stroke="url(#appGradient)" strokeWidth="2.5" strokeDasharray="6 3" />
-                      
+
                       {/* Connection Points with glow */}
                       <circle cx="200" cy="200" r="8" fill="#0078AA" filter="url(#glow)" />
                       <circle cx="200" cy="200" r="4" fill="white" />
-                      
+
                       <circle cx="125" cy="200" r="6" fill="#0078AA" filter="url(#glow)" />
                       <circle cx="125" cy="200" r="3" fill="white" />
-                      
+
                       <circle cx="275" cy="200" r="6" fill="#0078AA" filter="url(#glow)" />
                       <circle cx="275" cy="200" r="3" fill="white" />
-                      
+
                       {/* Direction indicators */}
                       <path d="M135 195L125 200L135 205" stroke="#0078AA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       <path d="M265 195L275 200L265 205" stroke="#0078AA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                 </div>
-                
+
                 {/* Text Side */}
                 <div className="p-10">
                   <h3 className="text-2xl font-bold mb-6">Πλήρης συνδεσιμότητα για καλύτερα αποτελέσματα</h3>
@@ -537,7 +553,7 @@ export default function MedicalSoftwarePage() {
                         <p className="text-sm text-gray-600">Οι ασθενείς κλείνουν ραντεβού online, με αυτόματη ενημέρωση του συστήματός σας.</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -549,7 +565,7 @@ export default function MedicalSoftwarePage() {
                         <p className="text-sm text-gray-600">Παρακολουθήστε από ποιες διαφημίσεις προέρχονται οι ασθενείς σας.</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -561,7 +577,7 @@ export default function MedicalSoftwarePage() {
                         <p className="text-sm text-gray-600">Μετρήστε την απόδοση των καμπανιών σας με ακριβή δεδομένα για κάθε καμπάνια.</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start">
                       <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -580,7 +596,7 @@ export default function MedicalSoftwarePage() {
           </div>
         </div>
       </section>
-      
+
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
@@ -590,10 +606,10 @@ export default function MedicalSoftwarePage() {
               Απαντήσεις στις πιο συχνές ερωτήσεις σχετικά με το ιατρικό μας λογισμικό.
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 px-5">
             {faqQuestions.map((faq, index) => (
-              <FAQToggleItem 
+              <FAQToggleItem
                 key={index}
                 question={faq.question}
                 answer={faq.answer}
@@ -602,7 +618,7 @@ export default function MedicalSoftwarePage() {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto">
@@ -610,14 +626,14 @@ export default function MedicalSoftwarePage() {
             <div className="relative p-8 md:p-12">
               {/* Decorative gradient top border */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-100 to-brand-200"></div>
-              
+
               <div className="text-center mb-8">
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">Ξεκινήστε με Δωρεάν Αξιολόγηση</h2>
                 <p className="text-lg text-text-light max-w-2xl mx-auto">
                   Ελάτε σε επαφή μαζί μας για να συζητήσουμε τις ανάγκες σας και να σας προτείνουμε τη βέλτιστη λύση ιατρικού software για το ιατρείο ή την κλινική σας.
                 </p>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/epikoinonia" className="btn-primary text-center">
                   Ζητήστε Δωρεάν Συμβουλευτική

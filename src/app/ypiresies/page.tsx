@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRightIcon } from '@/components/icons';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Υπηρεσίες Digital Marketing για Ιατρούς | Doctor Digital',
@@ -75,6 +77,19 @@ export function generateStaticParams() {
 export default function ServicesPage() {
   return (
     <>
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Αρχική", url: "https://doctordigital.gr/" },
+          { name: "Υπηρεσίες", url: "https://doctordigital.gr/ypiresies" }
+        ]}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="container mx-auto pt-6 pb-2 z-10 relative">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-brand-50 to-background py-16 md:py-24 overflow-hidden">
         <div className="container mx-auto">

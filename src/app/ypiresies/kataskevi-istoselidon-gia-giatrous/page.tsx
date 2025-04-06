@@ -6,6 +6,8 @@ import FAQSchema from '@/components/schema/FAQSchema';
 import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 import { CheckIcon, ArrowRightIcon } from '@/components/icons';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Κατασκευή Ιστοσελίδων για Ιατρούς & Κλινικές | Doctor Digital',
@@ -48,7 +50,7 @@ const PricingPackage = ({
   features: string[];
   highlighted?: boolean;
 }) => (
-  <div 
+  <div
     className={`rounded-lg p-6 h-full flex flex-col ${
       highlighted
         ? 'border-2 border-brand-200 shadow-lg bg-white relative'
@@ -92,8 +94,8 @@ const ResultCard = ({ number, text }: { number: string; text: string }) => (
 );
 
 // Before/After Showcase Component
-const WebsiteShowcase = ({ 
-  clientName, 
+const WebsiteShowcase = ({
+  clientName,
   specialty,
   beforeImgSrc,
   afterImgSrc,
@@ -110,13 +112,13 @@ const WebsiteShowcase = ({
       <h3 className="font-bold text-lg">{clientName}</h3>
       <p className="text-text-light text-sm">{specialty}</p>
     </div>
-    
+
     <div className="grid grid-cols-2 gap-4 p-4">
       {/* Before */}
       <div className="relative">
         <div className="absolute top-2 left-2 bg-gray-700 text-white text-xs px-2 py-1 rounded z-10">Πριν</div>
         <div className="border border-gray-200 rounded overflow-hidden">
-          <Image 
+          <Image
             src={beforeImgSrc}
             alt={`${clientName} website before redesign`}
             width={300}
@@ -125,12 +127,12 @@ const WebsiteShowcase = ({
           />
         </div>
       </div>
-      
+
       {/* After */}
       <div className="relative">
         <div className="absolute top-2 left-2 bg-brand-200 text-white text-xs px-2 py-1 rounded z-10">Μετά</div>
         <div className="border border-gray-200 rounded overflow-hidden">
-          <Image 
+          <Image
             src={afterImgSrc}
             alt={`${clientName} website after redesign`}
             width={300}
@@ -140,7 +142,7 @@ const WebsiteShowcase = ({
         </div>
       </div>
     </div>
-    
+
     <div className="p-4 bg-gray-50">
       <h4 className="font-medium text-sm mb-2">Βελτιώσεις:</h4>
       <ul className="space-y-1">
@@ -158,13 +160,13 @@ const WebsiteShowcase = ({
 );
 
 // Process Step Component
-const ProcessStep = ({ 
-  number, 
-  title, 
-  description 
-}: { 
-  number: number; 
-  title: string; 
+const ProcessStep = ({
+  number,
+  title,
+  description
+}: {
+  number: number;
+  title: string;
   description: string;
 }) => (
   <div className="relative">
@@ -220,6 +222,20 @@ export default function WebsitesPage() {
       />
       <FAQSchema questions={faqQuestions} />
 
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Αρχική", url: "https://doctordigital.gr/" },
+          { name: "Υπηρεσίες", url: "https://doctordigital.gr/ypiresies" },
+          { name: "Κατασκευή Ιστοσελίδων για Γιατρούς", url: "https://doctordigital.gr/ypiresies/kataskevi-istoselidon-gia-giatrous" }
+        ]}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="container mx-auto pt-6 pb-2 z-10 relative">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-brand-50 to-background overflow-hidden py-16 md:py-24">
         {/* Decorative elements */}
@@ -244,7 +260,7 @@ export default function WebsitesPage() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
@@ -256,7 +272,7 @@ export default function WebsitesPage() {
                   priority
                 />
               </div>
-              
+
               <div className="absolute -bottom-5 -right-5 bg-brand-200 px-4 py-3 rounded-md shadow-lg hidden md:block">
                 <p className="text-white text-sm font-semibold">
                   Αύξηση Ραντεβού & Προβολής
@@ -279,7 +295,7 @@ export default function WebsitesPage() {
                 Με τη σωστή κατασκευή και βελτιστοποίηση, μπορεί να μετατραπεί σε εργαλείο προσέλκυσης νέων ραντεβού και ενίσχυσης της φήμης σας.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <FeatureItem
                 icon={
@@ -290,7 +306,7 @@ export default function WebsitesPage() {
                 title="Εμφάνιση στην Google"
                 description="Στοχευμένες λέξεις-κλειδιά φέρνουν νέους ασθενείς που αναζητούν γιατρό της ειδικότητάς σας στην περιοχή σας."
               />
-              
+
               <FeatureItem
                 icon={
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -300,7 +316,7 @@ export default function WebsitesPage() {
                 title="Συμβατότητα με Κινητά"
                 description="Το 70% των ασθενών αναζητούν ιατρικές πληροφορίες από κινητά. Η responsive σχεδίαση είναι απαραίτητη."
               />
-              
+
               <FeatureItem
                 icon={
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -325,7 +341,7 @@ export default function WebsitesPage() {
               Αναλαμβάνουμε όλη τη διαδικασία κατασκευής ιστοσελίδας για γιατρούς, από τον σχεδιασμό έως τη φιλοξενία και την τεχνική υποστήριξη.
             </p>
           </div>
-          
+
           {/* Process Steps */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
             <ProcessStep
@@ -333,29 +349,29 @@ export default function WebsitesPage() {
               title="Ανάλυση & Σχεδιασμός"
               description="Κατανοούμε τις ανάγκες σας και σχεδιάζουμε την ιδανική δομή ιστοσελίδας."
             />
-            
+
             <ProcessStep
               number={2}
               title="Ανάπτυξη & Κατασκευή"
               description="Κατασκευάζουμε την ιστοσελίδα με προηγμένες τεχνολογίες και βέλτιστες πρακτικές."
             />
-            
+
             <ProcessStep
               number={3}
               title="Περιεχόμενο & SEO"
               description="Δημιουργούμε επαγγελματικό περιεχόμενο και βελτιστοποιούμε για τη Google."
             />
-            
+
             <ProcessStep
               number={4}
               title="Εκπαίδευση & Υποστήριξη"
               description="Σας εκπαιδεύουμε στη διαχείριση και παρέχουμε συνεχή υποστήριξη."
             />
           </div>
-          
+
           <div className="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
             <h3 className="text-xl font-bold mb-6 text-center">Τι Περιλαμβάνεται στην Ιατρική σας Ιστοσελίδα</h3>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
               <SimpleFeatureItem text="Κατασκευή σε WordPress ή custom λύση" />
               <SimpleFeatureItem text="Ενσωμάτωση online ραντεβού" />
@@ -384,7 +400,7 @@ export default function WebsitesPage() {
               Δείτε πώς μεταμορφώνουμε παλιές, παρωχημένες ιστοσελίδες σε σύγχρονες, επαγγελματικές διαδικτυακές παρουσίες
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <WebsiteShowcase
               clientName="Δρ. Παπαδόπουλος Αθανάσιος"
@@ -398,7 +414,7 @@ export default function WebsitesPage() {
                 "Αναβαθμισμένη ταχύτητα φόρτωσης"
               ]}
             />
-            
+
             <WebsiteShowcase
               clientName="Ορθοπαιδικό Κέντρο Αθηνών"
               specialty="Ορθοπαιδική Κλινική"
@@ -412,7 +428,7 @@ export default function WebsitesPage() {
               ]}
             />
           </div>
-          
+
           <div className="text-center mt-10">
             <Link href="/case-studies" className="text-brand-200 hover:text-brand-300 inline-flex items-center font-medium">
               Δείτε όλα τα έργα μας
@@ -432,7 +448,7 @@ export default function WebsitesPage() {
               Οι τιμές προσαρμόζονται στις ανάγκες κάθε ιατρείου. Παρέχουμε διαφανείς και λογικές τιμές ανάλογα με το μέγεθος και τις λειτουργίες της ιστοσελίδας.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <PricingPackage
               title="Βασικό"
@@ -446,7 +462,7 @@ export default function WebsitesPage() {
                 "1 μήνα υποστήριξη"
               ]}
             />
-            
+
             <PricingPackage
               title="Επαγγελματικό"
               price="890€"
@@ -462,7 +478,7 @@ export default function WebsitesPage() {
               ]}
               highlighted={true}
             />
-            
+
             <PricingPackage
               title="Premium"
               price="1250€+"
@@ -492,24 +508,24 @@ export default function WebsitesPage() {
               Αποδεδειγμένα αποτελέσματα από πραγματικές ιατρικές ιστοσελίδες που έχουμε αναπτύξει.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <ResultCard
               number="+240%"
               text="Αύξηση οργανικής επισκεψιμότητας"
             />
-            
+
             <ResultCard
               number="#1"
               text="Πρώτη σελίδα Google για 'γυναικολόγος Νέα Σμύρνη'"
             />
-            
+
             <ResultCard
               number="+3x"
               text="Ραντεβού μέσα από τη νέα ιστοσελίδα"
             />
           </div>
-          
+
           <div className="bg-brand-200/10 rounded-lg p-8 mt-12 max-w-3xl mx-auto">
             <p className="text-center text-base">
               <span className="font-bold">Γνωρίζατε ότι:</span> Το 70% των ασθενών θα επισκεφθούν την ιστοσελίδα ενός γιατρού πριν κλείσουν το πρώτο τους ραντεβού για να αξιολογήσουν την αξιοπιστία του.
@@ -528,10 +544,10 @@ export default function WebsitesPage() {
               Απαντήσεις στις πιο συχνές ερωτήσεις για την κατασκευή ιατρικών ιστοσελίδων.
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 px-5">
             {faqQuestions.map((faq, index) => (
-              <FAQToggleItem 
+              <FAQToggleItem
                 key={index}
                 question={faq.question}
                 answer={faq.answer}
@@ -547,14 +563,14 @@ export default function WebsitesPage() {
           <div className="bg-gradient-to-br from-brand-50 to-background p-10 rounded-lg shadow-md max-w-4xl mx-auto relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-100 rounded-full opacity-20"></div>
-            
+
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-bold mb-4">Ζητήστε Επαγγελματική Ιστοσελίδα για το Ιατρείο σας</h2>
                 <p className="text-text-light max-w-2xl mx-auto mb-8">
                   Επικοινωνήστε μαζί μας για μια εξατομικευμένη πρόταση που θα αυξήσει την online παρουσία του ιατρείου σας και θα προσελκύσει νέους ασθενείς.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Link href="/epikoinonia" className="btn-primary text-center py-3 px-8">
                     Ζητήστε Δωρεάν Εκτίμηση

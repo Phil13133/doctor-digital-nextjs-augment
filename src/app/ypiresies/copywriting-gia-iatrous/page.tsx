@@ -5,6 +5,8 @@ import type { Metadata } from 'next';
 import FAQSchema from '@/components/schema/FAQSchema';
 import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Copywriting για Γιατρούς & Κλινικές | Κειμενογράφος για site',
@@ -55,7 +57,21 @@ export default function CopywritingForDoctors() {
         category="Digital Marketing"
       />
       <FAQSchema questions={faqQuestions} />
-      
+
+      {/* Breadcrumb Schema */}
+      <BreadcrumbSchema
+        items={[
+          { name: "Αρχική", url: "https://doctordigital.gr/" },
+          { name: "Υπηρεσίες", url: "https://doctordigital.gr/ypiresies" },
+          { name: "Copywriting για Γιατρούς", url: "https://doctordigital.gr/ypiresies/copywriting-gia-iatrous" }
+        ]}
+      />
+
+      {/* Breadcrumbs Navigation */}
+      <div className="container mx-auto pt-6 pb-2 z-10 relative">
+        <Breadcrumbs />
+      </div>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-brand-50 to-background overflow-hidden py-16 md:py-24">
         {/* Decorative elements */}
@@ -82,7 +98,7 @@ export default function CopywritingForDoctors() {
                 </Link>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
@@ -94,7 +110,7 @@ export default function CopywritingForDoctors() {
                   priority
                 />
               </div>
-              
+
               <div className="absolute -bottom-5 -right-5 bg-brand-200 px-4 py-3 rounded-md shadow-lg hidden md:block">
                 <p className="text-white text-sm font-semibold">
                   Περιεχόμενο που Πείθει & Μετατρέπει
@@ -104,7 +120,7 @@ export default function CopywritingForDoctors() {
           </div>
         </div>
       </section>
-      
+
       {/* What is Copywriting Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
@@ -159,10 +175,10 @@ export default function CopywritingForDoctors() {
               Απαντήσεις στις πιο συχνές ερωτήσεις για το SEO Copywriting στον ιατρικό κλάδο.
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 px-5">
             {faqQuestions.map((faq, index) => (
-              <FAQToggleItem 
+              <FAQToggleItem
                 key={index}
                 question={faq.question}
                 answer={faq.answer}
