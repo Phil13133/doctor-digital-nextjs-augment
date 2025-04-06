@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { SITE } from '@/constants/site'; // Import SITE constants
+import TestimonialsSchema from '@/components/schema/TestimonialsSchema';
 
 export const metadata: Metadata = {
   title: 'Case Studies | Αποδεδειγμένα Αποτελέσματα με ROI | Doctor Digital',
@@ -29,7 +30,7 @@ export default function CaseStudiesPage() {
             </Link>
           </div>
         </div>
-        
+
         {/* Abstract background shape */}
         <div className="absolute right-0 top-32 w-64 h-64 bg-brand-100 rounded-full opacity-10 -z-10 blur-3xl"></div>
         <div className="absolute left-20 bottom-20 w-80 h-80 bg-brand-200 rounded-full opacity-5 -z-10 blur-3xl"></div>
@@ -104,7 +105,7 @@ export default function CaseStudiesPage() {
                   SEO
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Image 
+                  <Image
                     src="/images/SEO για Ιατρικές Ιστοσελίδες.webp"
                     alt="SEO για Ιατρική Κλινική"
                     width={400}
@@ -113,11 +114,11 @@ export default function CaseStudiesPage() {
                   />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="text-sm font-medium text-gray-500 mb-2">Ιατρική Κλινική</div>
                 <h3 className="text-2xl font-bold mb-3 text-text-heading">Αύξηση οργανικής επισκεψιμότητας κατά 200%</h3>
-                
+
                 <div className="bg-blue-50 rounded-lg p-3 mb-4 border-l-4 border-blue-400">
                   <div className="flex items-center">
                     <svg className="w-5 h-5 text-blue-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -126,11 +127,11 @@ export default function CaseStudiesPage() {
                     <div className="text-blue-800 font-medium">Αποτελέσματα σε 90 ημέρες</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 mb-5">
                   Πώς βοηθήσαμε μια ιδιωτική κλινική να αυξήσει τη διαδικτυακή της παρουσία και να τριπλασιάσει τα ραντεβού μέσω SEO και στρατηγικού περιεχομένου.
                 </p>
-                
+
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
                     <div className="bg-blue-100 text-blue-600 font-medium text-xs py-1 px-2 rounded">
@@ -140,12 +141,12 @@ export default function CaseStudiesPage() {
                       #1 θέση Google
                     </div>
                   </div>
-                  
+
                   {/* Removed "Read More" button */}
                 </div>
               </div>
             </div>
-            
+
             {/* Case Study 2 - Google Ads */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
               <div className="relative h-56 bg-red-50 overflow-hidden">
@@ -153,7 +154,7 @@ export default function CaseStudiesPage() {
                   Google Ads
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Image 
+                  <Image
                     src="/images/diafimisi-sth-google.webp"
                     alt="Google Ads για Παιδιατρικό Ιατρείο"
                     width={400}
@@ -162,11 +163,11 @@ export default function CaseStudiesPage() {
                   />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="text-sm font-medium text-gray-500 mb-2">Παιδιατρικό Ιατρείο</div>
                 <h3 className="text-2xl font-bold mb-3 text-text-heading">75% αύξηση σε νέα ραντεβού μέσω Google Ads</h3>
-                
+
                 <div className="bg-red-50 rounded-lg p-3 mb-4 border-l-4 border-red-400">
                   <div className="flex items-center">
                     <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -175,11 +176,11 @@ export default function CaseStudiesPage() {
                     <div className="text-red-800 font-medium">ROI: 413.89%</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 mb-5">
                   Εφαρμόσαμε στρατηγική Google Ads για παιδιατρικό ιατρείο, με στοχευμένες λέξεις-κλειδιά και landing pages, οδηγώντας σε +75% αύξηση σε νέες κλήσεις και κρατήσεις.
                 </p>
-                
+
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
                     <div className="bg-red-100 text-red-600 font-medium text-xs py-1 px-2 rounded">
@@ -189,12 +190,12 @@ export default function CaseStudiesPage() {
                       -41% κόστος/ραντεβού
                     </div>
                   </div>
-                  
+
                   {/* Removed "Read More" button */}
                 </div>
               </div>
             </div>
-            
+
             {/* Case Study 3 - Social Media */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
               <div className="relative h-56 bg-purple-50 overflow-hidden">
@@ -202,7 +203,7 @@ export default function CaseStudiesPage() {
                   Social Media
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Image 
+                  <Image
                     src="/images/Ιατρικό Copywriting για Γιατρούς.webp"
                     alt="Social Media για Οδοντιατρική Κλινική"
                     width={400}
@@ -211,11 +212,11 @@ export default function CaseStudiesPage() {
                   />
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="text-sm font-medium text-gray-500 mb-2">Οδοντιατρική Κλινική</div>
                 <h3 className="text-2xl font-bold mb-3 text-text-heading">120% αύξηση engagement στα social media</h3>
-                
+
                 <div className="bg-purple-50 rounded-lg p-3 mb-4 border-l-4 border-purple-400">
                   <div className="flex items-center">
                     <svg className="w-5 h-5 text-purple-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -224,11 +225,11 @@ export default function CaseStudiesPage() {
                     <div className="text-purple-800 font-medium">+68% νέοι ασθενείς</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 mb-5">
                   Δημιουργήσαμε στρατηγικό περιεχόμενο για οδοντιατρική κλινική, ενισχύοντας την αλληλεπίδραση και αυξάνοντας τη ροή νέων ασθενών μέσω Facebook & Instagram.
                 </p>
-                
+
                 <div className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
                     <div className="bg-purple-100 text-purple-600 font-medium text-xs py-1 px-2 rounded">
@@ -238,7 +239,7 @@ export default function CaseStudiesPage() {
                       15% CTR
                     </div>
                   </div>
-                  
+
                   {/* Removed "Read More" button */}
                 </div>
               </div>
@@ -279,17 +280,17 @@ export default function CaseStudiesPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative h-80 rounded-lg border border-gray-200 overflow-hidden">
                 <Image
-                  src="/images/google_search_console-blog-post_3.jpg" 
+                  src="/images/google_search_console-blog-post_3.jpg"
                   alt="SEO Performance Chart showing 200% organic traffic growth"
                   fill
                   style={{ objectFit: 'contain' }}
                   className="transition-opacity"
                 />
               </div>
-              
+
               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <p className="font-medium">3-Month Growth</p>
@@ -305,7 +306,7 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Google Ads Performance Chart */}
             <div className="bg-white rounded-xl shadow-lg p-6 mb-10 border border-gray-100">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
@@ -325,17 +326,17 @@ export default function CaseStudiesPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="relative h-80 rounded-lg border border-gray-200 overflow-hidden">
                 <Image
-                  src="/images/google-ads-performance.jpg" 
+                  src="/images/google-ads-performance.jpg"
                   alt="Google Ads Performance Chart showing 413.89% ROAS"
                   fill
                   style={{ objectFit: 'contain' }}
                   className="transition-opacity"
                 />
               </div>
-              
+
               <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-amber-50 p-4 rounded-lg">
                   <p className="font-medium">Conversions</p>
@@ -351,14 +352,14 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Data Table Section */}
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="mb-6">
                 <h3 className="text-xl font-bold mb-2">Αναλυτικά Δεδομένα Καμπανιών</h3>
                 <p className="text-gray-600">Λεπτομερείς μετρήσεις απόδοσης των ιατρικών καμπανιών</p>
               </div>
-              
+
               <div className="relative overflow-x-auto rounded-lg border border-gray-200 bg-gray-50 p-6">
                 <div className="grid grid-cols-5 gap-2 mb-4 bg-gray-100 p-2 rounded-lg text-sm font-semibold text-gray-700">
                   <div>Campaign</div>
@@ -389,7 +390,7 @@ export default function CaseStudiesPage() {
                   <div className="text-green-600 font-medium">289%</div>
                 </div>
               </div>
-              
+
               <div className="mt-6">
                 <p className="text-text-light mb-2">
                   <strong>Η διαφορά:</strong> Στην Doctor Digital, βασιζόμαστε αποκλειστικά σε μετρήσιμα δεδομένα και πραγματικά αποτελέσματα. Κάθε πελάτης λαμβάνει μηνιαίες αναφορές με αναλυτικά στοιχεία απόδοσης και προτάσεις για συνεχή βελτίωση.
@@ -413,7 +414,33 @@ export default function CaseStudiesPage() {
               Γιατροί και κλινικές μοιράζονται την εμπειρία τους από τις ψηφιακές καμπάνιες της Doctor Digital.
             </p>
           </div>
-          
+
+          {/* Testimonials Schema */}
+          <TestimonialsSchema
+            testimonials={[
+              {
+                author: "Δρ. Γεώργιος Παπαδόπουλος",
+                position: "Διευθυντής",
+                organization: "Ιατρική Κλινική Αθηνών",
+                text: "Μέσα σε 90 ημέρες, η κλινική μας είδε 200% αύξηση στις οργανικές επισκέψεις και 45% αύξηση στον αριθμό των ραντεβού. Η συνεργασία με την Doctor Digital ήταν η καλύτερη επένδυση που κάναμε τα τελευταία χρόνια.",
+                rating: 5
+              },
+              {
+                author: "Δρ. Ελένη Μαρκοπούλου",
+                position: "Παιδίατρος",
+                organization: "Παιδικό Χαμόγελο",
+                text: "Οι διαφημίσεις Google Ads που έστησε η ομάδα της Doctor Digital μας έχουν φέρει 75% περισσότερα ραντεβού με μειωμένο κόστος ανά ασθενή. Λαμβάνουμε σταθερά αποτελέσματα εδώ και 8 μήνες.",
+                rating: 5
+              }
+            ]}
+            itemReviewed={{
+              name: "Doctor Digital",
+              description: "Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Google Ads, SEO, περιεχόμενο & ιστοσελίδες για γιατρούς που θέλουν να προσελκύσουν νέους ασθενείς.",
+              url: "https://doctordigital.gr",
+              image: "https://doctordigital.gr/images/Doctordigital-SVG-logo.svg"
+            }}
+          />
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Testimonial 1 */}
             <div className="testimonial-card">
@@ -430,7 +457,7 @@ export default function CaseStudiesPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Testimonial 2 */}
             <div className="testimonial-card">
               <div className="relative mb-4">
@@ -456,14 +483,14 @@ export default function CaseStudiesPage() {
           <div className="bg-gradient-to-br from-brand-50 to-background p-10 rounded-xl shadow-md max-w-4xl mx-auto relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-100 rounded-full opacity-20"></div>
-            
+
             <div className="relative z-10">
               <div className="text-center">
                 <h2 className="text-2xl font-bold mb-4 text-text-heading">Έτοιμοι να δείτε αντίστοιχα αποτελέσματα;</h2>
                 <p className="text-text-light max-w-2xl mx-auto mb-8">
                   Επικοινωνήστε μαζί μας για μια δωρεάν αξιολόγηση της τρέχουσας ψηφιακής παρουσίας σας και των δυνατοτήτων βελτίωσης.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Link href="/epikoinonia" className="btn-primary py-3 px-8 rounded-md">
                     Ζητήστε Δωρεάν Αξιολόγηση
