@@ -1,0 +1,97 @@
+{
+  "name": "Doctor Digital - Ιατρικό Marketing",
+  "short_name": "Doctor Digital",
+  "description": "Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#53C2A0",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop.png",
+      "type": "image/png",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshots/mobile.png",
+      "type": "image/png",
+      "sizes": "720x1280",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Υπηρεσίες",
+      "short_name": "Υπηρεσίες",
+      "description": "Δείτε τις υπηρεσίες μας",
+      "url": "/ypiresies",
+      "icons": [{ "src": "/icons/services-icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Επικοινωνία",
+      "short_name": "Επικοινωνία",
+      "description": "Επικοινωνήστε μαζί μας",
+      "url": "/epikoinonia",
+      "icons": [{ "src": "/icons/contact-icon.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}
