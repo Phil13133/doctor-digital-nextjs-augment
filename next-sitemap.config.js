@@ -9,13 +9,11 @@ module.exports = {
     '/500',
     '/_offline',
     '/cookies',
-    '/ypiresies/veltistopoiisi-michanes-anazitisis',
-    '/ypiresies/diacheirisi-diafimiseon-google',
-    '/ypiresies/syggrafi-periechomenou',
-    '/ypiresies/anaptyxi-iatrikon-efarmogon-istou',
-    '/ypiresies/iatriko-marketing',
-    '/ypiresies/diacheirisi-social-media',
+    '/oroi-xrisis',
+    '/politiki-aporritou',
   ],
+  changefreq: 'weekly',
+  priority: 0.7,
   robotsTxtOptions: {
     policies: [
       {
@@ -23,8 +21,31 @@ module.exports = {
         allow: '/',
       },
     ],
-    additionalSitemaps: [
-      'https://doctordigital.gr/sitemap.xml',
-    ],
+  },
+  transform: async (config, path) => {
+    // Custom priority for specific pages
+    let priority = config.priority;
+    let changefreq = config.changefreq;
+
+    if (path === '/') {
+      priority = 1.0;
+      changefreq = 'daily';
+    } else if (path === '/ypiresies') {
+      priority = 0.9;
+      changefreq = 'weekly';
+    } else if (path.startsWith('/ypiresies/')) {
+      priority = 0.8;
+      changefreq = 'monthly';
+    } else if (path === '/blog') {
+      priority = 0.8;
+      changefreq = 'weekly';
+    }
+
+    return {
+      loc: path,
+      changefreq,
+      priority,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+    };
   },
 };

@@ -1,0 +1,32 @@
+# Doctor Digital - Robots.txt
+# https://doctordigital.gr
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and utility paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*?*
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /public/images/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+# Crawl delay for all bots
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://doctordigital.gr/sitemap.xml

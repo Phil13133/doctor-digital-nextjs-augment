@@ -13,9 +13,9 @@ node_modules/
 # Production
 /build
 
-# Public auto-generated SEO files
-/public/robots.txt
-/public/sitemap.xml
+# We now track these files in Git
+# /public/robots.txt
+# /public/sitemap.xml
 
 # Misc
 .DS_Store
