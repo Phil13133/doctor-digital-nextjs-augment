@@ -1,13 +1,14 @@
 import { createClient, ContentfulClientApi } from 'contentful';
 
 // Ensure environment variables are defined
-const spaceId = process.env.CONTENTFUL_SPACE_ID;
-const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+const spaceId = process.env.CONTENTFUL_SPACE_ID || 'dummy-space-id';
+const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN || 'dummy-access-token';
 const previewAccessToken = process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN;
 
-if (!spaceId || !accessToken) {
+// In production, we should validate the credentials
+if (process.env.NODE_ENV === 'production' && (!spaceId || !accessToken || spaceId === 'dummy-space-id' || accessToken === 'dummy-access-token')) {
   throw new Error(
-    'Contentful Space ID and Access Token must be defined in .env.local'
+    'Contentful Space ID and Access Token must be defined in environment variables for production'
   );
 }
 

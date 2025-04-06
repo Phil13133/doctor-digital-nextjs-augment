@@ -1,12 +1,9 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image'; // Import next/image
-// Removed duplicate imports below
-import { getAllBlogPosts, BlogPostEntry } from '@/lib/contentfulApi'; // Import fetch function and type
-// Removed date-fns imports
-// import { format, parseISO } from 'date-fns';
-// import { el } from 'date-fns/locale';
+import Image from 'next/image';
+import { getAllBlogPosts, BlogPostEntry } from '@/lib/contentfulApi';
+import mockBlogPostCollection from './mock-data'; // Import mock data
 
 export const metadata: Metadata = {
   title: 'Blog | Doctor Digital',
@@ -23,8 +20,20 @@ function getFieldValue<T>(field: any): T | undefined {
 }
 
 export default async function BlogPage() {
-  // Fetch blog posts from Contentful
-  const blogPostsCollection = await getAllBlogPosts();
+  // Fetch blog posts from Contentful or use mock data if Contentful is not available
+  let blogPostsCollection;
+  try {
+    blogPostsCollection = await getAllBlogPosts();
+    // Check if we got any posts back
+    if (!blogPostsCollection?.items?.length) {
+      console.log('No posts returned from Contentful, using mock data');
+      blogPostsCollection = mockBlogPostCollection;
+    }
+  } catch (error) {
+    console.error('Error fetching blog posts from Contentful:', error);
+    blogPostsCollection = mockBlogPostCollection;
+  }
+
   // Use optional chaining in case items is null/undefined
   let posts = blogPostsCollection?.items ?? [];
 

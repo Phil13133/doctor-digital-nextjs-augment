@@ -13,6 +13,7 @@ import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/contentfulApi';
 import BlogPostSchema from '@/components/schema/BlogPostSchema';
 import BreadcrumbNav from '@/components/ui/BreadcrumbNav';
 import { SITE } from '@/constants/site';
+import { getMockBlogPostBySlug } from '../mock-data';
 
 // Removed formatDate function
 
@@ -23,10 +24,22 @@ function getFieldValue<T>(field: any): T | undefined {
 
 // Generate static paths for all blog posts at build time
 export async function generateStaticParams() {
-  const allPosts = await getAllBlogPosts();
-  return allPosts?.items?.map((post) => ({
+  try {
+    const allPosts = await getAllBlogPosts();
+    if (allPosts?.items?.length) {
+      return allPosts.items.map((post) => ({
+        slug: post.fields.slug,
+      }));
+    }
+  } catch (error) {
+    console.error('Error generating static params for blog posts:', error);
+  }
+
+  // Fallback to mock data if Contentful is not available
+  const mockPosts = await import('../mock-data').then(mod => mod.mockBlogPosts);
+  return mockPosts.map((post) => ({
     slug: post.fields.slug,
-  })) ?? [];
+  }));
 }
 
 // Generate metadata for the specific blog post page
@@ -39,7 +52,21 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const post = await getBlogPostBySlug(params.slug);
+  let post;
+
+  try {
+    // Try to get the post from Contentful
+    post = await getBlogPostBySlug(params.slug);
+
+    // If not found in Contentful, try mock data
+    if (!post) {
+      post = getMockBlogPostBySlug(params.slug);
+    }
+  } catch (error) {
+    console.error(`Error generating metadata for blog post with slug ${params.slug}:`, error);
+    // Try mock data as fallback
+    post = getMockBlogPostBySlug(params.slug);
+  }
 
   if (!post) {
     return {
@@ -85,9 +112,22 @@ export async function generateMetadata(
 
 // The main component to render the blog post
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getBlogPostBySlug(params.slug);
+  // Try to get the post from Contentful, fall back to mock data if not available
+  let post;
+  try {
+    post = await getBlogPostBySlug(params.slug);
 
-  // If post not found, return 404
+    // If post not found in Contentful, try mock data
+    if (!post) {
+      console.log(`Post with slug ${params.slug} not found in Contentful, trying mock data`);
+      post = getMockBlogPostBySlug(params.slug);
+    }
+  } catch (error) {
+    console.error(`Error fetching blog post with slug ${params.slug}:`, error);
+    post = getMockBlogPostBySlug(params.slug);
+  }
+
+  // If post not found in either source, return 404
   if (!post) {
     notFound();
   }

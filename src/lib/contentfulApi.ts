@@ -51,17 +51,29 @@ export type BlogPostCollection = EntryCollection<BlogPostSkeleton, undefined>;
  * @returns {Promise<BlogPostCollection>} A promise resolving to the collection of blog post entries.
  */
 export async function getAllBlogPosts(isPreview = false): Promise<BlogPostCollection> {
-  const client = getContentfulClient(isPreview);
+  try {
+    const client = getContentfulClient(isPreview);
 
-  // Use the BlogPostSkeleton for type safety
-  const entries = await client.getEntries<BlogPostSkeleton>({
-    content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
-    // order: ['-fields.publicationDate'], // Remove ordering - API rejects this field
-    // select: [...] // Remove select - API rejects publicationDate in select
-  });
+    // Use the BlogPostSkeleton for type safety
+    const entries = await client.getEntries<BlogPostSkeleton>({
+      content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
+      // order: ['-fields.publicationDate'], // Remove ordering - API rejects this field
+      // select: [...] // Remove select - API rejects publicationDate in select
+    });
 
-  // Note: Sorting will be done client-side due to API limitations with publicationDate
-  return entries;
+    // Note: Sorting will be done client-side due to API limitations with publicationDate
+    return entries;
+  } catch (error) {
+    console.error('Error fetching blog posts:', error);
+    // Return an empty collection instead of throwing
+    return {
+      total: 0,
+      skip: 0,
+      limit: 0,
+      items: [],
+      includes: {}
+    } as BlogPostCollection;
+  }
 }
 
 /**
@@ -71,19 +83,24 @@ export async function getAllBlogPosts(isPreview = false): Promise<BlogPostCollec
  * @returns {Promise<BlogPostEntry | null>} A promise resolving to the blog post entry or null if not found.
  */
 export async function getBlogPostBySlug(slug: string, isPreview = false): Promise<BlogPostEntry | null> {
-  const client = getContentfulClient(isPreview);
+  try {
+    const client = getContentfulClient(isPreview);
 
-  // Use the BlogPostSkeleton for type safety
-  const entries = await client.getEntries<BlogPostSkeleton>({
-    content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
-    'fields.slug': slug,
-    limit: 1,
-    include: 2, // Restore include
-  });
+    // Use the BlogPostSkeleton for type safety
+    const entries = await client.getEntries<BlogPostSkeleton>({
+      content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
+      'fields.slug': slug,
+      limit: 1,
+      include: 2, // Restore include
+    });
 
-  if (entries.items && entries.items.length > 0) {
-    return entries.items[0];
+    if (entries.items && entries.items.length > 0) {
+      return entries.items[0];
+    }
+
+    return null;
+  } catch (error) {
+    console.error(`Error fetching blog post with slug ${slug}:`, error);
+    return null;
   }
-
-  return null;
 }
