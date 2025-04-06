@@ -45,7 +45,7 @@ const services = [
     title: 'Ιατρικό Λογισμικό & Web Apps',
     shortDescription: 'Εξειδικευμένες εφαρμογές για διαχείριση ραντεβού, ιατρικά αρχεία και αυτοματοποίηση διαδικασιών του ιατρείου σας.',
     path: '/ypiresies/iatriko-logismiko',
-    iconSrc: '/images/icons/web-marketing.svg',
+    iconSrc: '/images/icons/software-development.svg',
   },
 ];
 
@@ -93,7 +93,7 @@ export default function ServicesPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Abstract background shape */}
         <div className="absolute right-0 top-32 w-64 h-64 bg-brand-100 rounded-full opacity-10 -z-10 blur-3xl"></div>
         <div className="absolute left-20 bottom-20 w-80 h-80 bg-brand-200 rounded-full opacity-5 -z-10 blur-3xl"></div>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
             {services.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-md border border-gray-100 p-6 hover:shadow-lg transition-all duration-300 flex flex-col h-full">
                 <div className="mb-4 w-16 h-16">
-                  <Image 
+                  <Image
                     src={service.iconSrc}
                     alt={service.title}
                     width={64}
@@ -211,15 +211,15 @@ export default function ServicesPage() {
           <div className="bg-white p-10 rounded-lg shadow-lg max-w-4xl mx-auto border border-brand-100 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-brand-50 rounded-full opacity-50"></div>
-            
+
             <div className="relative z-10">
               <div className="text-center mb-8">
                 <p className="text-2xl font-bold mb-4 text-text-heading">Ενισχύστε την Online Παρουσία του Ιατρείου σας</p>
                 <p className="text-text-light mb-8 max-w-2xl mx-auto">
-                  Εξειδικευόμαστε στην προώθηση ιατρικών υπηρεσιών και την προσέλκυση των κατάλληλων ασθενών. 
+                  Εξειδικευόμαστε στην προώθηση ιατρικών υπηρεσιών και την προσέλκυση των κατάλληλων ασθενών.
                   Αφήστε μας να δημιουργήσουμε μια στρατηγική ειδικά για εσάς.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <Link href="/epikoinonia" className="btn-primary py-3 px-8 rounded-md">
                     Δωρεάν Αξιολόγηση
