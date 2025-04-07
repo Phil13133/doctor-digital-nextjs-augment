@@ -7,7 +7,8 @@ import type { Entry, EntryCollection, EntrySkeletonType, Asset, EntryFieldTypes 
 // Skeleton for the Author content type (assuming API ID is 'author')
 export type AuthorSkeleton = EntrySkeletonType<{
   name: EntryFieldTypes.Symbol; // Re-added EntryFieldTypes.
-  // Add other author fields if they exist (e.g., picture: EntryFieldTypes.AssetLink)
+  avatar?: EntryFieldTypes.AssetLink; // Updated to match Contentful field name
+  bio?: EntryFieldTypes.Text; // Added bio field if it exists
 }>;
 export type AuthorEntry = Entry<AuthorSkeleton, undefined>;
 
@@ -26,7 +27,7 @@ export type BlogPostSkeleton = EntrySkeletonType<{
   internalName?: EntryFieldTypes.Symbol; // Optional internal name field, Re-added EntryFieldTypes.
   title: EntryFieldTypes.Symbol; // Re-added EntryFieldTypes.
   slug: EntryFieldTypes.Symbol; // Re-added EntryFieldTypes.
-  publicationDate: EntryFieldTypes.Date; // Reverted back to Date type
+  publishedDate: EntryFieldTypes.Date; // Updated to match Contentful field name
   featuredImage?: EntryFieldTypes.AssetLink; // Re-added EntryFieldTypes.
   shortDescription?: EntryFieldTypes.Text; // Added based on Contentful model
   excerpt?: EntryFieldTypes.Text; // Assuming 'Subtitle' field maps to this, or a dedicated field, Re-added EntryFieldTypes.

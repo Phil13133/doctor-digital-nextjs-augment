@@ -41,7 +41,50 @@ const createMockBlogPost = (id: string, title: string, slug: string, excerpt: st
           }
         ]
       },
-      publicationDate: new Date().toISOString()
+      publishedDate: new Date().toISOString(),
+      author: {
+        sys: {
+          id: 'author-1',
+          type: 'Entry',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          locale: 'el',
+          contentType: {
+            sys: {
+              id: 'author',
+              type: 'Link',
+              linkType: 'ContentType'
+            }
+          }
+        },
+        fields: {
+          name: 'Pavlos Alektoridis',
+          picture: {
+            sys: {
+              id: 'author-picture-1',
+              type: 'Asset',
+              createdAt: new Date().toISOString(),
+              updatedAt: new Date().toISOString(),
+              locale: 'el'
+            },
+            fields: {
+              title: 'Author Profile Picture',
+              file: {
+                url: '//images.ctfassets.net/sample/author-profile.jpg',
+                details: {
+                  size: 12345,
+                  image: {
+                    width: 200,
+                    height: 200
+                  }
+                },
+                fileName: 'author-profile.jpg',
+                contentType: 'image/jpeg'
+              }
+            }
+          }
+        }
+      }
     },
     metadata: {
       tags: []

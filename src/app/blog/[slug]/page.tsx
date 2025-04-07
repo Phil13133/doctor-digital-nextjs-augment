@@ -5,9 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import type { Document } from '@contentful/rich-text-types';
-// Removed date-fns imports as date is not displayed
-// import { format, parseISO } from 'date-fns';
-// import { el } from 'date-fns/locale';
+// Re-add date-fns imports for schema formatting
+import { format, parseISO } from 'date-fns';
 
 import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/contentfulApi';
 import BlogPostSchema from '@/components/schema/BlogPostSchema';
@@ -89,8 +88,8 @@ export async function generateMetadata(
       description: seoData?.seoDescription || post.fields.excerpt || post.fields.subtitle,
       url: `${SITE.url}/blog/${post.fields.slug}`,
       type: 'article',
-      // publishedTime: post.fields.publicationDate, // Removed due to API issue
-      // Add modifiedTime if available in your model
+      publishedTime: post.fields.publishedDate || post.sys.createdAt,
+      modifiedTime: post.sys.updatedAt,
       authors: [getFieldValue<any>(post.fields.author)?.fields?.name || SITE.name],
       images: [
         {
@@ -114,6 +113,7 @@ export async function generateMetadata(
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
   // Try to get the post from Contentful, fall back to mock data if not available
   let post;
+  let usingMockData = false;
   try {
     post = await getBlogPostBySlug(params.slug);
 
@@ -121,10 +121,14 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     if (!post) {
       console.log(`Post with slug ${params.slug} not found in Contentful, trying mock data`);
       post = getMockBlogPostBySlug(params.slug);
+      usingMockData = true;
+    } else {
+      console.log(`Successfully fetched post with slug ${params.slug} from Contentful`);
     }
   } catch (error) {
     console.error(`Error fetching blog post with slug ${params.slug}:`, error);
     post = getMockBlogPostBySlug(params.slug);
+    usingMockData = true;
   }
 
   // If post not found in either source, return 404
@@ -132,9 +136,21 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     notFound();
   }
 
-  // Destructure fields *after* the null check - remove publicationDate
-  const { title, featuredImage, content, author, seoFields, excerpt, subtitle } = post.fields;
+  // Destructure fields *after* the null check - use publishedDate instead of publicationDate
+  const { title, featuredImage, content, author, seoFields, excerpt, subtitle, publishedDate } = post.fields;
   const authorName = getFieldValue<any>(author)?.fields?.name || 'Doctor Digital';
+
+  // Debug author object
+  console.log('Author object:', JSON.stringify(getFieldValue<any>(author), null, 2));
+
+  // Get author avatar with proper nested field access
+  const authorAvatar = getFieldValue<any>(author)?.fields?.avatar;
+  console.log('Author avatar:', JSON.stringify(authorAvatar, null, 2));
+
+  // Get the URL with proper nested field access
+  // In Contentful, the avatar field is a reference to an Asset
+  const authorAvatarUrl = authorAvatar?.fields?.file?.url || null;
+  console.log('Author avatar URL:', authorAvatarUrl);
   const imageUrl = getFieldValue<any>(featuredImage)?.fields?.file?.url;
   const imageAlt = getFieldValue<any>(featuredImage)?.fields?.title || title;
   const seoData = getFieldValue<any>(seoFields)?.fields;
@@ -146,12 +162,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         headline={title}
         description={seoData?.seoDescription || excerpt || subtitle || ''}
         image={imageUrl ? `https:${imageUrl}` : ''}
-        datePublished="" // Pass empty string to satisfy prop type
-        // dateModified={...} // Add if you have a modified date field
+        datePublished={publishedDate || new Date().toISOString()} // Use published date or fallback to current date
+        dateModified={post.sys.updatedAt} // Use the system updatedAt field
         author={{ name: authorName }}
         publisher={{ name: SITE.name, logo: `${SITE.url}${SITE.logoPath}` }}
         url={`${SITE.url}/blog/${post.fields.slug}`}
-        // keywords={...} // Add if you have a keywords field
+        keywords={seoData?.keywords?.split(',').map(k => k.trim()) || []}
         articleBody={content ? JSON.stringify(content) : undefined} // Pass raw rich text JSON
       />
 
@@ -172,9 +188,36 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
           <div className="text-gray-600 text-sm flex items-center space-x-4">
-            {/* Date display fully removed */}
-            <span>Από {authorName}</span>
-            {/* Add category if available */}
+            {/* Display date */}
+            {publishedDate && (
+              <span className="text-gray-500">
+                {new Date(publishedDate).toLocaleDateString('el-GR', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </span>
+            )}
+
+            {/* Author with photo */}
+            <div className="flex items-center">
+              {authorAvatarUrl ? (
+                <div className="flex items-center">
+                  <div className="w-8 h-8 rounded-full overflow-hidden mr-2">
+                    <Image
+                      src={`https:${authorAvatarUrl}`}
+                      alt={authorName}
+                      width={32}
+                      height={32}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <span>Από {authorName}</span>
+                </div>
+              ) : (
+                <span>Από {authorName}</span>
+              )}
+            </div>
           </div>
         </header>
 

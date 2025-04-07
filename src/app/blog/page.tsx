@@ -22,16 +22,22 @@ function getFieldValue<T>(field: any): T | undefined {
 export default async function BlogPage() {
   // Fetch blog posts from Contentful or use mock data if Contentful is not available
   let blogPostsCollection;
+  let usingMockData = false;
   try {
     blogPostsCollection = await getAllBlogPosts();
     // Check if we got any posts back
     if (!blogPostsCollection?.items?.length) {
       console.log('No posts returned from Contentful, using mock data');
       blogPostsCollection = mockBlogPostCollection;
+      usingMockData = true;
+    } else {
+      console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
+      console.log('Available slugs:', blogPostsCollection.items.map(post => post.fields.slug));
     }
   } catch (error) {
     console.error('Error fetching blog posts from Contentful:', error);
     blogPostsCollection = mockBlogPostCollection;
+    usingMockData = true;
   }
 
   // Use optional chaining in case items is null/undefined
@@ -94,10 +100,36 @@ export default async function BlogPage() {
                 <p className="text-gray-600 mb-4">{featuredPost.fields.excerpt || featuredPost.fields.subtitle}</p>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
-                    {/* Placeholder for author image */}
-                    <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
+                    {/* Author image */}
+                    {/* Debug author avatar */}
+                    {console.log('Featured post author:', JSON.stringify(getFieldValue<any>(featuredPost.fields.author), null, 2))}
+                    {console.log('Featured post author avatar:', JSON.stringify(getFieldValue<any>(featuredPost.fields.author)?.fields?.avatar, null, 2))}
+                    {getFieldValue<any>(featuredPost.fields.author)?.fields?.avatar?.fields?.file?.url ? (
+                      <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
+                        <Image
+                          src={`https:${getFieldValue<any>(featuredPost.fields.author)?.fields.avatar.fields.file.url}`}
+                          alt={getFieldValue<any>(featuredPost.fields.author)?.fields?.name || 'Doctor Digital'}
+                          width={40}
+                          height={40}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
+                    )}
                     {/* Safely access linked author name */}
-                    <span className="font-medium">{getFieldValue<any>(featuredPost.fields.author)?.fields?.name || 'Doctor Digital'}</span>
+                    <div>
+                      <span className="font-medium">{getFieldValue<any>(featuredPost.fields.author)?.fields?.name || 'Doctor Digital'}</span>
+                      {featuredPost.fields.publishedDate && (
+                        <div className="text-xs text-gray-500">
+                          {new Date(featuredPost.fields.publishedDate).toLocaleDateString('el-GR', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </div>
+                      )}
+                    </div>
                   </div>
                   <Link href={`/blog/${featuredPost.fields.slug}`} className="text-primary font-medium inline-flex items-center">
                     Διαβάστε περισσότερα
@@ -131,10 +163,20 @@ export default async function BlogPage() {
                   )}
                   <div>
                     <div className="flex items-center text-xs text-gray-500 mb-1">
-                      {/* <span className="bg-blue-50 text-primary px-2 py-0.5 rounded-full font-medium">{post.fields.category}</span> */}
-                      {/* Removed date display */}
-                      {/* <span className="mx-2">•</span> */}
-                      {/* <span>{formatDate(post.fields.publicationDate)}</span> */}
+                      {/* Display author and date */}
+                      <span>{getFieldValue<any>(post.fields.author)?.fields?.name || 'Doctor Digital'}</span>
+                      {post.fields.publishedDate && (
+                        <>
+                          <span className="mx-2">•</span>
+                          <span>
+                            {new Date(post.fields.publishedDate).toLocaleDateString('el-GR', {
+                              year: 'numeric',
+                              month: 'short',
+                              day: 'numeric'
+                            })}
+                          </span>
+                        </>
+                      )}
                     </div>
                     <h3 className="font-bold mb-1 hover:text-primary transition-colors">
                       <Link href={`/blog/${post.fields.slug}`}>{post.fields.title}</Link>
