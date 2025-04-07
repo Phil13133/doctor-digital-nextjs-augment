@@ -7,6 +7,8 @@ import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
+import RelatedServices from '@/components/services/RelatedServices';
+import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
   title: 'Διαφήμιση Google για Γιατρούς & Κλινικές',
@@ -199,7 +201,7 @@ export default function GoogleAdsPage() {
                 </svg>
               </div>
               <p className="text-lg mb-4 leading-relaxed">
-                Η Google Ads (πρώην AdWords) είναι ένα σύστημα <strong>πληρωμής ανά κλικ (PPC)</strong> που σας επιτρέπει να εμφανίζεστε στην κορυφή των αποτελεσμάτων αναζήτησης της Google, όταν οι ασθενείς αναζητούν υπηρεσίες όπως οι δικές σας.
+                Η Google Ads (πρώην AdWords) είναι ένα σύστημα <strong>πληρωμής ανά κλικ (PPC)</strong> που σας επιτρέπει να εμφανίζεστε στην κορυφή των αποτελεσμάτων αναζήτησης της Google, όταν οι ασθενείς αναζητούν υπηρεσίες όπως οι δικές σας. Σε συνδυασμό με <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">στρατηγικές SEO</Link>, μπορείτε να κυριαρχήσετε στα αποτελέσματα αναζήτησης.
               </p>
               <p className="text-lg leading-relaxed">
                 Είναι η πιο άμεση και μετρήσιμη μέθοδος για να αυξήσετε τα ραντεβού σας, επιτρέποντάς σας να στοχεύσετε με ακρίβεια δυνητικούς ασθενείς που αναζητούν ενεργά έναν γιατρό της ειδικότητάς σας στην περιοχή σας.
@@ -412,7 +414,7 @@ export default function GoogleAdsPage() {
             <ResultItem
               number="58%"
               title="Μείωση στο κόστος ανά ραντεβού"
-              description="Μέσω βελτιστοποίησης Google Ads και landing pages, πετύχαμε μείωση κόστους 58% για οδοντιατρικό κέντρο."
+              description="Μέσω βελτιστοποίησης Google Ads και <Link href='/ypiresies/kataskevi-istoselidon-gia-giatrous' className='text-brand-200 hover:underline'>ειδικών landing pages</Link>, πετύχαμε μείωση κόστους 58% για οδοντιατρικό κέντρο."
             />
 
             <ResultItem
@@ -433,6 +435,21 @@ export default function GoogleAdsPage() {
               <span className="font-bold">Γνωρίζατε ότι:</span> Το 86% των ασθενών χρησιμοποιεί την Google όταν αναζητά ιατρικές υπηρεσίες και το 72% επιλέγει από τα πρώτα 3-4 αποτελέσματα της σελίδας;
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/diafimisi-sth-google" />
+        </div>
+      </section>
+
+      {/* Related Blog Posts Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          {/* @ts-expect-error Async Server Component */}
+          <RelatedBlogPosts topic="google ads" />
         </div>
       </section>
 

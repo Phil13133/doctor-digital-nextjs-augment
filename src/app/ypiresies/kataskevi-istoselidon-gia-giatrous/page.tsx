@@ -8,6 +8,8 @@ import ServiceSchema from '@/components/schema/ServiceSchema';
 import { CheckIcon, ArrowRightIcon } from '@/components/icons';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
+import RelatedServices from '@/components/services/RelatedServices';
+import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
   title: 'Κατασκευή Ιστοσελίδων για Ιατρούς & Κλινικές | Doctor Digital',
@@ -249,7 +251,7 @@ export default function WebsitesPage() {
                 Κατασκευή Ιστοσελίδων για Ιατρούς & Κλινικές
               </h1>
               <p className="text-xl text-text-light mb-8 max-w-xl">
-                Σύγχρονες, responsive και SEO-ready ιστοσελίδες, ειδικά σχεδιασμένες για τις ανάγκες του ιατρικού κλάδου.
+                Σύγχρονες, responsive και <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">SEO-ready</Link> ιστοσελίδες, ειδικά σχεδιασμένες για τις ανάγκες του ιατρικού κλάδου.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center">
@@ -292,7 +294,7 @@ export default function WebsitesPage() {
               <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
               <p className="text-lg text-text-light mb-8">
                 Η ιατρική ιστοσελίδα δεν είναι απλώς μια παρουσία στο διαδίκτυο. Είναι το πρώτο σημείο επαφής με τους ασθενείς σας.
-                Με τη σωστή κατασκευή και βελτιστοποίηση, μπορεί να μετατραπεί σε εργαλείο προσέλκυσης νέων ραντεβού και ενίσχυσης της φήμης σας.
+                Με τη σωστή κατασκευή και βελτιστοποίηση, μπορεί να μετατραπεί σε εργαλείο προσέλκυσης νέων ραντεβού και ενίσχυσης της φήμης σας. Συνδυάζοντας την με <Link href="/ypiresies/copywriting-gia-iatrous" className="text-brand-200 hover:underline">υψηλής ποιότητας ιατρικό περιεχόμενο</Link>, αυξάνετε την αποτελεσματικότητά της.
               </p>
             </div>
 
@@ -531,6 +533,21 @@ export default function WebsitesPage() {
               <span className="font-bold">Γνωρίζατε ότι:</span> Το 70% των ασθενών θα επισκεφθούν την ιστοσελίδα ενός γιατρού πριν κλείσουν το πρώτο τους ραντεβού για να αξιολογήσουν την αξιοπιστία του.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/kataskevi-istoselidon-gia-giatrous" />
+        </div>
+      </section>
+
+      {/* Related Blog Posts Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          {/* @ts-expect-error Async Server Component */}
+          <RelatedBlogPosts topic="ιστοσελίδες" />
         </div>
       </section>
 

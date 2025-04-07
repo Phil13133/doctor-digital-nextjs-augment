@@ -7,6 +7,8 @@ import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
+import RelatedServices from '@/components/services/RelatedServices';
+import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
   title: 'SEO για Ιατρικές Ιστοσελίδες',
@@ -231,7 +233,7 @@ export default function SeoForMedicalPages() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Τοπικό SEO για Google Maps</h3>
-                  <p className="text-gray-600">Βελτιστοποίηση του προφίλ σας στο Google Business Profile ώστε να εμφανίζεστε στους τοπικούς χάρτες και αναζητήσεις.</p>
+                  <p className="text-gray-600">Βελτιστοποίηση του προφίλ σας στο Google Business Profile ώστε να εμφανίζεστε στους τοπικούς χάρτες και αναζητήσεις. Συνδυάζεται άριστα με <Link href="/ypiresies/diafimisi-sth-google" className="text-brand-200 hover:underline">διαφημίσεις Google Ads</Link> για μέγιστη ορατότητα.</p>
                 </div>
               </div>
             </div>
@@ -248,7 +250,7 @@ export default function SeoForMedicalPages() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Δημιουργία ιατρικού περιεχομένου</h3>
-                  <p className="text-gray-600">Συγγραφή άρθρων, σελίδων υπηρεσιών και blog posts με επιστημονικά τεκμηριωμένο ιατρικό περιεχόμενο που προσελκύει επισκέπτες.</p>
+                  <p className="text-gray-600">Συγγραφή άρθρων, σελίδων υπηρεσιών και blog posts με επιστημονικά τεκμηριωμένο ιατρικό περιεχόμενο που προσελκύει επισκέπτες. Η <Link href="/ypiresies/copywriting-gia-iatrous" className="text-brand-200 hover:underline">υπηρεσία copywriting για ιατρούς</Link> μας εξασφαλίζει περιεχόμενο υψηλής ποιότητας.</p>
                 </div>
               </div>
             </div>
@@ -296,12 +298,19 @@ export default function SeoForMedicalPages() {
         </div>
       </section>
 
+      {/* Related Services Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/seo-gia-iatrous" />
+        </div>
+      </section>
+
       {/* Case Studies / Results Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">Πραγματικά Αποτελέσματα από Πελάτες μας</h2>
           <p className="text-lg max-w-2xl mx-auto mb-10 text-center">
-            Οι στρατηγικές SEO της Doctor Digital έχουν φέρει μετρήσιμα και σταθερά αποτελέσματα σε ιατρούς και κλινικές σε όλη την Ελλάδα:
+            Οι στρατηγικές SEO της Doctor Digital έχουν φέρει μετρήσιμα και σταθερά αποτελέσματα σε ιατρούς και κλινικές σε όλη την Ελλάδα. Οι πελάτες μας επωφελούνται επίσης από τις <Link href="/ypiresies/kataskevi-istoselidon-gia-giatrous" className="text-brand-200 hover:underline">υπηρεσίες κατασκευής ιστοσελίδων</Link> μας:
           </p>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -377,6 +386,21 @@ export default function SeoForMedicalPages() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/seo-gia-iatrous" />
+        </div>
+      </section>
+
+      {/* Related Blog Posts Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          {/* @ts-expect-error Async Server Component */}
+          <RelatedBlogPosts topic="seo" />
         </div>
       </section>
 

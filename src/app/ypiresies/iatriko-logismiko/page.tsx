@@ -8,6 +8,8 @@ import ServiceSchema from '@/components/schema/ServiceSchema';
 import { CheckIcon, ArrowRightIcon } from '@/components/icons';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
+import RelatedServices from '@/components/services/RelatedServices';
+import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
   title: 'Ιατρικό Λογισμικό | Σύγχρονο Ιατρικό Software Για Γιατρούς',
@@ -206,7 +208,7 @@ export default function MedicalSoftwarePage() {
                       <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
                         <CheckIcon size={14} color="#16a34a" />
                       </div>
-                      <span>Μείωση διοικητικού χρόνου & λιγότερη γραφειοκρατία</span>
+                      <span>Μείωση διοικητικού χρόνου & λιγότερη γραφειοκρατία - συνδυάζεται άριστα με <Link href="/ypiresies/kataskevi-istoselidon-gia-giatrous" className="text-brand-200 hover:underline">την ιστοσελίδα σας</Link></span>
                     </li>
                     <li className="flex items-start">
                       <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
@@ -224,7 +226,7 @@ export default function MedicalSoftwarePage() {
                       <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
                         <CheckIcon size={14} color="#16a34a" />
                       </div>
-                      <span>Καλύτερη εμπειρία για τους ασθενείς σας</span>
+                      <span>Καλύτερη εμπειρία για τους ασθενείς σας και αύξηση της <Link href="/ypiresies/diafimisi-sth-google" className="text-brand-200 hover:underline">ψηφιακής σας προβολής</Link></span>
                     </li>
                   </ul>
                 </div>
@@ -616,6 +618,21 @@ export default function MedicalSoftwarePage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/iatriko-logismiko" />
+        </div>
+      </section>
+
+      {/* Related Blog Posts Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          {/* @ts-expect-error Async Server Component */}
+          <RelatedBlogPosts topic="λογισμικό" />
         </div>
       </section>
 

@@ -7,6 +7,8 @@ import FAQToggleItem from '@/components/FAQToggleItem';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
+import RelatedServices from '@/components/services/RelatedServices';
+import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
   title: 'Copywriting για Γιατρούς & Κλινικές | Κειμενογράφος για site',
@@ -133,7 +135,7 @@ export default function CopywritingForDoctors() {
                 </svg>
               </div>
               <p className="text-lg mb-4 leading-relaxed">
-                Το copywriting δεν είναι απλά "ωραία" κείμενα. Είναι στρατηγικά σχεδιασμένο περιεχόμενο που στοχεύει σε συγκεκριμένα αποτελέσματα για το ιατρείο ή την κλινική σας.
+                Το copywriting δεν είναι απλά "ωραία" κείμενα. Είναι στρατηγικά σχεδιασμένο περιεχόμενο που στοχεύει σε συγκεκριμένα αποτελέσματα για το ιατρείο ή την κλινική σας. Είναι απαραίτητο για την <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">βελτιστοποίηση SEO</Link> της ιστοσελίδας σας.
               </p>
               <p className="text-lg mb-6 leading-relaxed">
                 Το επαγγελματικό ιατρικό copywriting:
@@ -205,7 +207,7 @@ export default function CopywritingForDoctors() {
                   <svg className="w-5 h-5 text-accent mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Κατατάσσεται στην Google</span>
+                  <span>Κατατάσσεται στην Google και ενισχύει τις <Link href="/ypiresies/diafimisi-sth-google" className="text-brand-200 hover:underline">διαφημιστικές σας καμπάνιες</Link></span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-accent mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -224,6 +226,21 @@ export default function CopywritingForDoctors() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-background">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/copywriting-gia-iatrous" />
+        </div>
+      </section>
+
+      {/* Related Blog Posts Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          {/* @ts-expect-error Async Server Component */}
+          <RelatedBlogPosts topic="περιεχόμενο" />
         </div>
       </section>
     </>
