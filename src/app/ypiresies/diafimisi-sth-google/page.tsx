@@ -11,7 +11,7 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'Διαφήμιση Google για Γιατρούς & Κλινικές',
+  title: 'Google Ads για Γιατρούς & Κλινικές',
   description: 'Διαφήμιση στη Google για γιατρούς και επαγγελματίες υγείας με στοχευμένες καμπάνιες που φέρνουν αποτελέσματα. Εξειδίκευση στο Ιατρικό Marketing από την Doctor Digital.',
   keywords: ['Διαφήμιση Google για Γιατρούς', 'Google Ads Ιατρεία', 'PPC Κλινικές', 'Καμπάνιες Google', 'Διαφήμιση Γιατρών Αθήνα', 'Ιατρικό Marketing'],
 };
@@ -78,9 +78,9 @@ const PricingPackage = ({
 
 // Result Item Component
 const ResultItem = ({ number, title, description }: { number: string; title: string; description: string }) => (
-  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-    <div className="text-4xl md:text-5xl font-bold text-black mb-4 mt-2 text-center">{number}</div>
-    <h3 className="text-xl font-bold mb-2 text-center">{title}</h3>
+  <div className="bg-white p-8 rounded-xl shadow-lg border-t-4 border-brand-200 hover:transform hover:scale-105 transition-all duration-300">
+    <div className="text-5xl md:text-6xl font-bold text-brand-200 mb-5 mt-2 text-center">{number}</div>
+    <h3 className="text-xl font-bold mb-3 text-center">{title}</h3>
     <p className="text-text-light text-base text-center">{description}</p>
   </div>
 );
@@ -113,7 +113,7 @@ export default function GoogleAdsPage() {
   return (
     <>
       <ServiceSchema
-        name="Διαφήμιση Google για Γιατρούς & Κλινικές"
+        name="Google Ads για Γιατρούς & Κλινικές"
         url="https://doctordigital.gr/ypiresies/diafimisi-sth-google"
         description="Αποκτήστε νέους ασθενείς μέσω στοχευμένων καμπανιών Google Ads ειδικά για τον ιατρικό σας κλάδο."
         provider={{
@@ -152,7 +152,7 @@ export default function GoogleAdsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Διαφήμιση Google για Γιατρούς, Κλινικές & Ιατρικά Κέντρα
+                Google Ads για Γιατρούς & Κλινικές
               </h1>
               <p className="text-xl text-text-light mb-8 max-w-xl">
                 Αποκτήστε νέους ασθενείς μέσω στοχευμένων καμπανιών Google Ads ειδικά για τον ιατρικό σας κλάδο.
@@ -193,7 +193,8 @@ export default function GoogleAdsPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Τι είναι η Διαφήμιση Google;</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Πώς λειτουργούν οι διαφημίσεις Google για ιατρεία</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <div className="bg-gray-50 p-8 rounded-lg mb-8 relative">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-full shadow-md">
                 <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +216,8 @@ export default function GoogleAdsPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Γιατί η Διαφήμιση Google είναι Ιδανική για Γιατρούς & Επαγγελματίες Υγείας</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Γιατί η Διαφήμιση Google είναι Ιδανική για Γιατρούς</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Η διαφήμιση Google προσφέρει μοναδικά πλεονεκτήματα για ιατρούς και κλινικές που θέλουν να προσελκύσουν νέους ασθενείς.
             </p>
@@ -286,11 +288,120 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
+
+
+      {/* Our Strategy for Medical Google Ads Campaigns */}
+      <section className="py-20 bg-gradient-to-b from-background to-gray-50">
+        <div className="container mx-auto">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6 text-center">
+                Η Στρατηγική Μας Για Καμπάνιες Google Ads Ιατρείων
+              </h2>
+              <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+              <p className="text-text-light max-w-2xl mx-auto text-lg">
+                Η επιτυχία των καμπανιών Google Ads για ιατρεία βασίζεται σε μια στρατηγική προσέγγιση που λαμβάνει υπόψη τις ιδιαιτερότητες του ιατρικού κλάδου.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-brand-200 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-brand-100 rounded-bl-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="mb-6 text-brand-200">
+                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4">Στοχευμένες Λέξεις-Κλειδιά Για Ιατρικές Υπηρεσίες</h3>
+                <p className="text-gray-600">
+                  Εντοπίζουμε τις ακριβείς λέξεις-κλειδιά που χρησιμοποιούν οι ασθενείς στην περιοχή σας όταν αναζητούν τις υπηρεσίες σας.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-brand-200 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-brand-100 rounded-bl-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="mb-6 text-brand-200">
+                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4">Γεωγραφική Στόχευση Ασθενών</h3>
+                <p className="text-gray-600">
+                  Εφαρμόζουμε προηγμένες τεχνικές γεωγραφικής στόχευσης ώστε οι διαφημίσεις σας να εμφανίζονται μόνο σε ασθενείς που βρίσκονται στην περιοχή σας.
+                </p>
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-brand-200 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-20 h-20 bg-brand-100 rounded-bl-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="mb-6 text-brand-200">
+                  <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold mb-4">Βελτιστοποίηση Καμπάνιας & Κόστους</h3>
+                <p className="text-gray-600">
+                  Συνεχής βελτιστοποίηση των καμπανιών με βάση τα δεδομένα απόδοσης. Μειώνουμε το κόστος ανά κλικ και αυξάνουμε το ποσοστό μετατροπής.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real Results Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Αποτελέσματα Από Καμπάνιες Ιατρείων
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+            <p className="text-text-light max-w-2xl mx-auto text-lg">
+              Αποδεδειγμένα αποτελέσματα από πραγματικές καμπάνιες ιατρικών επιχειρήσεων που διαχειριζόμαστε.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <ResultItem
+              number="58%"
+              title="Μείωση Στο Κόστος Ανά Ραντεβού"
+              description="Μέσω βελτιστοποίησης Google Ads και ειδικών landing pages, πετύχαμε μείωση κόστους 58% για οδοντιατρικό κέντρο."
+            />
+
+            <ResultItem
+              number="+200%"
+              title="Αύξηση Επισκέψεων"
+              description="Τριπλασιασμός οργανικών & πληρωμένων επισκέψεων για ορθοπαιδικό ιατρείο σε διάστημα 3 μηνών."
+            />
+
+            <ResultItem
+              number="#1"
+              title="Θέση Στην Google"
+              description="Πρώτη θέση στα αποτελέσματα της Google για το keyword 'ορθοπαιδικός Περιστέρι' σε μόλις 3 μήνες."
+            />
+          </div>
+
+          <div className="bg-gradient-to-r from-brand-100 to-brand-50 rounded-2xl p-8 mt-12 max-w-3xl mx-auto shadow-lg border border-brand-200/20">
+            <div className="flex items-center justify-center mb-3">
+              <svg className="w-6 h-6 text-brand-200 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="font-bold text-lg text-brand-800">Γνωρίζατε ότι:</span>
+            </div>
+            <p className="text-center text-base font-medium">
+              Το <span className="font-bold text-brand-800">86%</span> των ασθενών χρησιμοποιεί την Google όταν αναζητά ιατρικές υπηρεσίες και το <span className="font-bold text-brand-800">72%</span> επιλέγει από τα πρώτα 3-4 αποτελέσματα της σελίδας;
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Packages Section */}
-      <section id="pricing" className="py-16 bg-white">
+      <section id="pricing" className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Πακέτα & Τιμές Google Ads</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Πακέτα & Τιμές Google Ads</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Επιλέξτε το πακέτο που ταιριάζει καλύτερα στις ανάγκες του ιατρείου σας και στους στόχους σας.
             </p>
@@ -344,109 +455,15 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
-      {/* Why Doctor Digital Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Γιατί Doctor Digital;</h2>
-              <p className="text-text-light max-w-2xl mx-auto">
-                Εμπιστευτείτε την online προβολή του ιατρείου σας σε μια ομάδα που κατανοεί τις ιδιαίτερες ανάγκες του ιατρικού κλάδου.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-                <div>
-                  <h3 className="font-semibold mb-1">Εξειδίκευση στον Ιατρικό Τομέα</h3>
-                  <p className="text-text-light text-sm">Αποκλειστική εστίαση σε ιατρικές επιχειρήσεις, με κατανόηση των ιδιαιτεροτήτων κάθε ειδικότητας.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                </svg>
-                <div>
-                  <h3 className="font-semibold mb-1">Πιστοποιημένοι Google Ads Experts</h3>
-                  <p className="text-text-light text-sm">Ομάδα με επίσημες πιστοποιήσεις Google, συνεχή εκπαίδευση και πολυετή εμπειρία.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <div>
-                  <h3 className="font-semibold mb-1">Συμμόρφωση με τον Κώδικα Δεοντολογίας</h3>
-                  <p className="text-text-light text-sm">Πλήρης συμμόρφωση με τις οδηγίες του Ιατρικού Συλλόγου για τη διαφήμιση ιατρικών υπηρεσιών.</p>
-                </div>
-              </div>
-
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-brand-200 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-                <div>
-                  <h3 className="font-semibold mb-1">Συνεχής Παρακολούθηση & Βελτιστοποίηση</h3>
-                  <p className="text-text-light text-sm">Καθημερινή παρακολούθηση των καμπανιών και προσαρμογές για μέγιστη απόδοση της επένδυσής σας.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Real Results Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Πραγματικά Αποτελέσματα</h2>
-            <p className="text-text-light max-w-2xl mx-auto">
-              Αποδεδειγμένα αποτελέσματα από πραγματικές καμπάνιες ιατρικών επιχειρήσεων που διαχειριζόμαστε.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <ResultItem
-              number="58%"
-              title="Μείωση στο κόστος ανά ραντεβού"
-              description="Μέσω βελτιστοποίησης Google Ads και <Link href='/ypiresies/kataskevi-istoselidon-gia-giatrous' className='text-brand-200 hover:underline'>ειδικών landing pages</Link>, πετύχαμε μείωση κόστους 58% για οδοντιατρικό κέντρο."
-            />
-
-            <ResultItem
-              number="+200%"
-              title="Αύξηση επισκέψεων"
-              description="Τριπλασιασμός οργανικών & πληρωμένων επισκέψεων για ορθοπαιδικό ιατρείο σε διάστημα 3 μηνών."
-            />
-
-            <ResultItem
-              number="#1"
-              title="Θέση στην Google"
-              description="Πρώτη θέση στα αποτελέσματα της Google για το keyword 'ορθοπαιδικός Περιστέρι' σε μόλις 3 μήνες."
-            />
-          </div>
-
-          <div className="bg-brand-200/10 rounded-lg p-8 mt-12 max-w-3xl mx-auto">
-            <p className="text-center text-base">
-              <span className="font-bold">Γνωρίζατε ότι:</span> Το 86% των ασθενών χρησιμοποιεί την Google όταν αναζητά ιατρικές υπηρεσίες και το 72% επιλέγει από τα πρώτα 3-4 αποτελέσματα της σελίδας;
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Related Services Section */}
-      <section className="py-12 bg-background">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <RelatedServices currentService="/ypiresies/diafimisi-sth-google" />
         </div>
       </section>
 
       {/* Related Blog Posts Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           {/* @ts-expect-error Async Server Component */}
           <RelatedBlogPosts topic="google ads" />
@@ -454,10 +471,13 @@ export default function GoogleAdsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Συχνές Ερωτήσεις (FAQ)</h2>
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Συχνές Ερωτήσεις Για Τις Διαφημίσεις Google
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Απαντήσεις στις πιο συχνές ερωτήσεις για τις καμπάνιες Google Ads στον ιατρικό κλάδο.
             </p>
@@ -480,7 +500,8 @@ export default function GoogleAdsPage() {
         <div className="container mx-auto">
           <div className="bg-white p-10 rounded-lg border border-brand-100 shadow-md max-w-4xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold mb-4">Ενδιαφέρεστε για Στοχευμένες Καμπάνιες Google Ads;</h2>
+              <h2 className="text-2xl font-bold mb-6 text-center">Ενδιαφέρεστε για Στοχευμένες Καμπάνιες Google Ads;</h2>
+              <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
               <p className="text-text-light max-w-2xl mx-auto mb-8">
                 Αποκτήστε περισσότερους ασθενείς με εξειδικευμένες καμπάνιες Google Ads για τον ιατρικό σας χώρο.
               </p>

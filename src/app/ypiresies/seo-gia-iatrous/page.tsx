@@ -11,7 +11,7 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'SEO για Ιατρικές Ιστοσελίδες',
+  title: 'SEO για Ιατρούς & Ιατρικές Ιστοσελίδες',
   description: 'SEO για ιατρικές ιστοσελίδες που φέρνει αποτελέσματα. Αποκτήστε νέους ασθενείς με εξειδικευμένες υπηρεσίες SEO για γιατρούς και επαγγελματίες υγείας.',
   keywords: ['SEO για Ιατρούς', 'Ιατρικό SEO', 'Βελτιστοποίηση Google', 'SEO Κλινικής', 'Οργανική Προβολή Ιατρείου', 'Ιατρικό Marketing'],
 };
@@ -45,7 +45,7 @@ export default function SeoForMedicalPages() {
     <>
       {/* Service Schema */}
       <ServiceSchema
-        name="SEO για Ιατρικές Ιστοσελίδες"
+        name="SEO για Ιατρούς & Ιατρικές Ιστοσελίδες"
         url="https://doctordigital.gr/ypiresies/seo-gia-iatrous"
         description="Αναδείξτε το ιατρείο ή την κλινική σας στα οργανικά αποτελέσματα της Google με στοχευμένο SEO ειδικά για τον ιατρικό κλάδο."
         provider={{
@@ -78,7 +78,7 @@ export default function SeoForMedicalPages() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-3">
-                SEO για Ιατρικές Ιστοσελίδες
+                SEO για Ιατρούς & Ιατρικές Ιστοσελίδες
               </h1>
               <h2 className="text-xl md:text-2xl text-text-light font-medium mb-5">
                 Επαγγελματικές Υπηρεσίες SEO για Γιατρούς, Κλινικές & Διαγνωστικά Κέντρα
@@ -122,7 +122,8 @@ export default function SeoForMedicalPages() {
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Τι είναι το SEO και γιατί αφορά τους επαγγελματίες υγείας;</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Τι είναι το Ιατρικό SEO;</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <div className="bg-gray-50 p-8 rounded-lg mb-8 relative">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-full shadow-md">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -160,10 +161,70 @@ export default function SeoForMedicalPages() {
         </div>
       </section>
 
+      {/* How SEO helps your medical practice */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Πώς το SEO βοηθάει το ιατρείο σας να αποκτήσει νέους ασθενείς</h2>
+
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-start">
+                  <div className="bg-brand-50 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-6 h-6 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Στοχευμένη προσέλκυση ασθενών</h3>
+                    <p className="text-gray-600">
+                      Το SEO φέρνει στο ιατρείο σας ασθενείς που ήδη αναζητούν τις υπηρεσίες σας. Αυτό σημαίνει υψηλότερο ποσοστό μετατροπής σε ραντεβού και καλύτερη απόδοση της επένδυσής σας.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-start">
+                  <div className="bg-brand-50 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-6 h-6 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Ενίσχυση αξιοπιστίας & κύρους</h3>
+                    <p className="text-gray-600">
+                      Η εμφάνιση στις πρώτες θέσεις της Google ενισχύει την αξιοπιστία σας στα μάτια των ασθενών. Οι περισσότεροι ασθενείς εμπιστεύονται τα οργανικά αποτελέσματα περισσότερο από τις διαφημίσεις.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="flex items-start">
+                  <div className="bg-brand-50 w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                    <svg className="w-6 h-6 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Μακροπρόθεσμη απόδοση επένδυσης</h3>
+                    <p className="text-gray-600">
+                      Το SEO αποτελεί μια μακροπρόθεσμη επένδυση με συνεχή απόδοση. Αντίθετα με τις διαφημίσεις που σταματούν μόλις σταματήσετε να πληρώνετε, το SEO συνεχίζει να φέρνει ασθενείς.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services section with detailed breakdown */}
       <section className="py-16 bg-background">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Υπηρεσίες SEO για Ιατρικές Ιστοσελίδες</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Η στρατηγική μας για το Ιατρικό SEO</h2>
+          <div className="w-24 h-1 bg-brand-200 mx-auto mb-8"></div>
           <p className="text-lg max-w-2xl mx-auto mb-10 text-center">
             Παρέχουμε εξειδικευμένες υπηρεσίες SEO για επαγγελματίες υγείας που περιλαμβάνουν SEO audit, έρευνα λέξεων-κλειδιών,
             on-page και off-page βελτιστοποίηση, τοπικό SEO, δημιουργία περιεχομένου, και τεχνικό SEO.
@@ -308,7 +369,8 @@ export default function SeoForMedicalPages() {
       {/* Case Studies / Results Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Πραγματικά Αποτελέσματα από Πελάτες μας</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Αποτελέσματα SEO για ιατρούς</h2>
+          <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
           <p className="text-lg max-w-2xl mx-auto mb-10 text-center">
             Οι στρατηγικές SEO της Doctor Digital έχουν φέρει μετρήσιμα και σταθερά αποτελέσματα σε ιατρούς και κλινικές σε όλη την Ελλάδα. Οι πελάτες μας επωφελούνται επίσης από τις <Link href="/ypiresies/kataskevi-istoselidon-gia-giatrous" className="text-brand-200 hover:underline">υπηρεσίες κατασκευής ιστοσελίδων</Link> μας:
           </p>
@@ -389,13 +451,6 @@ export default function SeoForMedicalPages() {
         </div>
       </section>
 
-      {/* Related Services Section */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <RelatedServices currentService="/ypiresies/seo-gia-iatrous" />
-        </div>
-      </section>
-
       {/* Related Blog Posts Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -408,7 +463,8 @@ export default function SeoForMedicalPages() {
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Συχνές Ερωτήσεις (FAQ)</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Συχνές Ερωτήσεις για το Ιατρικό SEO</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Απαντήσεις στις πιο συχνές ερωτήσεις για το SEO στον ιατρικό κλάδο.
             </p>
@@ -433,7 +489,8 @@ export default function SeoForMedicalPages() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-6">Θέλετε η ιστοσελίδα σας να εμφανίζεται στην 1η σελίδα της Google;</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">Θέλετε η ιστοσελίδα σας να εμφανίζεται στην 1η σελίδα της Google;</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-lg mb-8">
               Επικοινωνήστε μαζί μας για μια δωρεάν αξιολόγηση SEO της ιατρικής σας ιστοσελίδας και ανακαλύψτε το πλήρες δυναμικό του ιατρείου σας στο διαδίκτυο.
             </p>

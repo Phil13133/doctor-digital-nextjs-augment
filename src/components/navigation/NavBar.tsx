@@ -34,7 +34,10 @@ export default function NavBar() {
 
   // Handle mouse leave for desktop dropdown
   const handleMouseLeave = () => {
-    setHoverDropdown(null);
+    // Add a small delay before closing the dropdown to make it more user-friendly
+    setTimeout(() => {
+      setHoverDropdown(null);
+    }, 100);
   };
 
   // Close dropdown when clicking outside
@@ -75,12 +78,12 @@ export default function NavBar() {
                   <li key={item.path} className="relative">
                     {item.children ? (
                       <div
-                        className="relative"
+                        className="relative group"
                         onMouseEnter={() => handleMouseEnter(item.label)}
                         onMouseLeave={handleMouseLeave}
                       >
                         <button
-                          className="font-medium text-black hover:text-gray-500 transition-colors flex items-center"
+                          className="font-medium text-black hover:text-gray-500 transition-colors flex items-center py-2"
                         >
                           {item.label}
                           <svg
@@ -96,7 +99,9 @@ export default function NavBar() {
 
                         {/* Dropdown Menu */}
                         {hoverDropdown === item.label && (
-                          <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-2 z-50 border border-gray-100 animate-fadeIn">
+                          <div className="absolute top-full left-0 w-64 bg-white rounded-md shadow-lg pt-3 pb-2 z-50 border border-gray-100 animate-fadeIn">
+                            {/* Invisible bridge to prevent gap */}
+                            <div className="absolute -top-2 left-0 w-full h-2 bg-transparent"></div>
                             {item.children.map((child) => (
                               <Link
                                 key={child.path}

@@ -59,9 +59,9 @@ export default function RelatedServices({ currentService, className = '' }: Rela
     <div className={`py-16 ${className}`}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl font-bold mb-3 text-gray-800">Σχετικές Υπηρεσίες</h2>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-brand-100 to-brand-200 rounded-full"></div>
-          <p className="mt-4 text-gray-600 max-w-2xl text-center">Ανακαλύψτε περισσότερες υπηρεσίες που μπορούν να βοηθήσουν το ιατρείο σας να αναπτυχθεί ψηφιακά</p>
+          <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">Σχετικές Υπηρεσίες</h2>
+          <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+          <p className="text-gray-600 max-w-2xl text-center">Ανακαλύψτε περισσότερες υπηρεσίες που μπορούν να βοηθήσουν το ιατρείο σας να αναπτυχθεί ψηφιακά</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

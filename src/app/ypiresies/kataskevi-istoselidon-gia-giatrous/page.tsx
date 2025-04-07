@@ -19,24 +19,26 @@ export const metadata: Metadata = {
 
 // Feature Item Component
 const FeatureItem = ({ icon, title, description }: { icon: React.ReactNode; title?: string; description: string }) => (
-  <div className="flex items-start mb-6">
+  <div className="flex items-start mb-8 p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-brand-200">
     <div className="text-brand-200 mt-1 mr-4 flex-shrink-0">
       {icon}
     </div>
     <div>
-      {title && <h3 className="text-lg font-semibold mb-2">{title}</h3>}
+      {title && <h3 className="text-lg font-bold mb-2">{title}</h3>}
       <p className="text-text-light">{description}</p>
     </div>
   </div>
 );
 
 // Simple Feature Item Component (bullet points)
-const SimpleFeatureItem = ({ text }: { text: string }) => (
-  <div className="flex items-start mb-4">
-    <div className="bg-brand-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
-      <CheckIcon size={14} color="#ffffff" />
+const SimpleFeatureItem = ({ text, isHeading = false }: { text: string, isHeading?: boolean }) => (
+  <div className={`flex items-center p-4 bg-[#e6f7f1] rounded-lg ${isHeading ? 'mb-5' : 'mb-3'}`}>
+    <div className="bg-white border border-gray-200 rounded-md p-1 mr-3 flex-shrink-0">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 13l4 4L19 7" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
     </div>
-    <p className="text-text-dark">{text}</p>
+    <span className="text-gray-700">{text}</span>
   </div>
 );
 
@@ -89,9 +91,9 @@ const PricingPackage = ({
 
 // Result Card Component
 const ResultCard = ({ number, text }: { number: string; text: string }) => (
-  <div className="bg-white p-5 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300 text-center">
-    <p className="text-3xl font-bold text-brand-200 mb-2">{number}</p>
-    <p className="text-text-dark">{text}</p>
+  <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-brand-200 hover:transform hover:scale-105 transition-all duration-300 text-center">
+    <p className="text-3xl md:text-4xl font-bold text-brand-200 mb-3">{number}</p>
+    <p className="text-text-dark font-medium text-base">{text}</p>
   </div>
 );
 
@@ -109,10 +111,10 @@ const WebsiteShowcase = ({
   afterImgSrc: string;
   improvements: string[];
 }) => (
-  <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-    <div className="p-4 border-b border-gray-100">
-      <h3 className="font-bold text-lg">{clientName}</h3>
-      <p className="text-text-light text-sm">{specialty}</p>
+  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 border border-gray-100">
+    <div className="p-5 border-b border-gray-100 bg-gradient-to-r from-brand-50 to-white">
+      <h3 className="font-bold text-xl text-brand-800">{clientName}</h3>
+      <p className="text-text-light">{specialty}</p>
     </div>
 
     <div className="grid grid-cols-2 gap-4 p-4">
@@ -171,15 +173,15 @@ const ProcessStep = ({
   title: string;
   description: string;
 }) => (
-  <div className="relative">
-    <div className="flex items-start">
-      <div className="w-10 h-10 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-base mr-3 mt-0.5 flex-shrink-0">
+  <div className="relative bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+    <div className="text-center mb-4">
+      <div className="w-12 h-12 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-lg mx-auto shadow-md">
         {number}
       </div>
-      <div>
-        <h3 className="font-semibold text-base mb-1">{title}</h3>
-        <p className="text-text-light text-sm">{description}</p>
-      </div>
+    </div>
+    <div className="text-center">
+      <h3 className="font-bold text-lg mb-2">{title}</h3>
+      <p className="text-text-light">{description}</p>
     </div>
   </div>
 );
@@ -290,8 +292,10 @@ export default function WebsitesPage() {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Γιατί είναι σημαντική η σωστή ιατρική ιστοσελίδα;</h2>
-              <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
+              <h2 className="text-4xl font-bold mb-6 text-center">
+                Γιατί Χρειάζεστε Μια Επαγγελματική Ιατρική Ιστοσελίδα
+              </h2>
+              <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
               <p className="text-lg text-text-light mb-8">
                 Η ιατρική ιστοσελίδα δεν είναι απλώς μια παρουσία στο διαδίκτυο. Είναι το πρώτο σημείο επαφής με τους ασθενείς σας.
                 Με τη σωστή κατασκευή και βελτιστοποίηση, μπορεί να μετατραπεί σε εργαλείο προσέλκυσης νέων ραντεβού και ενίσχυσης της φήμης σας. Συνδυάζοντας την με <Link href="/ypiresies/copywriting-gia-iatrous" className="text-brand-200 hover:underline">υψηλής ποιότητας ιατρικό περιεχόμενο</Link>, αυξάνετε την αποτελεσματικότητά της.
@@ -337,8 +341,10 @@ export default function WebsitesPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Δημιουργία Ιστοσελίδας από το Α έως το Ω</h2>
-            <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Η Διαδικασία Κατασκευής Ιστοσελίδας Για Ιατρούς
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-3xl mx-auto">
               Αναλαμβάνουμε όλη τη διαδικασία κατασκευής ιστοσελίδας για γιατρούς, από τον σχεδιασμό έως τη φιλοξενία και την τεχνική υποστήριξη.
             </p>
@@ -371,22 +377,30 @@ export default function WebsitesPage() {
             />
           </div>
 
-          <div className="bg-white p-8 rounded-lg shadow-md max-w-5xl mx-auto">
-            <h3 className="text-xl font-bold mb-6 text-center">Τι Περιλαμβάνεται στην Ιατρική σας Ιστοσελίδα</h3>
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 max-w-5xl mx-auto">
+            <div className="mb-8 text-center">
+              <h3 className="text-2xl text-gray-700">Τι Περιλαμβάνεται στην Ιατρική σας Ιστοσελίδα</h3>
+            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
+              <SimpleFeatureItem text="Responsive Σχεδιασμός Για Όλες Τις Συσκευές" isHeading={true} />
+              <SimpleFeatureItem text="Προσαρμογή για κινητά & tablets" />
               <SimpleFeatureItem text="Κατασκευή σε WordPress ή custom λύση" />
-              <SimpleFeatureItem text="Ενσωμάτωση online ραντεβού" />
-              <SimpleFeatureItem text="Σελίδες για ειδικότητες & παθήσεις" />
-              <SimpleFeatureItem text="Blog με ιατρικά άρθρα" />
-              <SimpleFeatureItem text="GDPR συμμόρφωση" />
-              <SimpleFeatureItem text="Υποστήριξη & εκπαίδευση" />
+
+              <SimpleFeatureItem text="Βελτιστοποίηση Για Μηχανές Αναζήτησης (SEO)" isHeading={true} />
               <SimpleFeatureItem text="SEO βελτιστοποίηση" />
+              <SimpleFeatureItem text="Βασικό analytics reporting" />
+              <SimpleFeatureItem text="Blog με ιατρικά άρθρα" />
+
+              <SimpleFeatureItem text="Σύστημα Κράτησης Ραντεβού" isHeading={true} />
+              <SimpleFeatureItem text="Ενσωμάτωση online ραντεβού" />
               <SimpleFeatureItem text="Φόρμες επικοινωνίας" />
               <SimpleFeatureItem text="Χάρτης & οδηγίες πρόσβασης" />
+
+              <SimpleFeatureItem text="Ασφάλεια & Συμμόρφωση GDPR" isHeading={true} />
+              <SimpleFeatureItem text="GDPR συμμόρφωση" />
+              <SimpleFeatureItem text="Υποστήριξη & εκπαίδευση" />
               <SimpleFeatureItem text="Σύνδεση με κοινωνικά δίκτυα" />
-              <SimpleFeatureItem text="Βασικό analytics reporting" />
-              <SimpleFeatureItem text="Προσαρμογή για κινητά & tablets" />
             </div>
           </div>
         </div>
@@ -396,8 +410,10 @@ export default function WebsitesPage() {
       <section id="showcase" className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Πριν & Μετά: Μεταμορφώσεις Ιατρικών Ιστοσελίδων</h2>
-            <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Χαρακτηριστικά Των Ιατρικών Ιστοσελίδων Μας
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Δείτε πώς μεταμορφώνουμε παλιές, παρωχημένες ιστοσελίδες σε σύγχρονες, επαγγελματικές διαδικτυακές παρουσίες
             </p>
@@ -444,8 +460,10 @@ export default function WebsitesPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Κατασκευή Ιστοσελίδων Τιμές</h2>
-            <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Πακέτα & Τιμές Ιατρικών Ιστοσελίδων
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Οι τιμές προσαρμόζονται στις ανάγκες κάθε ιατρείου. Παρέχουμε διαφανείς και λογικές τιμές ανάλογα με το μέγεθος και τις λειτουργίες της ιστοσελίδας.
             </p>
@@ -504,8 +522,10 @@ export default function WebsitesPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Τι έχουν πετύχει οι πελάτες μας;</h2>
-            <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Τι Έχουν Πετύχει Οι Πελάτες Μας
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Αποδεδειγμένα αποτελέσματα από πραγματικές ιατρικές ιστοσελίδες που έχουμε αναπτύξει.
             </p>
@@ -528,9 +548,15 @@ export default function WebsitesPage() {
             />
           </div>
 
-          <div className="bg-brand-200/10 rounded-lg p-8 mt-12 max-w-3xl mx-auto">
-            <p className="text-center text-base">
-              <span className="font-bold">Γνωρίζατε ότι:</span> Το 70% των ασθενών θα επισκεφθούν την ιστοσελίδα ενός γιατρού πριν κλείσουν το πρώτο τους ραντεβού για να αξιολογήσουν την αξιοπιστία του.
+          <div className="bg-brand-50 rounded-lg p-6 mt-10 max-w-3xl mx-auto shadow-md border border-brand-200/20">
+            <div className="flex items-center justify-center mb-2">
+              <svg className="w-5 h-5 text-brand-200 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="font-bold text-base text-brand-800">Γνωρίζατε ότι:</span>
+            </div>
+            <p className="text-center text-sm font-medium">
+              Το <span className="font-bold text-brand-800">70%</span> των ασθενών θα επισκεφθούν την ιστοσελίδα ενός γιατρού πριν κλείσουν το πρώτο τους ραντεβού για να αξιολογήσουν την αξιοπιστία του.
             </p>
           </div>
         </div>
@@ -555,8 +581,10 @@ export default function WebsitesPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Συχνές Ερωτήσεις</h2>
-            <div className="w-20 h-1 bg-brand-200 mx-auto my-4"></div>
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Συχνές Ερωτήσεις Για Τις Ιατρικές Ιστοσελίδες
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Απαντήσεις στις πιο συχνές ερωτήσεις για την κατασκευή ιατρικών ιστοσελίδων.
             </p>
