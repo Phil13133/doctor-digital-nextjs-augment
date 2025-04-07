@@ -636,6 +636,227 @@ export default function MedicalSoftwarePage() {
         </div>
       </section>
 
+      {/* Medical Software Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ιατρικό Λογισμικό & Web Apps για Ιατρούς</h2>
+            <p className="text-text-light max-w-3xl mx-auto">
+              Αυξήστε την αποδοτικότητα του ιατρείου σας με σύγχρονες, αυτοματοποιημένες λύσεις λογισμικού.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/images/Ιατρικό Λογισμικό & Web Apps για Ιατρούς.webp"
+                  alt="Ιατρικό Λογισμικό και Εφαρμογές για Κλινικές και Ιατρεία"
+                  width={600}
+                  height={400}
+                  className="w-full max-h-[400px] object-cover object-center"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start mb-6">
+                <div className="bg-brand-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                  <CheckIcon size={16} color="#ffffff" />
+                </div>
+                <div>
+                  <p className="font-bold mb-1">Online Ραντεβού & Διαχείριση Ασθενών</p>
+                  <p className="text-text-light">Επιτρέψτε στους ασθενείς να κλείνουν ραντεβού online με αυτοματοποιημένες ειδοποιήσεις SMS & email.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start mb-6">
+                <div className="bg-brand-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                  <CheckIcon size={16} color="#ffffff" />
+                </div>
+                <div>
+                  <p className="font-bold mb-1">Ιατρικό CRM & Σύστημα Ηλεκτρονικών Αρχείων</p>
+                  <p className="text-text-light">Οργανώστε το ιστορικό ασθενών, παρακολουθήστε ιατρικές εγγραφές και διαχειριστείτε την επικοινωνία εύκολα.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start mb-6">
+                <div className="bg-brand-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0">
+                  <CheckIcon size={16} color="#ffffff" />
+                </div>
+                <div>
+                  <p className="font-bold mb-1">Custom Ιατρικό Λογισμικό για Κλινικές & Διαγνωστικά Κέντρα</p>
+                  <p className="text-text-light">Δημιουργούμε προσαρμοσμένες εφαρμογές για τηλεϊατρική, φόρμες εισαγωγής ασθενών, e-prescriptions & πολλά άλλα.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Medical Applications Section */}
+      <section className="py-16 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-background to-white pointer-events-none"></div>
+
+        <div className="container mx-auto relative z-10">
+          {/* Section Header with fixed spacing */}
+          <div className="text-center mb-20 relative">
+            <span className="block py-1.5 px-5 rounded-full bg-brand-100/30 text-brand-300 font-semibold text-sm mb-8 mx-auto w-max">
+              ΙΑΤΡΙΚΈΣ ΕΦΑΡΜΟΓΈΣ
+            </span>
+
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+              Ιατρικές Εφαρμογές Που Κάνουν Τη Διαφορά
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-brand-100 to-brand-200 rounded-full"></div>
+            </h2>
+
+            <p className="text-lg text-text-light max-w-3xl mx-auto mb-8">
+              Δείτε πώς οι εξατομικευμένες λύσεις μας βοήθησαν πραγματικές ιατρικές επιχειρήσεις να επιλύσουν σύνθετα προβλήματα.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+            {/* Case Study 1: Patient Scheduling System */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-brand-100/30 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-brand-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">PlanMed</h3>
+                    <p className="text-sm text-gray-500">Σύστημα Κράτησης Ραντεβού</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-text-light mb-4">
+                    Αναπτύξαμε ένα προηγμένο σύστημα διαχείρισης ραντεβού για μεγάλο διαγνωστικό κέντρο με πολλαπλά υποκαταστήματα και ιατρούς διαφορετικών ειδικοτήτων.
+                  </p>
+
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                        <CheckIcon size={12} color="#16a34a" />
+                      </div>
+                      <span className="text-sm">Μείωση ακυρώσεων κατά 35%</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                        <CheckIcon size={12} color="#16a34a" />
+                      </div>
+                      <span className="text-sm">Αύξηση πληρότητας ιατρείων κατά 28%</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                        <CheckIcon size={12} color="#16a34a" />
+                      </div>
+                      <span className="text-sm">Εξοικονόμηση 15 ωρών/εβδομάδα για το προσωπικό</span>
+                    </div>
+                  </div>
+
+                  {/* App Preview */}
+                  <div className="mt-6 rounded-xl border border-gray-100 p-2 bg-gray-50 hover:shadow-md transition-shadow">
+                    <Image
+                      src="/images/patient-scheduling-application.webp"
+                      alt="PlanMed Patient Scheduling Interface"
+                      width={400}
+                      height={200}
+                      className="w-full h-auto rounded-lg"
+                    />
+                    <p className="text-xs text-gray-500 mt-2 text-center">Κεντρική οθόνη διαχείρισης ραντεβού</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Case Study 2: Lab Results System */}
+            <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-brand-100/30 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-6 h-6 text-brand-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">LabConnect</h3>
+                    <p className="text-sm text-gray-500">Σύστημα Διαχείρισης Εργαστηριακών Εξετάσεων</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-text-light mb-4">
+                    Δημιουργήσαμε μια εφαρμογή για μικροβιολογικό εργαστήριο που επιτρέπει την ψηφιακή διαχείριση δειγμάτων, αποτελεσμάτων και την αυτόματη ενημέρωση ασθενών.
+                  </p>
+
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                        <CheckIcon size={12} color="#16a34a" />
+                      </div>
+                      <span className="text-sm">Μείωση χρόνου επεξεργασίας κατά 42%</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                        <CheckIcon size={12} color="#16a34a" />
+                      </div>
+                      <span className="text-sm">Εξάλειψη λαθών καταχώρησης</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mr-2">
+                        <CheckIcon size={12} color="#16a34a" />
+                      </div>
+                      <span className="text-sm">Αύξηση ικανοποίησης πελατών κατά 47%</span>
+                    </div>
+                  </div>
+
+                  {/* App Preview */}
+                  <div className="mt-6 rounded-xl border border-gray-100 p-2 bg-gray-50 hover:shadow-md transition-shadow">
+                    <Image
+                      src="/images/blood-test-application.webp"
+                      alt="LabConnect Results Interface"
+                      width={400}
+                      height={200}
+                      className="w-full h-auto rounded-lg"
+                    />
+                    <p className="text-xs text-gray-500 mt-2 text-center">Διεπαφή αποτελεσμάτων εξετάσεων</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Enhanced CTA with improved shadow effects */}
+          <div className="mt-20 relative">
+            {/* Subtle outer shadow effect */}
+            <div className="absolute -inset-4 bg-white/50 rounded-2xl blur-xl"></div>
+
+            <div className="relative bg-white rounded-xl p-8 border border-gray-100 shadow-lg">
+              <p className="text-2xl font-bold mb-4 text-center text-text-heading">
+                Χρειάζεστε Αντίστοιχη Εφαρμογή Για Το Ιατρείο Ή Την Επιχείρησή Σας;
+              </p>
+              <p className="text-text-light mb-8 text-center max-w-3xl mx-auto">
+                Έχουμε αναπτύξει δεκάδες εξειδικευμένες εφαρμογές για τον ιατρικό κλάδο. Επικοινωνήστε μαζί μας για να συζητήσουμε τις ανάγκες σας.
+              </p>
+              <div className="text-center">
+                <Link
+                  href="/epikoinonia"
+                  className="inline-block relative overflow-hidden group"
+                >
+                  <span className="block btn-primary px-8 py-3.5 text-lg relative z-10">
+                    Ζητήστε Δωρεάν Συμβουλευτική
+                    <ArrowRightIcon className="ml-2 inline-block transition-transform group-hover:translate-x-1" size={16} />
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto">

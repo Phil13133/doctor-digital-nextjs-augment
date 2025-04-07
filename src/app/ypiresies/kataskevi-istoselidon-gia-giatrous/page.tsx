@@ -253,7 +253,7 @@ export default function WebsitesPage() {
                 Κατασκευή Ιστοσελίδων για Ιατρούς & Κλινικές
               </h1>
               <p className="text-xl text-text-light mb-8 max-w-xl">
-                Σύγχρονες, responsive και <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">SEO-ready</Link> ιστοσελίδες, ειδικά σχεδιασμένες για τις ανάγκες του ιατρικού κλάδου.
+                Σύγχρονες, responsive και <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">SEO-ready</Link> ιστοσελίδες, ειδικά σχεδιασμένες για τις ανάγκες του ιατρικού κλάδου. Ένα ισχυρό θεμέλιο για επιτυχημένο <Link href="/" className="text-brand-200 hover:underline">Ιατρικό Μάρκετινγκ</Link>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center">

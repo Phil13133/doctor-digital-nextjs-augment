@@ -7,6 +7,7 @@ import FAQSchema from '@/components/schema/FAQSchema';
 import FAQToggleItem from '@/components/FAQToggleItem';
 import FeatureListItem from '@/components/FeatureListItem';
 import TestimonialsSchema from '@/components/schema/TestimonialsSchema';
+import ServiceSchema from '@/components/schema/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Ιατρικό Μάρκετινγκ | Google Ads & SEO | Doctor Digital',
@@ -98,24 +99,24 @@ export default function Home() {
   // FAQ questions data
   const faqQuestions = [
     {
-      question: "Πόσο κοστίζει η διαφήμιση Google Ads για γιατρούς;",
-      answer: "Το κόστος εξαρτάται από την ειδικότητα και την περιοχή. Ξεκινά από 100€/μήνα σε διαφημιστικό budget και προσαρμόζεται ανάλογα με τον ανταγωνισμό και τις λέξεις-κλειδιά."
+      question: "Τι είναι το Ιατρικό Μάρκετινγκ και πώς μπορεί να βοηθήσει το ιατρείο μου;",
+      answer: "Το Ιατρικό Μάρκετινγκ είναι ένα εξειδικευμένο σύνολο στρατηγικών ψηφιακού μάρκετινγκ που εστιάζει στις ιδιαίτερες ανάγκες των ιατρών και κλινικών. Περιλαμβάνει SEO, Google Ads, ιατρικό περιεχόμενο και σχεδιασμό ιστοσελίδων. Βοηθά στην αύξηση της προβολής του ιατρείου σας, την προσέλκυση νέων ασθενών και την ενίσχυση της αξιοπιστίας σας."
     },
     {
-      question: "Σε πόσο καιρό βλέπω αποτελέσματα από το SEO;",
-      answer: "Τα πρώτα οργανικά αποτελέσματα εμφανίζονται συνήθως μέσα σε 2–3 μήνες. Η πρόοδος εξαρτάται από τη δομή της ιστοσελίδας, τον ανταγωνισμό και τη συνέπεια στη βελτιστοποίηση."
+      question: "Πόσο κοστίζουν οι υπηρεσίες Ιατρικού Μάρκετινγκ για γιατρούς;",
+      answer: "Το κόστος των υπηρεσιών Ιατρικού Μάρκετινγκ εξαρτάται από τις ανάγκες του ιατρείου σας. Τα πακέτα ξεκινούν από 300€/μήνα και προσαρμόζονται ανάλογα με την ειδικότητα, την περιοχή και τους στόχους σας. Προσφέρουμε εξατομικευμένες λύσεις για κάθε προϋπολογισμό."
     },
     {
-      question: "Για ποιες ειδικότητες προσφέρετε ιατρικό λογισμικό;",
-      answer: "Αναπτύσσουμε λογισμικό για ιατρούς όλων των ειδικοτήτων, πολυϊατρεία, κλινικές, μικροβιολογικά εργαστήρια και διαγνωστικά κέντρα."
+      question: "Σε πόσο καιρό βλέπω αποτελέσματα από το Ιατρικό SEO;",
+      answer: "Τα πρώτα οργανικά αποτελέσματα από το Ιατρικό SEO εμφανίζονται συνήθως μέσα σε 2–3 μήνες. Η πρόοδος εξαρτάται από τη δομή της ιστοσελίδας, τον ανταγωνισμό στον ιατρικό κλάδο και τη συνέπεια στη βελτιστοποίηση του ιατρικού περιεχομένου."
     },
     {
-      question: "Ποια είναι η διαφορά ανάμεσα στο SEO και το Google Ads;",
-      answer: "Το Google Ads προσφέρει άμεσα αποτελέσματα μέσω πληρωμένων διαφημίσεων, ενώ το SEO είναι μακροπρόθεσμη στρατηγική για οργανική κατάταξη στην Google. Ο ιδανικός συνδυασμός και των δύο μεγιστοποιεί την προβολή σας."
+      question: "Ποιες στρατηγικές Ιατρικού Μάρκετινγκ είναι πιο αποτελεσματικές για γιατρούς;",
+      answer: "Οι πιο αποτελεσματικές στρατηγικές Ιατρικού Μάρκετινγκ περιλαμβάνουν συνδυασμό SEO, στοχευμένων διαφημίσεων Google Ads, δημιουργία αξιόπιστου ιατρικού περιεχομένου και βελτιστοποίηση της εμπειρίας χρήστη στην ιστοσελίδα σας. Η αποτελεσματικότητα εξαρτάται από την ειδικότητα και τους στόχους του ιατρείου σας."
     },
     {
       question: "Μπορείτε να βοηθήσετε ιατρούς που δεν έχουν ακόμη ιστοσελίδα;",
-      answer: "Ναι, δημιουργούμε πλήρως λειτουργικές και καλαίσθητες ιστοσελίδες για γιατρούς από την αρχή, φιλικές προς κινητά, γρήγορες και έτοιμες για SEO."
+      answer: "Ναι, στο πλαίσιο του ολοκληρωμένου Ιατρικού Μάρκετινγκ, δημιουργούμε πλήρως λειτουργικές και καλαίσθητες ιστοσελίδες για γιατρούς από την αρχή, φιλικές προς κινητά, γρήγορες και έτοιμες για SEO. Η ιστοσελίδα αποτελεί τη βάση για κάθε επιτυχημένη στρατηγική ιατρικού μάρκετινγκ."
     }
   ];
   return (
@@ -126,11 +127,11 @@ export default function Home() {
         <div className="container mx-auto py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-               Εξειδικευμένο Ιατρικό Μάρκετινγκ για Γιατρούς & Κλινικές
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight mb-6">
+               Ιατρικό Μάρκετινγκ για Γιατρούς & Κλινικές
               </h1>
               <p className="text-lg text-text-light mb-8 max-w-lg">
-              Αποκτήστε περισσότερα ραντεβού και μεγαλύτερη προβολή με λύσεις Google Ads, SEO και ιατρικό περιεχόμενο – εξατομικευμένα για τον ιατρικό σας κλάδο.
+              Το <strong>Ιατρικό Μάρκετινγκ</strong> βοηθά τους γιατρούς να αποκτήσουν περισσότερα ραντεβού και μεγαλύτερη προβολή με εξειδικευμένες λύσεις Google Ads, SEO και ιατρικό περιεχόμενο – σχεδιασμένες αποκλειστικά για τον ιατρικό σας κλάδο.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center">
@@ -164,13 +165,81 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* What is Medical Marketing Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Υπηρεσίες Ιατρικού Μάρκετινγκ</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Τι Είναι το Ιατρικό Μάρκετινγκ;</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-12 bg-gray-50 p-8 rounded-lg relative">
+            <p className="text-lg mb-4">
+              Το <strong>Ιατρικό Μάρκετινγκ</strong> είναι ένα εξειδικευμένο σύνολο στρατηγικών ψηφιακού μάρκετινγκ που εστιάζει στις ιδιαίτερες ανάγκες των ιατρών, κλινικών και επαγγελματιών υγείας.
+            </p>
+            <p className="text-lg mb-4">
+              Στόχος του <strong>Ιατρικού Μάρκετινγκ</strong> είναι η αύξηση της προβολής του ιατρείου στο διαδίκτυο, η προσέλκυση νέων ασθενών και η διατήρηση των υπαρχόντων, με σεβασμό στον ιατρικό κώδικα δεοντολογίας. Οι στρατηγικές Ιατρικού Μάρκετινγκ προσαρμόζονται στις ιδιαίτερες ανάγκες κάθε ιατρικής ειδικότητας.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h3 className="font-bold mb-2 text-brand-800">Το Ιατρικό Μάρκετινγκ περιλαμβάνει:</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
+                      <CheckIcon size={12} color="#ffffff" />
+                    </div>
+                    <span>Βελτιστοποίηση για μηχανές αναζήτησης (SEO)</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
+                      <CheckIcon size={12} color="#ffffff" />
+                    </div>
+                    <span>Διαφημίσεις Google Ads</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
+                      <CheckIcon size={12} color="#ffffff" />
+                    </div>
+                    <span>Ιατρικό περιεχόμενο & blogging</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h3 className="font-bold mb-2 text-brand-800">Τα οφέλη του Ιατρικού Μάρκετινγκ:</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
+                      <CheckIcon size={12} color="#ffffff" />
+                    </div>
+                    <span>Αύξηση των νέων ασθενών</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
+                      <CheckIcon size={12} color="#ffffff" />
+                    </div>
+                    <span>Ενίσχυση της αξιοπιστίας του ιατρείου</span>
+                  </li>
+                  <li className="flex items-center">
+                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
+                      <CheckIcon size={12} color="#ffffff" />
+                    </div>
+                    <span>Βελτίωση της εμπειρίας των ασθενών</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-6 text-center">Υπηρεσίες Ιατρικού Μάρκετινγκ</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-3xl mx-auto">
-              Εξειδικευμένες ψηφιακές υπηρεσίες σχεδιασμένες αποκλειστικά για τις ανάγκες ιατρών και κλινικών στην Ελλάδα.
+              Το <strong>Ιατρικό Μάρκετινγκ</strong> περιλαμβάνει εξειδικευμένες ψηφιακές υπηρεσίες σχεδιασμένες αποκλειστικά για τις ανάγκες ιατρών και κλινικών στην Ελλάδα.
             </p>
           </div>
 
@@ -595,12 +664,12 @@ export default function Home() {
 
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            <h2 className="text-3xl font-bold mb-6 text-center">
               Αποτελέσματα στην Πράξη
-              <span className="absolute -bottom-3 left-0 w-full h-1 bg-brand-200 transform scale-x-50 opacity-70"></span>
             </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-lg text-text-light max-w-3xl mx-auto">
-              Η Doctor Digital έχει βοηθήσει ιατρούς και κλινικές να βελτιώσουν την ψηφιακή τους παρουσία και να αυξήσουν τις κρατήσεις τους με μετρήσιμα, αποδεδειγμένα αποτελέσματα.
+              Οι στρατηγικές <strong>Ιατρικού Μάρκετινγκ</strong> της Doctor Digital έχουν βοηθήσει ιατρούς και κλινικές να βελτιώσουν την ψηφιακή τους παρουσία και να αυξήσουν τις κρατήσεις τους με μετρήσιμα, αποδεδειγμένα αποτελέσματα.
             </p>
           </div>
 
@@ -782,10 +851,10 @@ export default function Home() {
                 <span className="block py-1.5 px-5 rounded-full bg-brand-100/30 text-brand-300 font-semibold text-sm mb-8 mx-auto w-max">
                   ΜΕΘΟΔΟΛΟΓΙΑ
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block mt-2">
+                <h2 className="text-3xl font-bold mb-6 text-center mt-2">
                   Πώς Ξεκινάμε
-                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-brand-100 to-brand-200 rounded-full"></div>
                 </h2>
+                <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
                 <p className="text-lg text-text-light max-w-3xl mx-auto mb-14">
                   Ακολουθούμε μια δομημένη προσέγγιση για να διασφαλίσουμε ότι παρέχουμε ακριβώς αυτό που χρειάζεται το ιατρείο σας.
                 </p>
@@ -909,7 +978,8 @@ export default function Home() {
           <section className="py-16 bg-white">
             <div className="container mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Συχνές Ερωτήσεις για το Ιατρικό Μάρκετινγκ</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center">Συχνές Ερωτήσεις για το Ιατρικό Μάρκετινγκ</h2>
+                <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
                 <p className="text-text-light max-w-2xl mx-auto">
                   Απαντήσεις στις πιο συχνές ερωτήσεις σχετικά με τις υπηρεσίες ιατρικού μάρκετινγκ
                 </p>
@@ -931,7 +1001,8 @@ export default function Home() {
           <section className="py-16 bg-background">
             <div className="container mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-2xl md:text-3xl font-bold mb-4">Τι λενε για Εμας;</h2>
+                <h2 className="text-3xl font-bold mb-6 text-center">Τι λενε για Εμας;</h2>
+                <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
                 <p className="text-text-light max-w-3xl mx-auto">
                   Δείτε τι λένε οι ιατροί που έχουν ήδη συνεργαστεί μαζί μας και έχουν δει πραγματικά αποτελέσματα.
                 </p>
@@ -1026,6 +1097,22 @@ export default function Home() {
           </section>
         </div>
       </section>
+      {/* Structured Data for Main Services */}
+      <ServiceSchema
+        name="Ιατρικό Μάρκετινγκ για Γιατρούς & Κλινικές"
+        url="https://doctordigital.gr"
+        description="Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Google Ads, SEO, περιεχόμενο & ιστοσελίδες για γιατρούς που θέλουν να προσελκύσουν νέους ασθενείς."
+        provider={{
+          name: "Doctor Digital",
+          url: "https://doctordigital.gr"
+        }}
+        serviceArea={[
+          { name: "Ελλάδα", type: "Country" },
+          { name: "Αθήνα", type: "City" },
+          { name: "Θεσσαλονίκη", type: "City" }
+        ]}
+        category="Medical Marketing"
+      />
     </>
   );
 }

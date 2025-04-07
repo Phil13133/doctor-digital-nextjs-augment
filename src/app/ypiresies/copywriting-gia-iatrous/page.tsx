@@ -161,7 +161,7 @@ export default function CopywritingForDoctors() {
                 </li>
               </ul>
               <p className="text-lg mt-6 leading-relaxed">
-                Ειδικά στον ιατρικό τομέα, το περιεχόμενο πρέπει να συνδυάζει <strong>δεοντολογία</strong>, <strong>εμπιστοσύνη</strong> και <strong>SEO τεχνικές</strong>.
+                Ειδικά στον ιατρικό τομέα, το περιεχόμενο πρέπει να συνδυάζει <strong>δεοντολογία</strong>, <strong>εμπιστοσύνη</strong> και <strong>SEO τεχνικές</strong>. Το ιατρικό περιεχόμενο αποτελεί βασικό πυλώνα του <Link href="/" className="text-brand-200 hover:underline">Ιατρικού Μάρκετινγκ</Link> που προσφέρουμε.
               </p>
             </div>
           </div>

@@ -84,7 +84,7 @@ export default function SeoForMedicalPages() {
                 Επαγγελματικές Υπηρεσίες SEO για Γιατρούς, Κλινικές & Διαγνωστικά Κέντρα
               </h2>
               <p className="text-xl text-text-light mb-8 max-w-xl">
-                Αναδείξτε το ιατρείο ή την κλινική σας στα οργανικά αποτελέσματα της Google με στοχευμένη βελτιστοποίηση ιστοσελίδας (SEO) ειδικά για τον ιατρικό κλάδο.
+                Αναδείξτε το ιατρείο ή την κλινική σας στα οργανικά αποτελέσματα της Google με στοχευμένη βελτιστοποίηση ιστοσελίδας (SEO) ειδικά για τον ιατρικό κλάδο. Μέρος των ολοκληρωμένων υπηρεσιών <Link href="/" className="text-brand-200 hover:underline">Ιατρικού Μάρκετινγκ</Link> που προσφέρουμε.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center">
