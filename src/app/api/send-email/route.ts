@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
     const data = await resend.emails.send({
       from: 'Doctor Digital <onboarding@resend.dev>',
       to: ['marketing@doctordigital.gr'],
-      reply_to: email,
+      replyTo: email,
       subject: subjectLine,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
