@@ -146,7 +146,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
         author={{ name: authorName }}
         publisher={{ name: SITE.name, logo: `${SITE.url}${SITE.logoPath}` }}
         url={`${SITE.url}/blog/${post.fields.slug}`}
-        keywords={seoData?.keywords?.split(',').map(k => k.trim()) || []}
+        keywords={seoData?.keywords?.split(',').map((k: string) => k.trim()) || []}
         articleBody={content ? JSON.stringify(content) : undefined} // Pass raw rich text JSON
       />
 
