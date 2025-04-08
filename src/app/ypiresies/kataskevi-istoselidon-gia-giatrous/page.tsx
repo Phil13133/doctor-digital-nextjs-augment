@@ -567,7 +567,7 @@ export default function WebsitesPage() {
       {/* Related Blog Posts Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          {/* @ts-expect-error Async Server Component */}
+
           <RelatedBlogPosts topic="ιστοσελίδες" />
         </div>
       </section>

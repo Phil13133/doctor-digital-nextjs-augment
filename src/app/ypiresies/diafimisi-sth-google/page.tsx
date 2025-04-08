@@ -465,7 +465,7 @@ export default function GoogleAdsPage() {
       {/* Related Blog Posts Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          {/* @ts-expect-error Async Server Component */}
+
           <RelatedBlogPosts topic="google ads" />
         </div>
       </section>
