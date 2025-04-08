@@ -5,7 +5,7 @@ interface ContactFormEmailProps {
   email: string;
   phone?: string;
   company?: string;
-  subject: string;
+
   message: string;
   subjectLine: string;
 }
@@ -15,7 +15,6 @@ export const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
   email,
   phone,
   company,
-  subject,
   message,
   subjectLine,
 }) => {
@@ -29,14 +28,14 @@ export const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
         {company && <p style={{ marginBottom: '8px' }}><strong>Εταιρεία/Ιατρείο:</strong> {company}</p>}
         <p style={{ marginBottom: '8px' }}><strong>Υπηρεσία:</strong> {subjectLine}</p>
       </div>
-      
+
       <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
         <h3 style={{ color: '#374151', marginBottom: '12px' }}>Μήνυμα:</h3>
         <div style={{ whiteSpace: 'pre-wrap', color: '#4b5563' }}>
           {message}
         </div>
       </div>
-      
+
       <div style={{ marginTop: '24px', padding: '16px', borderTop: '1px solid #e5e7eb', fontSize: '14px', color: '#6b7280', textAlign: 'center' }}>
         <p>Αυτό το email στάλθηκε από τη φόρμα επικοινωνίας του <a href="https://doctordigital.gr" style={{ color: '#16a34a', textDecoration: 'none' }}>Doctor Digital</a>.</p>
       </div>

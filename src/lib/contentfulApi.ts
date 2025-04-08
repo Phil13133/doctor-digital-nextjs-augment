@@ -1,5 +1,5 @@
 import { getContentfulClient } from './contentfulClient';
-import type { Entry, EntryCollection, EntrySkeletonType, Asset, EntryFieldTypes } from 'contentful'; // Import EntryFieldTypes
+import type { Entry, EntryCollection, EntrySkeletonType, EntryFieldTypes } from 'contentful'; // Import EntryFieldTypes
 
 // Define interfaces for the expected structure of Contentful entries
 // Adjust these based on the exact fields in your Contentful model

@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import type { Document } from '@contentful/rich-text-types';
-// Re-add date-fns imports for schema formatting
-import { format, parseISO } from 'date-fns';
 
 import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/contentfulApi';
 import BlogPostSchema from '@/components/schema/BlogPostSchema';
@@ -44,8 +42,7 @@ type Props = {
 };
 
 export async function generateMetadata(
-  { params, searchParams }: Props,
-  parent: ResolvingMetadata
+  { params }: Props
 ): Promise<Metadata> {
   let post;
 

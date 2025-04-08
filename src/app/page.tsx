@@ -44,15 +44,7 @@ const ServiceCard = ({
   </div>
 );
 
-// Feature list item component
-const FeatureItem = ({ text }: { text: string }) => (
-  <div className="flex items-start mb-3">
-    <div className="bg-brand-200 rounded-full p-1.5 mr-3 mt-1 flex-shrink-0">
-      <CheckIcon size={16} color="#ffffff" />
-    </div>
-    <p>{text}</p>
-  </div>
-);
+// Feature list item component is used in other files
 
 // These components are defined for use in future updates
 // Leaving them commented to avoid unused variable warnings

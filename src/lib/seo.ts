@@ -8,7 +8,7 @@
 import { Metadata } from 'next';
 import { SITE } from '@/constants/site';
 import { DEFAULT_SEO, ORGANIZATION_SCHEMA } from '@/constants/seo';
-import { PageMeta, SEOData } from '@/types';
+import { PageMeta } from '@/types';
 
 /**
  * Creates Next.js metadata object for a page

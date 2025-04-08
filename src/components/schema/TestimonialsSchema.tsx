@@ -28,7 +28,7 @@ export default function TestimonialsSchema({
   itemReviewed
 }: TestimonialsSchemaProps) {
   // Create an array of review schemas
-  const reviewSchemas = testimonials.map((testimonial, index) => ({
+  const reviewSchemas = testimonials.map((testimonial) => ({
     '@context': 'https://schema.org',
     '@type': 'Review',
     'itemReviewed': {

@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllBlogPosts, BlogPostEntry } from '@/lib/contentfulApi';
+import { getAllBlogPosts } from '@/lib/contentfulApi';
 
 export const metadata: Metadata = {
   title: 'Blog | Doctor Digital',
@@ -39,7 +39,7 @@ export default async function BlogPage() {
   }
 
   // Use optional chaining in case items is null/undefined
-  let posts = blogPostsCollection?.items ?? [];
+  const posts = blogPostsCollection?.items ?? [];
 
   // Removed client-side sorting based on date
 
