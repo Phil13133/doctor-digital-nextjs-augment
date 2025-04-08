@@ -33,9 +33,9 @@ const FeatureItem = ({ icon, title, description }: { icon: React.ReactNode; titl
 // Simple Feature Item Component (bullet points)
 const SimpleFeatureItem = ({ text, isHeading = false }: { text: string, isHeading?: boolean }) => (
   <div className={`flex items-center p-4 bg-[#e6f7f1] rounded-lg ${isHeading ? 'mb-5' : 'mb-3'}`}>
-    <div className="bg-white border border-gray-200 rounded-md p-1 mr-3 flex-shrink-0">
+    <div className="bg-brand-100 rounded-md p-1 mr-3 flex-shrink-0">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 13l4 4L19 7" stroke="#10b981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M5 13l4 4L19 7" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     </div>
     <span className="text-gray-700">{text}</span>
@@ -562,12 +562,7 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      {/* Related Services Section */}
-      <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
-          <RelatedServices currentService="/ypiresies/kataskevi-istoselidon-gia-giatrous" />
-        </div>
-      </section>
+
 
       {/* Related Blog Posts Section */}
       <section className="py-16 bg-white">
@@ -627,6 +622,13 @@ export default function WebsitesPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/kataskevi-istoselidon-gia-giatrous" />
         </div>
       </section>
     </>

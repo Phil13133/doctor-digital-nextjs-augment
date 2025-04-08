@@ -359,12 +359,7 @@ export default function SeoForMedicalPages() {
         </div>
       </section>
 
-      {/* Related Services Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <RelatedServices currentService="/ypiresies/seo-gia-iatrous" />
-        </div>
-      </section>
+
 
       {/* Case Studies / Results Section */}
       <section className="py-16 bg-white">
@@ -459,6 +454,27 @@ export default function SeoForMedicalPages() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold mb-6 text-center">Θέλετε η ιστοσελίδα σας να εμφανίζεται στην 1η σελίδα της Google;</h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+            <p className="text-lg mb-8">
+              Επικοινωνήστε μαζί μας για μια δωρεάν αξιολόγηση SEO της ιατρικής σας ιστοσελίδας και ανακαλύψτε το πλήρες δυναμικό του ιατρείου σας στο διαδίκτυο.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/epikoinonia" className="btn-primary text-center">
+                Ζητήστε Δωρεάν SEO Ανάλυση
+              </Link>
+              <Link href="/ypiresies/diafimisi-sth-google" className="btn-outline text-center">
+                Συνδυάστε με Google Ads
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
@@ -485,26 +501,14 @@ export default function SeoForMedicalPages() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-6 text-center">Θέλετε η ιστοσελίδα σας να εμφανίζεται στην 1η σελίδα της Google;</h2>
-            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
-            <p className="text-lg mb-8">
-              Επικοινωνήστε μαζί μας για μια δωρεάν αξιολόγηση SEO της ιατρικής σας ιστοσελίδας και ανακαλύψτε το πλήρες δυναμικό του ιατρείου σας στο διαδίκτυο.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/epikoinonia" className="btn-primary text-center">
-                Ζητήστε Δωρεάν SEO Ανάλυση
-              </Link>
-              <Link href="/ypiresies/diafimisi-sth-google" className="btn-outline text-center">
-                Συνδυάστε με Google Ads
-              </Link>
-            </div>
-          </div>
+      {/* Related Services Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <RelatedServices currentService="/ypiresies/seo-gia-iatrous" />
         </div>
       </section>
+
+
     </>
   );
 }

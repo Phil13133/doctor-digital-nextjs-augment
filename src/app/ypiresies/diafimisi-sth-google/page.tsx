@@ -507,11 +507,11 @@ export default function GoogleAdsPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link href="/epikoinonia" className="btn-primary text-center rounded-full px-8 py-3 flex items-center justify-center">
+                <Link href="/epikoinonia" className="btn-primary text-center rounded-md px-8 py-3 flex items-center justify-center">
                   <span className="mr-2">🟢</span>
                   Ζητήστε Δωρεάν Ανάλυση
                 </Link>
-                <Link href="/epikoinonia" className="btn-outline text-center rounded-full px-8 py-3 flex items-center justify-center">
+                <Link href="/epikoinonia" className="btn-outline text-center rounded-md px-8 py-3 flex items-center justify-center">
                   <span className="mr-2">🔵</span>
                   Κλείστε Ραντεβού με Ειδικό
                 </Link>

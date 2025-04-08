@@ -255,26 +255,26 @@ export default function MedicalSoftwarePage() {
                   </h3>
                   <ul className="space-y-3 mt-6">
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Μείωση διοικητικού χρόνου & λιγότερη γραφειοκρατία - συνδυάζεται άριστα με <Link href="/ypiresies/kataskevi-istoselidon-gia-giatrous" className="text-brand-200 hover:underline">την ιστοσελίδα σας</Link></span>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Εξάλειψη χαμένων ραντεβού & αύξηση πληρότητας</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Άμεση πρόσβαση σε ιατρικά δεδομένα & αρχεία</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Καλύτερη εμπειρία για τους ασθενείς σας και αύξηση της <Link href="/ypiresies/diafimisi-sth-google" className="text-brand-200 hover:underline">ψηφιακής σας προβολής</Link></span>
                     </li>
@@ -289,26 +289,26 @@ export default function MedicalSoftwarePage() {
                   </h3>
                   <ul className="space-y-3 mt-6">
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Πλήρης συμμόρφωση με GDPR</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Κρυπτογράφηση δεδομένων & ασφαλή backups</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Έλεγχοι πρόσβασης & δικαιώματα χρηστών</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-green-200 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
-                        <CheckIcon size={14} color="#16a34a" />
+                      <div className="bg-brand-100 rounded-full p-1 mr-3 mt-1 flex-shrink-0 shadow-sm">
+                        <CheckIcon size={14} color="#FFFFFF" />
                       </div>
                       <span>Καταγραφή ενεργειών & παρακολούθηση αλλαγών</span>
                     </li>
@@ -502,16 +502,17 @@ export default function MedicalSoftwarePage() {
       </section>
 
       {/* Integration Section */}
-      <section className="py-16 bg-background relative overflow-hidden">
+      <section className="py-20 bg-background relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 right-0 w-full h-full pointer-events-none">
-          <div className="absolute top-20 right-20 w-72 h-72 bg-brand-100/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-brand-200/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 right-20 w-72 h-72 bg-brand-100/10 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-brand-200/10 rounded-full blur-3xl animate-pulse-slow animation-delay-1000"></div>
+          <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-brand-300/5 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"></div>
         </div>
 
         <div className="container mx-auto relative z-10">
           <div className="text-center mb-16">
-            <span className="inline-block py-1.5 px-5 rounded-full bg-brand-100/30 text-brand-300 font-semibold text-sm mb-4">
+            <span className="inline-block py-1.5 px-5 rounded-full bg-brand-100/30 text-brand-300 font-semibold text-sm mb-4 animate-fade-in">
               ΨΗΦΙΑΚΗ ΕΝΣΩΜΑΤΩΣΗ
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
@@ -523,83 +524,100 @@ export default function MedicalSoftwarePage() {
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto relative mb-16">
-            {/* Main content card with glass effect */}
-            <div className="relative bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-100/50 shadow-xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                {/* Left side - Illustration */}
-                <div className="bg-gradient-to-br from-brand-50/80 to-background/80 p-8 lg:p-12 flex items-center justify-center">
-                  <div className="relative w-full max-w-md">
-                    <div className="absolute -top-20 -left-20 w-40 h-40 bg-brand-100/10 rounded-full blur-2xl"></div>
-                    <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-200/10 rounded-full blur-2xl"></div>
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold mb-10 text-brand-800 text-center">Πλήρης συνδεσιμότητα για καλύτερα αποτελέσματα</h3>
 
-                    {/* Modern 3D illustration */}
-                    <div className="relative z-10 p-4">
-                      <Image
-                        src="/images/medical-software-integration.webp"
-                        alt="Ενσωμάτωση ιατρικού λογισμικού με ιστοσελίδα και marketing"
-                        width={500}
-                        height={400}
-                        className="w-full h-auto rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105"
-                      />
-                    </div>
+            {/* Card-based layout for features */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              {/* Feature Card 1 */}
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand-600 transition-colors duration-300">
+                      Κρατήσεις από την ιστοσελίδα σας σε πραγματικό χρόνο
+                    </h4>
+                    <p className="text-gray-600">
+                      Οι ασθενείς κλείνουν ραντεβού online, με αυτόματη ενημέρωση του συστήματός σας.
+                    </p>
                   </div>
                 </div>
-
-                {/* Right side - Features */}
-                <div className="p-8 lg:p-12">
-                  <h3 className="text-2xl font-bold mb-8 text-brand-800">Πλήρης συνδεσιμότητα για καλύτερα αποτελέσματα</h3>
-                  <div className="space-y-8">
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="font-bold mb-1">Κρατήσεις από την ιστοσελίδα σας σε πραγματικό χρόνο</h4>
-                        <p className="text-sm text-gray-600">Οι ασθενείς κλείνουν ραντεβού online, με αυτόματη ενημέρωση του συστήματός σας.</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19l-7-7 7-7m8 14l7-7-7-7" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="font-bold mb-1">Συλλογή στοιχείων από Google Ads & Facebook Ads</h4>
-                        <p className="text-sm text-gray-600">Παρακολουθήστε από ποιες διαφημίσεις προέρχονται οι ασθενείς σας.</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="font-bold mb-1">Παρακολούθηση conversion rate και ROI</h4>
-                        <p className="text-sm text-gray-600">Μετρήστε την απόδοση των καμπανιών σας με ακριβή δεδομένα για κάθε καμπάνια.</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-100 to-brand-200 rounded-full flex items-center justify-center mr-4 shadow-md">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h4 className="font-bold mb-1">Επαναληπτικά ραντεβού & αυτοματοποιημένα follow-ups</h4>
-                        <p className="text-sm text-gray-600">Αυτόματες υπενθυμίσεις για επαναληπτικά ραντεβού και follow-up επισκέψεις.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="w-0 h-1 bg-brand-200 group-hover:w-full transition-all duration-500 mt-4 rounded-full"></div>
               </div>
+
+              {/* Feature Card 2 */}
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand-600 transition-colors duration-300">
+                      Συλλογή στοιχείων από Google Ads & Facebook Ads
+                    </h4>
+                    <p className="text-gray-600">
+                      Παρακολουθήστε από ποιες διαφημίσεις προέρχονται οι ασθενείς σας.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-0 h-1 bg-brand-200 group-hover:w-full transition-all duration-500 mt-4 rounded-full"></div>
+              </div>
+
+              {/* Feature Card 3 */}
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand-600 transition-colors duration-300">
+                      Παρακολούθηση conversion rate και ROI
+                    </h4>
+                    <p className="text-gray-600">
+                      Μετρήστε την απόδοση των καμπανιών σας με ακριβή δεδομένα για κάθε καμπάνια.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-0 h-1 bg-brand-200 group-hover:w-full transition-all duration-500 mt-4 rounded-full"></div>
+              </div>
+
+              {/* Feature Card 4 */}
+              <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 text-gray-800 group-hover:text-brand-600 transition-colors duration-300">
+                      Επαναληπτικά ραντεβού & αυτοματοποιημένα follow-ups
+                    </h4>
+                    <p className="text-gray-600">
+                      Αυτόματες υπενθυμίσεις για επαναληπτικά ραντεβού και follow-up επισκέψεις.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-0 h-1 bg-brand-200 group-hover:w-full transition-all duration-500 mt-4 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Call to action */}
+            <div className="text-center mt-12">
+              <Link href="/epikoinonia" className="inline-flex items-center bg-brand-200 hover:bg-brand-300 text-white hover:text-white font-semibold py-3 px-8 rounded-md shadow-md hover:shadow-lg transition-all duration-300 group">
+                Μάθετε Περισσότερα
+                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>

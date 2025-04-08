@@ -30,16 +30,16 @@
   p, li, div:not(.text-sm):not(.text-xs) {
     @apply text-lg;
   }
-  
+
   /* Preserve explicitly sized text */
   .text-sm, .text-xs, .text-base {
     font-size: inherit;
   }
-  
+
   a {
     @apply text-brand-green hover:text-brand-greenDark no-underline;
   }
-  
+
   button {
     @apply no-underline;
   }
@@ -188,7 +188,7 @@ body {
   @apply absolute bottom-0 left-0 w-0 h-0.5 bg-brand-200 transition-all duration-300;
 }
 
-.nav-link:hover::after, 
+.nav-link:hover::after,
 .nav-link.active::after {
   @apply w-full;
 }
@@ -205,6 +205,15 @@ body {
 
 .app-card-image {
   @apply relative h-48 overflow-hidden;
+}
+
+/* Animation Delay Classes */
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2000ms;
 }
 
 .app-tag {
@@ -272,8 +281,8 @@ body {
   @apply absolute bottom-0 right-0 w-64 h-64 bg-brand-50 rounded-full -mr-12 -mb-12 opacity-50;
 }
 
-.form-input:focus, 
-.form-textarea:focus, 
+.form-input:focus,
+.form-textarea:focus,
 .form-select:focus {
   @apply outline-none ring-2 ring-brand-200 border-brand-200;
 }

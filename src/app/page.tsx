@@ -173,59 +173,63 @@ export default function Home() {
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
           </div>
 
-          <div className="max-w-4xl mx-auto mb-12 bg-gray-50 p-8 rounded-lg relative">
-            <p className="text-lg mb-4">
-              Το <strong>Ιατρικό Μάρκετινγκ</strong> είναι ένα εξειδικευμένο σύνολο στρατηγικών ψηφιακού μάρκετινγκ που εστιάζει στις ιδιαίτερες ανάγκες των ιατρών, κλινικών και επαγγελματιών υγείας.
-            </p>
-            <p className="text-lg mb-4">
-              Στόχος του <strong>Ιατρικού Μάρκετινγκ</strong> είναι η αύξηση της προβολής του ιατρείου στο διαδίκτυο, η προσέλκυση νέων ασθενών και η διατήρηση των υπαρχόντων, με σεβασμό στον ιατρικό κώδικα δεοντολογίας. Οι στρατηγικές Ιατρικού Μάρκετινγκ προσαρμόζονται στις ιδιαίτερες ανάγκες κάθε ιατρικής ειδικότητας.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-bold mb-2 text-brand-800">Το Ιατρικό Μάρκετινγκ περιλαμβάνει:</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
-                      <CheckIcon size={12} color="#ffffff" />
-                    </div>
-                    <span>Βελτιστοποίηση για μηχανές αναζήτησης (SEO)</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
-                      <CheckIcon size={12} color="#ffffff" />
-                    </div>
-                    <span>Διαφημίσεις Google Ads</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
-                      <CheckIcon size={12} color="#ffffff" />
-                    </div>
-                    <span>Ιατρικό περιεχόμενο & blogging</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h3 className="font-bold mb-2 text-brand-800">Τα οφέλη του Ιατρικού Μάρκετινγκ:</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
-                      <CheckIcon size={12} color="#ffffff" />
-                    </div>
-                    <span>Αύξηση των νέων ασθενών</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
-                      <CheckIcon size={12} color="#ffffff" />
-                    </div>
-                    <span>Ενίσχυση της αξιοπιστίας του ιατρείου</span>
-                  </li>
-                  <li className="flex items-center">
-                    <div className="bg-brand-200 rounded-full p-1 mr-2 flex-shrink-0">
-                      <CheckIcon size={12} color="#ffffff" />
-                    </div>
-                    <span>Βελτίωση της εμπειρίας των ασθενών</span>
-                  </li>
-                </ul>
+          <div className="max-w-4xl mx-auto mb-12 bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl relative shadow-sm border border-gray-100">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-100/10 rounded-full -mr-10 -mt-10 z-0"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-brand-200/5 rounded-full -ml-6 -mb-6 z-0"></div>
+            <div className="relative z-10">
+              <p className="text-lg mb-4">
+                Το <strong>Ιατρικό Μάρκετινγκ</strong> είναι ένα εξειδικευμένο σύνολο στρατηγικών ψηφιακού μάρκετινγκ που εστιάζει στις ιδιαίτερες ανάγκες των ιατρών, κλινικών και επαγγελματιών υγείας.
+              </p>
+              <p className="text-lg mb-4">
+                Στόχος του <strong>Ιατρικού Μάρκετινγκ</strong> είναι η αύξηση της προβολής του ιατρείου στο διαδίκτυο, η προσέλκυση νέων ασθενών και η διατήρηση των υπαρχόντων, με σεβασμό στον ιατρικό κώδικα δεοντολογίας. Οι στρατηγικές Ιατρικού Μάρκετινγκ προσαρμόζονται στις ιδιαίτερες ανάγκες κάθε ιατρικής ειδικότητας.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow duration-300">
+                  <h3 className="font-bold mb-4 text-brand-800 text-lg">Το Ιατρικό Μάρκετινγκ περιλαμβάνει:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <div className="bg-green-100 rounded-full p-1.5 mr-3 flex-shrink-0">
+                        <CheckIcon size={14} color="#16a34a" />
+                      </div>
+                      <span>Βελτιστοποίηση για μηχανές αναζήτησης (SEO)</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="bg-green-100 rounded-full p-1.5 mr-3 flex-shrink-0">
+                        <CheckIcon size={14} color="#16a34a" />
+                      </div>
+                      <span>Διαφημίσεις Google Ads</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="bg-green-100 rounded-full p-1.5 mr-3 flex-shrink-0">
+                        <CheckIcon size={14} color="#16a34a" />
+                      </div>
+                      <span>Ιατρικό περιεχόμενο & blogging</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-50 hover:shadow-md transition-shadow duration-300">
+                  <h3 className="font-bold mb-4 text-brand-800 text-lg">Τα οφέλη του Ιατρικού Μάρκετινγκ:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <div className="bg-green-100 rounded-full p-1.5 mr-3 flex-shrink-0">
+                        <CheckIcon size={14} color="#16a34a" />
+                      </div>
+                      <span>Αύξηση των νέων ασθενών</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="bg-green-100 rounded-full p-1.5 mr-3 flex-shrink-0">
+                        <CheckIcon size={14} color="#16a34a" />
+                      </div>
+                      <span>Ενίσχυση της αξιοπιστίας του ιατρείου</span>
+                    </li>
+                    <li className="flex items-center">
+                      <div className="bg-green-100 rounded-full p-1.5 mr-3 flex-shrink-0">
+                        <CheckIcon size={14} color="#16a34a" />
+                      </div>
+                      <span>Βελτίωση της εμπειρίας των ασθενών</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -334,39 +338,154 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">Γιατί να Επιλέξετε τη Doctor Digital</h2>
+      {/* Why Choose Us Section - Modern Redesign */}
+      <section className="py-20 bg-gradient-to-br from-white to-brand-50/30 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-100/10 rounded-full opacity-70 blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-brand-200/5 rounded-full opacity-70 blur-3xl -z-10"></div>
+        <div className="absolute top-1/3 left-1/4 w-6 h-6 bg-brand-100/30 rounded-full"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-4 h-4 bg-brand-200/20 rounded-full"></div>
 
-              <div className="space-y-4">
-                <FeatureItem text="Εξειδίκευση αποκλειστικά στον ιατρικό τομέα" />
-                <FeatureItem text="Αποτελέσματα μετρήσιμα & διαφανή" />
-                <FeatureItem text="Συμμόρφωση με το νομικό πλαίσιο προβολής ιατρών στην Ελλάδα" />
-                <FeatureItem text="Προσωποποιημένες στρατηγικές ανά ειδικότητα" />
-                <FeatureItem text="Συνεχής υποστήριξη & αναφορές απόδοσης" />
-              </div>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-2">
+              <span className="inline-block py-1.5 px-6 rounded-full bg-green-100 text-green-800 font-medium text-sm">
+                ΓΙΑΤΙ ΕΜΑΣ
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+              Γιατί να Επιλέξετε τη Doctor Digital
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-gradient-to-r from-brand-100 to-brand-200 rounded-full"></div>
+            </h2>
+            <p className="text-lg text-text-light max-w-3xl mx-auto mt-8">
+              Εξειδικευόμαστε αποκλειστικά στο ιατρικό μάρκετινγκ, προσφέροντας λύσεις που συμμορφώνονται με το νομικό πλαίσιο προβολής ιατρών στην Ελλάδα.
+            </p>
+          </div>
 
-              <div className="mt-8">
-                <Link href="/ypiresies" className="learn-more-cta inline-flex items-center">
-                  Μάθετε περισσότερα για τις υπηρεσίες μας
-                  <ArrowRightIcon className="ml-2" size={16} />
-                </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            {/* Feature Card 1 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Εξειδίκευση στον Ιατρικό Τομέα</h3>
+                  <p className="text-gray-600">Αποκλειστική εστίαση στο ιατρικό μάρκετινγκ με βαθιά κατανόηση των αναγκών του κλάδου.</p>
+                </div>
               </div>
             </div>
 
-            <div>
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/images/Εξειδικευμένο ιατρικό μάρκετινγκ με μετρήσιμα αποτελέσματα.webp"
-                  alt="Εξειδικευμένο ιατρικό μάρκετινγκ με μετρήσιμα αποτελέσματα"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
+            {/* Feature Card 2 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Μετρήσιμα Αποτελέσματα</h3>
+                  <p className="text-gray-600">Διαφανής παρακολούθηση απόδοσης με αναλυτικές αναφορές και μετρήσιμα αποτελέσματα.</p>
+                </div>
               </div>
+            </div>
+
+            {/* Feature Card 3 */}
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-brand-100 to-brand-300 rounded-xl flex items-center justify-center mr-5 shadow-md transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-800">Νομική Συμμόρφωση</h3>
+                  <p className="text-gray-600">Πλήρης συμμόρφωση με το νομικό πλαίσιο προβολής ιατρών και τους κανόνες του ιατρικού συλλόγου.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 overflow-hidden relative group hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-4 text-gray-800">Προσωποποιημένες Στρατηγικές</h3>
+                <p className="text-gray-600 mb-5">Δημιουργούμε εξατομικευμένες στρατηγικές μάρκετινγκ ανάλογα με την ειδικότητά σας, την τοποθεσία και τους στόχους σας.</p>
+
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-start group">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center mr-3 group-hover:bg-brand-200 transition-colors duration-300">
+                      <CheckIcon size={16} color="#FFFFFF" className="transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Στρατηγικές ανά ειδικότητα</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start group">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center mr-3 group-hover:bg-brand-200 transition-colors duration-300">
+                      <CheckIcon size={16} color="#FFFFFF" className="transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Τοπική στόχευση ασθενών</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 overflow-hidden relative group hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-full -mr-16 -mt-16 opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-4 text-gray-800">Συνεχής Υποστήριξη</h3>
+                <p className="text-gray-600 mb-5">Παρέχουμε συνεχή υποστήριξη και συμβουλευτική καθ' όλη τη διάρκεια της συνεργασίας μας.</p>
+
+                <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="flex items-start group">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center mr-3 group-hover:bg-brand-200 transition-colors duration-300">
+                      <CheckIcon size={16} color="#FFFFFF" className="transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Μηνιαίες αναφορές απόδοσης</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start group">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center mr-3 group-hover:bg-brand-200 transition-colors duration-300">
+                      <CheckIcon size={16} color="#FFFFFF" className="transition-colors duration-300" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Προσωπικός σύμβουλος</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA at bottom */}
+          <div className="mt-12 text-center">
+            <div className="inline-block bg-brand-50 p-1 rounded-xl shadow-lg">
+              <Link
+                href="/ypiresies"
+                className="bg-white hover:bg-brand-50 px-8 py-4 rounded-lg inline-flex items-center transition-colors shadow-sm border border-gray-100 group"
+              >
+                <span className="bg-gradient-to-r from-brand-200 to-brand-300 p-2 mr-4 rounded-lg text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </span>
+                <span>
+                  <p className="font-bold text-text-dark group-hover:text-brand-300 transition-colors">Δείτε Όλες τις Υπηρεσίες μας</p>
+                  <p className="text-sm text-text-light">Εξειδικευμένες λύσεις για κάθε ιατρική ειδικότητα</p>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
