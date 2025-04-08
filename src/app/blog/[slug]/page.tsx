@@ -1,6 +1,6 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';

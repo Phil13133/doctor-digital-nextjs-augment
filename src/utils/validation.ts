@@ -66,7 +66,7 @@ export const isValidUrl = (url: string): boolean => {
     // Use the URL constructor to validate
     new URL(url);
     return true;
-  } catch (_) {
+  } catch {
     return false;
   }
 };
