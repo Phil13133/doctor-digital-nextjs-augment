@@ -12,7 +12,6 @@ import { getAllBlogPosts, getBlogPostBySlug } from '@/lib/contentfulApi';
 import BlogPostSchema from '@/components/schema/BlogPostSchema';
 import BreadcrumbNav from '@/components/ui/BreadcrumbNav';
 import { SITE } from '@/constants/site';
-import { getMockBlogPostBySlug } from '../mock-data';
 
 // Removed formatDate function
 
@@ -34,11 +33,8 @@ export async function generateStaticParams() {
     console.error('Error generating static params for blog posts:', error);
   }
 
-  // Fallback to mock data if Contentful is not available
-  const mockPosts = await import('../mock-data').then(mod => mod.mockBlogPosts);
-  return mockPosts.map((post) => ({
-    slug: post.fields.slug,
-  }));
+  // Return empty array if no posts are found
+  return [];
 }
 
 // Generate metadata for the specific blog post page
@@ -56,15 +52,8 @@ export async function generateMetadata(
   try {
     // Try to get the post from Contentful
     post = await getBlogPostBySlug(params.slug);
-
-    // If not found in Contentful, try mock data
-    if (!post) {
-      post = getMockBlogPostBySlug(params.slug);
-    }
   } catch (error) {
     console.error(`Error generating metadata for blog post with slug ${params.slug}:`, error);
-    // Try mock data as fallback
-    post = getMockBlogPostBySlug(params.slug);
   }
 
   if (!post) {
@@ -111,24 +100,17 @@ export async function generateMetadata(
 
 // The main component to render the blog post
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  // Try to get the post from Contentful, fall back to mock data if not available
+  // Try to get the post from Contentful
   let post;
-  let usingMockData = false;
   try {
     post = await getBlogPostBySlug(params.slug);
-
-    // If post not found in Contentful, try mock data
-    if (!post) {
-      console.log(`Post with slug ${params.slug} not found in Contentful, trying mock data`);
-      post = getMockBlogPostBySlug(params.slug);
-      usingMockData = true;
-    } else {
+    if (post) {
       console.log(`Successfully fetched post with slug ${params.slug} from Contentful`);
+    } else {
+      console.log(`Post with slug ${params.slug} not found in Contentful`);
     }
   } catch (error) {
     console.error(`Error fetching blog post with slug ${params.slug}:`, error);
-    post = getMockBlogPostBySlug(params.slug);
-    usingMockData = true;
   }
 
   // If post not found in either source, return 404

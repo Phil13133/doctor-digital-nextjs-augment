@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBlogPosts, BlogPostEntry } from '@/lib/contentfulApi';
-import mockBlogPostCollection from './mock-data'; // Import mock data
 
 export const metadata: Metadata = {
   title: 'Blog | Doctor Digital',
@@ -20,24 +19,23 @@ function getFieldValue<T>(field: any): T | undefined {
 }
 
 export default async function BlogPage() {
-  // Fetch blog posts from Contentful or use mock data if Contentful is not available
+  // Fetch blog posts from Contentful
   let blogPostsCollection;
-  let usingMockData = false;
   try {
     blogPostsCollection = await getAllBlogPosts();
-    // Check if we got any posts back
-    if (!blogPostsCollection?.items?.length) {
-      console.log('No posts returned from Contentful, using mock data');
-      blogPostsCollection = mockBlogPostCollection;
-      usingMockData = true;
-    } else {
-      console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
+    console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
+    if (blogPostsCollection?.items?.length) {
       console.log('Available slugs:', blogPostsCollection.items.map(post => post.fields.slug));
     }
   } catch (error) {
     console.error('Error fetching blog posts from Contentful:', error);
-    blogPostsCollection = mockBlogPostCollection;
-    usingMockData = true;
+    blogPostsCollection = {
+      total: 0,
+      skip: 0,
+      limit: 0,
+      items: [],
+      includes: {}
+    };
   }
 
   // Use optional chaining in case items is null/undefined
