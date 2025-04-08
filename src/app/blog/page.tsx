@@ -23,10 +23,11 @@ export default async function BlogPage() {
   let blogPostsCollection;
   try {
     blogPostsCollection = await getAllBlogPosts();
-    console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
-    if (blogPostsCollection?.items?.length) {
-      console.log('Available slugs:', blogPostsCollection.items.map(post => post.fields.slug));
-    }
+    // Log information about fetched posts
+    // console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
+    // if (blogPostsCollection?.items?.length) {
+    //   console.log('Available slugs:', blogPostsCollection.items.map(post => post.fields.slug));
+    // }
   } catch (error) {
     console.error('Error fetching blog posts from Contentful:', error);
     blogPostsCollection = {
@@ -100,8 +101,6 @@ export default async function BlogPage() {
                   <div className="flex items-center">
                     {/* Author image */}
                     {/* Debug author avatar */}
-                    {console.log('Featured post author:', JSON.stringify(getFieldValue<any>(featuredPost.fields.author), null, 2))}
-                    {console.log('Featured post author avatar:', JSON.stringify(getFieldValue<any>(featuredPost.fields.author)?.fields?.avatar, null, 2))}
                     {getFieldValue<any>(featuredPost.fields.author)?.fields?.avatar?.fields?.file?.url ? (
                       <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
                         <Image
