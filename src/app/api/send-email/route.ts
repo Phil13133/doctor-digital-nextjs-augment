@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const data = await resend.emails.send({
-      from: 'Doctor Digital <onboarding@resend.dev>',
+      from: 'Doctor Digital <noreply@doctordigital.gr>',
       to: ['marketing@doctordigital.gr'],
       replyTo: email,
       subject: subjectLine,
