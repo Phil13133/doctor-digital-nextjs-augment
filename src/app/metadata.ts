@@ -6,16 +6,16 @@ import { Metadata } from 'next';
  * This metadata is used for SEO and social sharing
  */
 export const metadata: Metadata = {
-  title: 'Ιατρικό Μάρκετινγκ | Google Ads & SEO | Doctor Digital',
-  description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Google Ads, SEO, περιεχόμενο & ιστοσελίδες για γιατρούς που θέλουν να προσελκύσουν νέους ασθενείς.',
+  title: 'Ιατρικό Μάρκετινγκ στην Ελλάδα | Doctor Digital',
+  description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Αυξήστε τους ασθενείς σας με στοχευμένες στρατηγικές Google Ads, SEO & περιεχομένου για ιατρούς.',
   keywords: ['Ιατρικό Μάρκετινγκ', 'SEO για Ιατρούς', 'Google Ads για Ιατρεία', 'Ιατρικές Ιστοσελίδες', 'Digital Marketing για Γιατρούς', 'Ελλάδα'],
   alternates: {
     canonical: SITE.url,
   },
   openGraph: {
     type: 'website',
-    title: 'Ιατρικό Μάρκετινγκ | Google Ads & SEO | Doctor Digital',
-    description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Google Ads, SEO, περιεχόμενο & ιστοσελίδες για γιατρούς.',
+    title: 'Ιατρικό Μάρκετινγκ στην Ελλάδα | Doctor Digital',
+    description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Αυξήστε τους ασθενείς σας με στοχευμένες στρατηγικές Google Ads, SEO & περιεχομένου για ιατρούς.',
     url: SITE.url,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ιατρικό Μάρκετινγκ | Google Ads & SEO | Doctor Digital',
-    description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ για γιατρούς και κλινικές στην Ελλάδα.',
+    title: 'Ιατρικό Μάρκετινγκ στην Ελλάδα | Doctor Digital',
+    description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Αυξήστε τους ασθενείς σας με στοχευμένες στρατηγικές Google Ads, SEO & περιεχομένου.',
     images: [`${SITE.url}/og/home.jpg`],
   },
   robots: {

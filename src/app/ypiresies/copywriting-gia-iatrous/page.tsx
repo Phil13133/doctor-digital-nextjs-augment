@@ -11,8 +11,8 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'Ιατρικό Copywriting & Κειμενογραφία για Γιατρούς',
-  description: 'Αποκτήστε επαγγελματικό ιατρικό περιεχόμενο που πείθει τους ασθενείς και κατατάσσεται στην Google. Εξειδικευμένες υπηρεσίες SEO Copywriting & Ιατρικής Κειμενογραφίας για γιατρούς, κλινικές & ιστοσελίδες υγείας.',
+  title: 'SEO Ιατρικό Κείμενο | Συγγραφή για Ιατρικά Sites | Doctor Digital',
+  description: 'Συγγραφή SEO κειμένου για ιατρικά sites. Αποκτήστε επαγγελματικό περιεχόμενο που πείθει τους ασθενείς και κατατάσσεται στη Google από εξειδικευμένο κειμενογράφο.',
   keywords: ['Ιατρικό Copywriting', 'Κειμενογράφος για Ιατρούς', 'Ιατρική Κειμενογραφία', 'SEO Άρθρα για Γιατρούς', 'Ιατρικό Περιεχόμενο', 'Copywriting Κλινική', 'Ιατρικά Άρθρα', 'Περιεχόμενο για Ιατρικό Site', 'Συγγραφή Ιατρικών Κειμένων', 'Ιατρικό Blogging'],
 };
 

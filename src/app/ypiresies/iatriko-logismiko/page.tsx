@@ -12,7 +12,7 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'Ιατρικό Λογισμικό | Σύγχρονο Ιατρικό Software Για Γιατρούς',
+  title: 'Ιατρικό Λογισμικό | Σύγχρονο Software Για Ιατρεία | Doctor Digital',
   description: 'Αναβαθμίστε την οργάνωση του ιατρείου σας με εύχρηστο, ασφαλές και παραμετροποιήσιμο ιατρικό λογισμικό. Ιδανικό για γιατρούς, κλινικές & διαγνωστικά.',
   keywords: ['ιατρικό λογισμικό', 'ιατρικό software', 'σύγχρονο λογισμικό για γιατρούς', 'ραντεβού για ιατρούς', 'ψηφιακή οργάνωση ιατρείου', 'software για ιατρικά κέντρα', 'ηλεκτρονικός φάκελος ασθενή'],
 };

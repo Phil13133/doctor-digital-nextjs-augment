@@ -8,7 +8,7 @@ import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
   title: 'Υπηρεσίες Digital Marketing για Ιατρούς | Doctor Digital',
-  description: 'Εξειδικευμένες υπηρεσίες digital marketing για ιατρούς και κλινικές στην Ελλάδα. SEO, Google Ads, Ιατρικό Περιεχόμενο και Εφαρμογές που φέρνουν νέους ασθενείς.',
+  description: 'Εξειδικευμένες υπηρεσίες digital marketing για ιατρούς και κλινικές. SEO, Google Ads και ιατρικό περιεχόμενο που αυξάνουν τους νέους ασθενείς σας.',
   keywords: 'Ιατρικό Marketing, SEO για Ιατρούς, Google Ads για Ιατρεία, Ιατρικό Περιεχόμενο, Web Apps για Γιατρούς, Digital Marketing Υγείας',
 };
 

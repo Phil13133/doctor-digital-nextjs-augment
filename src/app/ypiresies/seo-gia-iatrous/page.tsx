@@ -11,8 +11,8 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'SEO για Ιατρούς & Ιατρικές Ιστοσελίδες',
-  description: 'SEO για ιατρικές ιστοσελίδες που φέρνει αποτελέσματα. Αποκτήστε νέους ασθενείς με εξειδικευμένες υπηρεσίες SEO για γιατρούς και επαγγελματίες υγείας.',
+  title: 'Ιατρικό SEO | Βελτιστοποίηση Ιατρικών Ιστοσελίδων | Doctor Digital',
+  description: 'Εξειδικευμένο ιατρικό SEO και local SEO για βελτιστοποίηση ιατρικών ιστοσελίδων. Αυξήστε την προβολή του ιατρείου σας και προσελκύστε περισσότερους ασθενείς.',
   keywords: ['SEO για Ιατρούς', 'Ιατρικό SEO', 'Βελτιστοποίηση Google', 'SEO Κλινικής', 'Οργανική Προβολή Ιατρείου', 'Ιατρικό Marketing'],
 };
 

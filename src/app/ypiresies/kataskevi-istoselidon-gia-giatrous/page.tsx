@@ -12,8 +12,8 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'Κατασκευή Ιστοσελίδων για Ιατρούς & Κλινικές | Doctor Digital',
-  description: 'Σύγχρονες, responsive και SEO-ready ιστοσελίδες, ειδικά σχεδιασμένες για τις ανάγκες του ιατρικού κλάδου από την Doctor Digital.',
+  title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Doctor Digital',
+  description: 'Σύγχρονες, responsive και SEO-ready ιατρικές ιστοσελίδες, ειδικά σχεδιασμένες για ιατρούς. Αυξήστε τους ασθενείς σας με μια επαγγελματική διαδικτυακή παρουσία.',
   keywords: ['Ιστοσελίδες για Ιατρούς', 'Medical Websites', 'Web Design Ιατρεία', 'Κατασκευή Site Γιατρών', 'SEO για Ιατρούς'],
 };
 

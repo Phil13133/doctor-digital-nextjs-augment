@@ -6,16 +6,16 @@ import { Metadata } from 'next';
  * This metadata is used for SEO and social sharing for the SEO services page
  */
 export const metadata: Metadata = {
-  title: 'SEO για Ιατρούς | Βελτιστοποίηση Ιστοσελίδων για Γιατρούς',
-  description: 'Αυξήστε την οργανική σας επισκεψιμότητα και αποκτήστε περισσότερους ασθενείς με εξειδικευμένες στρατηγικές SEO για ιατρούς, κλινικές και επαγγελματίες υγείας.',
+  title: 'Ιατρικό SEO | Βελτιστοποίηση Ιατρικών Ιστοσελίδων | Doctor Digital',
+  description: 'Εξειδικευμένο ιατρικό SEO και local SEO για βελτιστοποίηση ιατρικών ιστοσελίδων. Αυξήστε την προβολή του ιατρείου σας και προσελκύστε περισσότερους ασθενείς.',
   keywords: ['SEO για Ιατρούς', 'Βελτιστοποίηση Ιστοσελίδων', 'Ιατρικό SEO', 'Οργανική Κατάταξη Google', 'Κατάταξη Ιατρείου στην Google', 'Medical SEO'],
   alternates: {
     canonical: `${SITE.url}/ypiresies/seo-gia-iatrous`,
   },
   openGraph: {
     type: 'website',
-    title: 'SEO για Ιατρούς | Βελτιστοποίηση Ιστοσελίδων στην Google',
-    description: 'Εξειδικευμένες υπηρεσίες SEO για ιατρούς που θέλουν να αυξήσουν την προβολή τους στις αναζητήσεις και να προσελκύσουν νέους ασθενείς.',
+    title: 'Ιατρικό SEO | Βελτιστοποίηση Ιατρικών Ιστοσελίδων | Doctor Digital',
+    description: 'Εξειδικευμένο ιατρικό SEO και local SEO για βελτιστοποίηση ιατρικών ιστοσελίδων. Αυξήστε την προβολή του ιατρείου σας και προσελκύστε περισσότερους ασθενείς.',
     url: `${SITE.url}/ypiresies/seo-gia-iatrous`,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO για Ιατρούς | Doctor Digital',
-    description: 'Εξειδικευμένες υπηρεσίες βελτιστοποίησης για μηχανές αναζήτησης για ιατρούς και επαγγελματίες υγείας.',
+    title: 'Ιατρικό SEO | Βελτιστοποίηση Ιατρικών Ιστοσελίδων | Doctor Digital',
+    description: 'Εξειδικευμένο ιατρικό SEO και local SEO για βελτιστοποίηση ιατρικών ιστοσελίδων. Αυξήστε την προβολή του ιατρείου σας.',
     images: [`${SITE.url}/og/seo.jpg`],
   },
   robots: {

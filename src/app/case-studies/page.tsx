@@ -8,8 +8,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BreadcrumbSchema from '@/components/schema/BreadcrumbSchema';
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Αποδεδειγμένα Αποτελέσματα με ROI | Doctor Digital',
-  description: 'Μετρήσιμα, αποδεδειγμένα αποτελέσματα για γιατρούς, κλινικές και ιατρικά κέντρα στην Ελλάδα. SEO, Google Ads και Social Media με πραγματική απόδοση της επένδυσης (ROI).',
+  title: 'Case Studies | Αποδεδειγμένα Αποτελέσματα για Ιατρούς | Doctor Digital',
+  description: 'Μετρήσιμα αποτελέσματα για γιατρούς, κλινικές και ιατρικά κέντρα. SEO, Google Ads και Social Media με πραγματική απόδοση επένδυσης (ROI).',
   keywords: 'case studies, ιατρικό marketing, αποτελέσματα SEO, Google Ads ιατρούς, social media για κλινικές, digital marketing υγεία',
 };
 

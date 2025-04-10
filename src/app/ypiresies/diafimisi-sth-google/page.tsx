@@ -11,8 +11,8 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'Google Ads για Γιατρούς & Κλινικές',
-  description: 'Διαφήμιση στη Google για γιατρούς και επαγγελματίες υγείας με στοχευμένες καμπάνιες που φέρνουν αποτελέσματα. Εξειδίκευση στο Ιατρικό Marketing από την Doctor Digital.',
+  title: 'Διαφήμιση Google για Γιατρούς | Προώθηση Ιατρείου | Doctor Digital',
+  description: 'Προώθηση ιατρείου μέσω διαφημίσεων Google (Google Ads) με στοχευμένες καμπάνιες που φέρνουν νέους ασθενείς. Εξειδικευμένο ιατρικό marketing με μετρήσιμα αποτελέσματα.',
   keywords: ['Διαφήμιση Google για Γιατρούς', 'Google Ads Ιατρεία', 'PPC Κλινικές', 'Καμπάνιες Google', 'Διαφήμιση Γιατρών Αθήνα', 'Ιατρικό Marketing'],
 };
 

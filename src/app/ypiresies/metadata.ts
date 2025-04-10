@@ -6,16 +6,16 @@ import { Metadata } from 'next';
  * This metadata is used for SEO and social sharing for the main services listing page
  */
 export const metadata: Metadata = {
-  title: 'Υπηρεσίες Ιατρικού Marketing | SEO, Google Ads, Web Development',
-  description: 'Εξειδικευμένες υπηρεσίες μάρκετινγκ για γιατρούς και κλινικές που θέλουν να αυξήσουν την online προβολή τους, να προσελκύσουν νέους ασθενείς και να αναπτύξουν το ιατρείο τους.',
+  title: 'Υπηρεσίες Digital Marketing για Ιατρούς | Doctor Digital',
+  description: 'Εξειδικευμένες υπηρεσίες digital marketing για ιατρούς και κλινικές. SEO, Google Ads και ιατρικό περιεχόμενο που αυξάνουν τους νέους ασθενείς σας.',
   keywords: ['Υπηρεσίες Ιατρικού Marketing', 'SEO για Γιατρούς', 'Google Ads για Ιατρούς', 'Ιατρικές Ιστοσελίδες', 'Ιατρικό Λογισμικό', 'Copywriting για Γιατρούς'],
   alternates: {
     canonical: `${SITE.url}/ypiresies`,
   },
   openGraph: {
     type: 'website',
-    title: 'Υπηρεσίες Ιατρικού Marketing | SEO, Google Ads, Web Development',
-    description: 'Ολοκληρωμένες υπηρεσίες ψηφιακού μάρκετινγκ αποκλειστικά για ιατρούς, κλινικές και επαγγελματίες υγείας.',
+    title: 'Υπηρεσίες Digital Marketing για Ιατρούς | Doctor Digital',
+    description: 'Εξειδικευμένες υπηρεσίες digital marketing για ιατρούς και κλινικές. SEO, Google Ads και ιατρικό περιεχόμενο που αυξάνουν τους ασθενείς σας.',
     url: `${SITE.url}/ypiresies`,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Υπηρεσίες Ιατρικού Marketing | Doctor Digital',
-    description: 'Ολοκληρωμένες υπηρεσίες ψηφιακού μάρκετινγκ αποκλειστικά για ιατρούς και επαγγελματίες υγείας.',
+    title: 'Υπηρεσίες Digital Marketing για Ιατρούς | Doctor Digital',
+    description: 'Εξειδικευμένες υπηρεσίες digital marketing για ιατρούς και κλινικές. SEO, Google Ads και ιατρικό περιεχόμενο που αυξάνουν τους ασθενείς σας.',
     images: [`${SITE.url}/og/services.jpg`],
   },
   robots: {

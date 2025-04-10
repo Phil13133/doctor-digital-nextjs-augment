@@ -5,9 +5,9 @@ import Image from 'next/image';
 import { getAllBlogPosts } from '@/lib/contentfulApi';
 
 export const metadata: Metadata = {
-  title: 'Blog | Doctor Digital',
-  description: 'Άρθρα, συμβουλές και οδηγοί για το digital marketing, SEO, Google Ads, και περισσότερα από την ομάδα του Doctor Digital.',
-  keywords: 'blog, digital marketing, SEO, tips, οδηγοί, συμβουλές, Google Ads, social media',
+  title: 'Ιατρικό Marketing Blog | Doctor Digital',
+  description: 'Εξειδικευμένα άρθρα, συμβουλές και οδηγοί για το ιατρικό digital marketing',
+  keywords: 'blog, ιατρικό marketing, SEO για γιατρούς, tips, οδηγοί, συμβουλές, Google Ads για ιατρεία, social media',
 };
 
 // Removed formatDate function

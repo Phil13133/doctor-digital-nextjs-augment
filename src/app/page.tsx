@@ -10,8 +10,8 @@ import TestimonialsSchema from '@/components/schema/TestimonialsSchema';
 import ServiceSchema from '@/components/schema/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'Ιατρικό Μάρκετινγκ | Google Ads & SEO | Doctor Digital',
-  description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Google Ads, SEO, περιεχόμενο & ιστοσελίδες για γιατρούς που θέλουν να προσελκύσουν νέους ασθενείς.',
+  title: 'Ιατρικό Μάρκετινγκ στην Ελλάδα | Doctor Digital',
+  description: 'Εξειδικευμένες λύσεις ιατρικού μάρκετινγκ στην Ελλάδα. Αυξήστε τους ασθενείς σας με στοχευμένες στρατηγικές Google Ads, SEO & περιεχομένου για ιατρούς.',
   keywords: ['Ιατρικό Μάρκετινγκ', 'SEO για Ιατρούς', 'Google Ads για Ιατρεία', 'Ιατρικές Ιστοσελίδες', 'Digital Marketing για Γιατρούς', 'Ελλάδα'],
 };
 

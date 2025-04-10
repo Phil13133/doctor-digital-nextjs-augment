@@ -6,16 +6,16 @@ import { Metadata } from 'next';
  * This metadata is used for SEO and social sharing for the blog listing page
  */
 export const metadata: Metadata = {
-  title: 'Ιατρικό Blog | Τελευταίες Εξελίξεις στο Marketing για Γιατρούς',
-  description: 'Διαβάστε τις τελευταίες εξελίξεις και συμβουλές ιατρικού μάρκετινγκ, SEO, και στρατηγικές digital marketing για ιατρούς και κλινικές.',
+  title: 'Ιατρικό Marketing Blog | Doctor Digital',
+  description: 'Εξειδικευμένα άρθρα, συμβουλές και οδηγοί για το ιατρικό digital marketing',
   keywords: ['Ιατρικό Blog', 'Marketing για Γιατρούς', 'SEO για Ιατρούς', 'Ιατρικό Περιεχόμενο', 'Digital Marketing', 'Συμβουλές για Ιατρεία'],
   alternates: {
     canonical: `${SITE.url}/blog`,
   },
   openGraph: {
     type: 'website',
-    title: 'Ιατρικό Blog | Συμβουλές Marketing για Γιατρούς και Κλινικές',
-    description: 'Εξειδικευμένες συμβουλές και στρατηγικές ιατρικού μάρκετινγκ για να αυξήσετε την επισκεψιμότητα και τους ασθενείς σας.',
+    title: 'Ιατρικό Marketing Blog | Doctor Digital',
+    description: 'Εξειδικευμένα άρθρα, συμβουλές και οδηγοί για το ιατρικό digital marketing',
     url: `${SITE.url}/blog`,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ιατρικό Blog | Συμβουλές Marketing για Γιατρούς',
-    description: 'Εξειδικευμένες συμβουλές και στρατηγικές ιατρικού μάρκετινγκ για επαγγελματίες υγείας.',
+    title: 'Ιατρικό Marketing Blog | Doctor Digital',
+    description: 'Εξειδικευμένα άρθρα, συμβουλές και οδηγοί για το ιατρικό digital marketing',
     images: [`${SITE.url}/og/blog.jpg`],
   },
   robots: {

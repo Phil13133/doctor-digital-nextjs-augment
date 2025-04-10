@@ -6,16 +6,16 @@ import { Metadata } from 'next';
  * This metadata is used for SEO and social sharing for the medical software services page
  */
 export const metadata: Metadata = {
-  title: 'Ιατρικό Λογισμικό | Web Apps για Γιατρούς & Κλινικές',
-  description: 'Εξειδικευμένες εφαρμογές ιατρικού λογισμικού για τη διαχείριση ασθενών, ραντεβού, ιατρικών δεδομένων και αυτοματοποίηση διαδικασιών στο ιατρείο ή την κλινική σας.',
+  title: 'Ιατρικό Λογισμικό | Σύγχρονο Software Για Ιατρεία | Doctor Digital',
+  description: 'Αναβαθμίστε την οργάνωση του ιατρείου σας με εύχρηστο, ασφαλές και παραμετροποιήσιμο ιατρικό λογισμικό. Ιδανικό για γιατρούς, κλινικές & διαγνωστικά.',
   keywords: ['Ιατρικό Λογισμικό', 'Web Apps για Γιατρούς', 'Διαχείριση Ιατρείου', 'Εφαρμογές για Κλινικές', 'Σύστημα Διαχείρισης Ασθενών', 'Medical Software'],
   alternates: {
     canonical: `${SITE.url}/ypiresies/iatriko-logismiko`,
   },
   openGraph: {
     type: 'website',
-    title: 'Ιατρικό Λογισμικό | Web Apps για Γιατρούς & Κλινικές',
-    description: 'Εξειδικευμένες εφαρμογές λογισμικού για ιατρούς και κλινικές που αυτοματοποιούν διαδικασίες και βελτιώνουν την αποδοτικότητα του ιατρείου σας.',
+    title: 'Ιατρικό Λογισμικό | Σύγχρονο Software Για Ιατρεία | Doctor Digital',
+    description: 'Αναβαθμίστε την οργάνωση του ιατρείου σας με εύχρηστο, ασφαλές και παραμετροποιήσιμο ιατρικό λογισμικό. Ιδανικό για γιατρούς, κλινικές & διαγνωστικά.',
     url: `${SITE.url}/ypiresies/iatriko-logismiko`,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ιατρικό Λογισμικό | Doctor Digital',
-    description: 'Εξειδικευμένες εφαρμογές λογισμικού για ιατρούς και κλινικές που αυτοματοποιούν διαδικασίες.',
+    title: 'Ιατρικό Λογισμικό | Σύγχρονο Software Για Ιατρεία | Doctor Digital',
+    description: 'Αναβαθμίστε την οργάνωση του ιατρείου σας με εύχρηστο, ασφαλές και παραμετροποιήσιμο ιατρικό λογισμικό.',
     images: [`${SITE.url}/og/medical-software.jpg`],
   },
   robots: {
