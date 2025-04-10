@@ -1,6 +1,6 @@
 /**
  * Navigation configuration
- * 
+ *
  * This file defines the main navigation structure for the site.
  * It's used to dynamically generate navigation elements throughout the site.
  */
@@ -22,28 +22,6 @@ export const MAIN_NAV: NavItem[] = [
   {
     label: 'Υπηρεσίες',
     path: ROUTES.SERVICES,
-    children: [
-      {
-        label: 'Κατασκευή Ιστοσελίδων για Ιατρούς',
-        path: ROUTES.WEBSITE_DEVELOPMENT,
-      },
-      {
-        label: 'SEO για Ιατρούς & Κλινικές',
-        path: ROUTES.SEO,
-      },
-      {
-        label: 'Google Ads για Ιατρεία',
-        path: ROUTES.GOOGLE_ADS,
-      },
-      {
-        label: 'Ιατρικό Copywriting',
-        path: ROUTES.COPYWRITING,
-      },
-      {
-        label: 'Ιατρικό Λογισμικό & Web Apps',
-        path: ROUTES.MEDICAL_SOFTWARE,
-      },
-    ],
   },
   {
     label: 'Case Studies',

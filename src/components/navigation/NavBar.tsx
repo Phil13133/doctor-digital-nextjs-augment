@@ -59,7 +59,7 @@ export default function NavBar() {
       {/* Modern White Header */}
       <header className="bg-white shadow-sm py-4 sticky top-0 z-50">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center relative">
             {/* Logo */}
             <Link href="/" className="flex items-center text-text-dark" onClick={handleNavLinkClick}>
               <Image
@@ -129,9 +129,9 @@ export default function NavBar() {
               </ul>
             </nav>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - with higher z-index to ensure it's always clickable */}
             <button
-              className="md:hidden text-text-dark"
+              className="md:hidden text-text-dark relative z-[100]"
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
@@ -143,8 +143,8 @@ export default function NavBar() {
         </div>
       </header>
 
-      {/* Mobile Menu (toggled by state) */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} bg-white p-4 md:hidden shadow-md`}>
+      {/* Mobile Menu (toggled by state) - with fixed positioning and high z-index */}
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} bg-white p-4 md:hidden shadow-md fixed top-[72px] left-0 right-0 z-[90]`}>
         <nav>
           <ul className="space-y-4">
             {MAIN_NAV.map((item) => (
