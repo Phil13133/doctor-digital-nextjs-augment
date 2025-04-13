@@ -486,9 +486,6 @@ export default function SeoForMedicalPages() {
             </p>
           </div>
 
-          {/* FAQ Schema for structured data */}
-          <FAQSchema questions={faqQuestions} />
-
           <div className="max-w-3xl mx-auto bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 px-5">
             {faqQuestions.map((faq, index) => (
               <FAQToggleItem
