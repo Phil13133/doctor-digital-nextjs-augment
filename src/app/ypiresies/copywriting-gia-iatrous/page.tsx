@@ -11,9 +11,9 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'SEO Ιατρικό Κείμενο | Συγγραφή για Ιατρικά Sites | Doctor Digital',
-  description: 'Συγγραφή SEO κειμένου για ιατρικά sites. Αποκτήστε επαγγελματικό περιεχόμενο που πείθει τους ασθενείς και κατατάσσεται στη Google από εξειδικευμένο κειμενογράφο.',
-  keywords: ['Ιατρικό Copywriting', 'Κειμενογράφος για Ιατρούς', 'Ιατρική Κειμενογραφία', 'SEO Άρθρα για Γιατρούς', 'Ιατρικό Περιεχόμενο', 'Copywriting Κλινική', 'Ιατρικά Άρθρα', 'Περιεχόμενο για Ιατρικό Site', 'Συγγραφή Ιατρικών Κειμένων', 'Ιατρικό Blogging'],
+  title: 'Κειμενογράφος για Site & Ιατρεία | SEO Copywriting | Doctor Digital',
+  description: 'Επαγγελματικός κειμενογράφος για ιατρικά site. Εξειδικευμένο SEO copywriting που προσελκύει ασθενείς στο ιατρείο σας και βελτιώνει την κατάταξή σας στη Google.',
+  keywords: ['Κειμενογράφος', 'Κειμενογράφος για site', 'Ιατρικό Copywriting', 'Κειμενογράφος για Ιατρούς', 'Ιατρική Κειμενογραφία', 'SEO Άρθρα για Γιατρούς', 'Ιατρικό Περιεχόμενο', 'Copywriting Κλινική', 'Ιατρικά Άρθρα', 'Περιεχόμενο για Ιατρικό Site', 'Συγγραφή Ιατρικών Κειμένων', 'Ιατρικό Blogging'],
 };
 
 // FAQ data
@@ -44,9 +44,9 @@ export default function CopywritingForDoctors() {
   return (
     <>
       <ServiceSchema
-        name="Εξειδικευμένες Υπηρεσίες Copywriting για Γιατρούς"
+        name="Υπηρεσίες Επαγγελματικού Κειμενογράφου για Ιατρικά Site"
         url="https://doctordigital.gr/ypiresies/copywriting-gia-iatrous"
-        description="Δημιουργούμε στοχευμένο, επιστημονικά τεκμηριωμένο περιεχόμενο που ανεβάζει την κατάταξή σας στην Google και μετατρέπει επισκέπτες σε ασθενείς."
+        description="Εξειδικευμένος κειμενογράφος για ιατρικά site. Δημιουργούμε στοχευμένο, επιστημονικά τεκμηριωμένο περιεχόμενο που ανεβάζει την κατάταξή σας στην Google και μετατρέπει επισκέπτες σε ασθενείς."
         provider={{
           name: "Doctor Digital",
           url: "https://doctordigital.gr"
@@ -83,13 +83,13 @@ export default function CopywritingForDoctors() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-3">
-                Ιατρικό Περιεχόμενο & Blogging για Γιατρούς
+                SEO Copywriting για Ιατρεία & Επαγγελματική Κειμενογραφία για Site
               </h1>
               <h2 className="text-xl md:text-2xl text-text-light font-medium mb-5">
-                Επαγγελματικές Υπηρεσίες Κειμενογραφίας για τον Τομέα της Υγείας
+                Υπηρεσίες Επαγγελματικού Κειμενογράφου για Ιατρικά Site
               </h2>
               <p className="text-xl text-text-light mb-8 max-w-xl">
-                Δημιουργούμε στοχευμένο, επιστημονικά τεκμηριωμένο περιεχόμενο που ανεβάζει την κατάταξή σας στην Google και μετατρέπει επισκέπτες σε ασθενείς.
+                Είμαστε εξειδικευμένοι κειμενογράφοι για site με έμφαση στον ιατρικό τομέα. Δημιουργούμε στοχευμένο, επιστημονικά τεκμηριωμένο περιεχόμενο που ανεβάζει την κατάταξή σας στην Google και μετατρέπει επισκέπτες σε ασθενείς.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center">
@@ -168,15 +168,34 @@ export default function CopywritingForDoctors() {
         </div>
       </section>
 
-      {/* Medical Copywriting Services Section */}
+      {/* Copywriting Services Section */}
       <section className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Οι Υπηρεσίες Ιατρικού Περιεχομένου Μας</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Υπηρεσίες Επαγγελματικού Κειμενογράφου για Ιατρικά Site</h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-10"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Service 1 */}
+              {/* Service 1 - Corporate sites */}
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+                <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-7 h-7 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Κειμενογραφία για εταιρικά site</h3>
+                <p className="text-gray-600 mb-4">
+                  Ως επαγγελματικός κειμενογράφος για site, δημιουργούμε περιεχόμενο που αναδεικνύει την επιχείρησή σας, βελτιώνει την κατάταξη SEO και αυξάνει τις μετατροπές. Το περιεχόμενο προσαρμόζεται στο ύφος και τους στόχους σας.
+                </p>
+                <Link href="/epikoinonia" className="text-brand-200 font-medium flex items-center hover:text-brand-300 transition-colors">
+                  Μάθετε περισσότερα
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+
+              {/* Service 2 - Medical sites */}
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
                 <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +214,7 @@ export default function CopywritingForDoctors() {
                 </Link>
               </div>
 
-              {/* Service 2 */}
+              {/* Service 3 */}
               <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
                 <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -214,8 +233,8 @@ export default function CopywritingForDoctors() {
                 </Link>
               </div>
 
-              {/* Service 3 */}
-              <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+              {/* Service 4 - Hidden on smaller screens */}
+              <div className="hidden">
                 <div className="bg-brand-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-brand-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
@@ -237,11 +256,11 @@ export default function CopywritingForDoctors() {
         </div>
       </section>
 
-      {/* How We Create Medical Content Section */}
+      {/* How Copywriting Helps Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-center">Πώς το Ιατρικό Περιεχόμενο Βοηθά το Ιατρείο Σας</h2>
+            <h2 className="text-3xl font-bold mb-10 text-center">Πώς Βοηθά το Εξειδικευμένο Περιεχόμενο το Ιατρείο Σας</h2>
 
             <div className="space-y-12">
               {/* Step 1 */}
@@ -347,7 +366,7 @@ export default function CopywritingForDoctors() {
       <section className="py-16 bg-gradient-to-br from-brand-50/50 to-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Οφέλη του Επαγγελματικού Ιατρικού Περιεχομένου</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Οφέλη Συνεργασίας με Εξειδικευμένο Κειμενογράφο για το Ιατρείο Σας</h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-10"></div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -427,7 +446,7 @@ export default function CopywritingForDoctors() {
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Συχνές Ερωτήσεις για το ιατρικό περιεχόμενο</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Συχνές Ερωτήσεις για το SEO Copywriting Ιατρικών Site</h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Απαντήσεις στις πιο συχνές ερωτήσεις για το SEO Copywriting στον ιατρικό κλάδο.
