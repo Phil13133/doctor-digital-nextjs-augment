@@ -12,9 +12,9 @@ import RelatedServices from '@/components/services/RelatedServices';
 import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
-  title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Doctor Digital',
-  description: 'Σύγχρονες, responsive και SEO-ready ιατρικές ιστοσελίδες, ειδικά σχεδιασμένες για ιατρούς. Αυξήστε τους ασθενείς σας με μια επαγγελματική διαδικτυακή παρουσία.',
-  keywords: ['Ιστοσελίδες για Ιατρούς', 'Medical Websites', 'Web Design Ιατρεία', 'Κατασκευή Site Γιατρών', 'SEO για Ιατρούς'],
+  title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Δημιουργία Site για Γιατρούς | Doctor Digital',
+  description: 'Εξειδικευμένη κατασκευή ιατρικών ιστοσελίδων & σχεδιασμός site για γιατρούς. Σύγχρονα, responsive ιατρικά websites που αυξάνουν τους ασθενείς και την αξιοπιστία σας.',
+  keywords: ['Κατασκευή Ιατρικών Ιστοσελίδων', 'Ιστοσελίδες για Ιατρούς', 'Δημιουργία Site για Γιατρούς', 'Σχεδιασμός Ιατρικών Website', 'Ιατρικό Web Design', 'Κόστος Ιατρικής Ιστοσελίδας', 'Ιατρικό Digital Marketing'],
 };
 
 // Feature Item Component
@@ -97,65 +97,45 @@ const ResultCard = ({ number, text }: { number: string; text: string }) => (
   </div>
 );
 
-// Before/After Showcase Component
+// Website Showcase Component
 const WebsiteShowcase = ({
-  clientName,
-  specialty,
-  beforeImgSrc,
-  afterImgSrc,
-  improvements
+  title,
+  description,
+  imageSrc,
+  features
 }: {
-  clientName: string;
-  specialty: string;
-  beforeImgSrc: string;
-  afterImgSrc: string;
-  improvements: string[];
+  title: string;
+  description: string;
+  imageSrc: string;
+  features: string[];
 }) => (
   <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 border border-gray-100">
     <div className="p-5 border-b border-gray-100 bg-gradient-to-r from-brand-50 to-white">
-      <h3 className="font-bold text-xl text-brand-800">{clientName}</h3>
-      <p className="text-text-light">{specialty}</p>
+      <h3 className="font-bold text-xl text-brand-800">{title}</h3>
+      <p className="text-text-light">{description}</p>
     </div>
 
-    <div className="grid grid-cols-2 gap-4 p-4">
-      {/* Before */}
-      <div className="relative">
-        <div className="absolute top-2 left-2 bg-gray-700 text-white text-xs px-2 py-1 rounded z-10">Πριν</div>
-        <div className="border border-gray-200 rounded overflow-hidden">
-          <Image
-            src={beforeImgSrc}
-            alt={`${clientName} website before redesign`}
-            width={300}
-            height={200}
-            className="w-full h-auto"
-          />
-        </div>
-      </div>
-
-      {/* After */}
-      <div className="relative">
-        <div className="absolute top-2 left-2 bg-brand-200 text-white text-xs px-2 py-1 rounded z-10">Μετά</div>
-        <div className="border border-gray-200 rounded overflow-hidden">
-          <Image
-            src={afterImgSrc}
-            alt={`${clientName} website after redesign`}
-            width={300}
-            height={200}
-            className="w-full h-auto"
-          />
-        </div>
+    <div className="p-4">
+      <div className="border border-gray-200 rounded overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={`Παράδειγμα κατασκευής ιατρικής ιστοσελίδας - ${title} - Επαγγελματικός σχεδιασμός και ανάπτυξη`}
+          width={1200}
+          height={800}
+          className="w-full h-auto"
+        />
       </div>
     </div>
 
     <div className="p-4 bg-gray-50">
-      <h4 className="font-medium text-sm mb-2">Βελτιώσεις:</h4>
+      <h4 className="font-medium text-sm mb-2">Χαρακτηριστικά:</h4>
       <ul className="space-y-1">
-        {improvements.map((improvement, i) => (
+        {features.map((feature, i) => (
           <li key={i} className="flex items-start">
             <div className="text-brand-200 mr-2 mt-0.5 flex-shrink-0">
               <CheckIcon size={14} color="currentColor" />
             </div>
-            <span className="text-sm">{improvement}</span>
+            <span className="text-sm">{feature}</span>
           </li>
         ))}
       </ul>
@@ -189,16 +169,28 @@ const ProcessStep = ({
 // FAQ data
 const faqQuestions = [
   {
-    question: "Πόσο χρόνο χρειάζεται η κατασκευή μιας ιατρικής ιστοσελίδας;",
-    answer: "Ο μέσος χρόνος ανάπτυξης μιας επαγγελματικής ιατρικής ιστοσελίδας είναι 3-5 εβδομάδες, ανάλογα με την πολυπλοκότητα και τις λειτουργίες. Ξεκινάμε με τον σχεδιασμό (1-2 εβδομάδες), συνεχίζουμε με την ανάπτυξη (1-2 εβδομάδες) και ολοκληρώνουμε με τον έλεγχο και τις τελικές προσαρμογές (1 εβδομάδα)."
+    question: "Πόσο χρόνο χρειάζεται η κατασκευή ιατρικής ιστοσελίδας;",
+    answer: "Ο μέσος χρόνος ανάπτυξης μιας επαγγελματικής ιατρικής ιστοσελίδας είναι 2-3 εβδομάδες, ανάλογα με την πολυπλοκότητα και τις λειτουργίες. Ξεκινάμε με την αρχική συνάντηση και ανάλυση αναγκών (2-3 ημέρες), συνεχίζουμε με τον σχεδιασμό (3-5 ημέρες), την ανάπτυξη (5-7 ημέρες), την ενσωμάτωση περιεχομένου και SEO (3-4 ημέρες) και ολοκληρώνουμε με τον έλεγχο και την παράδοση (1-2 ημέρες). Σε επείγουσες περιπτώσεις, μπορούμε να παραδώσουμε βασικές ιστοσελίδες σε μόλις 7-10 ημέρες."
+  },
+  {
+    question: "Πόσο κοστίζει μια ιατρική ιστοσελίδα;",
+    answer: "Το κόστος μιας ιατρικής ιστοσελίδας ξεκινά από 480€ για το Βασικό πακέτο (απλή παρουσία με 3-4 σελίδες), 890€ για το Επαγγελματικό πακέτο (πλήρης ιστοσελίδα με έως 10 σελίδες, blog και προηγμένο SEO) και από 1250€ για το Premium πακέτο (custom design, σύστημα online ραντεβού και πλήρες digital marketing setup). Η τιμολόγηση προσαρμόζεται στις συγκεκριμένες ανάγκες κάθε ιατρείου και εξαρτάται από παράγοντες όπως ο αριθμός των σελίδων, οι ειδικές λειτουργίες και οι απαιτήσεις περιεχομένου."
   },
   {
     question: "Τι περιλαμβάνει το κόστος;",
     answer: "Το κόστος περιλαμβάνει τον σχεδιασμό, την ανάπτυξη, την ενσωμάτωση περιεχομένου, την βελτιστοποίηση SEO, την προσαρμογή για κινητές συσκευές (responsive design), την εκπαίδευση στη διαχείριση περιεχομένου, και 3 μήνες δωρεάν τεχνική υποστήριξη. Επίσης καλύπτουμε το domain και το hosting για τον πρώτο χρόνο στα πακέτα Professional και Premium."
   },
   {
-    question: "Θα μπορώ να επεξεργάζομαι μόνος μου την ιστοσελίδα;",
-    answer: "Ναι. Όλες οι ιστοσελίδες που κατασκευάζουμε διαθέτουν φιλικό προς τον χρήστη σύστημα διαχείρισης περιεχομένου (CMS), συνήθως WordPress, που σας επιτρέπει να ενημερώνετε εύκολα κείμενα, εικόνες και άλλα στοιχεία. Παρέχουμε επίσης αναλυτικό εγχειρίδιο και εκπαίδευση για να μπορείτε να διαχειρίζεστε το περιεχόμενο με αυτονομία."
+    question: "Πώς μπορώ να διαχειρίζομαι την ιστοσελίδα του ιατρείου μου;",
+    answer: "Όλες οι ιατρικές ιστοσελίδες που κατασκευάζουμε διαθέτουν φιλικό προς τον χρήστη σύστημα διαχείρισης περιεχομένου (CMS), συνήθως WordPress, που σας επιτρέπει να ενημερώνετε εύκολα κείμενα, εικόνες, ώρες λειτουργίας και άλλα στοιχεία χωρίς τεχνικές γνώσεις. Παρέχουμε αναλυτικό εγχειρίδιο χρήσης και προσωπική εκπαίδευση 1-2 ωρών για εσάς ή τη γραμματεία σας. Επιπλέον, προσφέρουμε τεχνική υποστήριξη για οποιαδήποτε απορία ή βοήθεια χρειαστείτε στη διαχείριση της ιστοσελίδας σας."
+  },
+  {
+    question: "Περιλαμβάνεται SEO στην κατασκευή ιατρικής ιστοσελίδας;",
+    answer: "Ναι, όλα τα πακέτα κατασκευής ιατρικών ιστοσελίδων περιλαμβάνουν βασική βελτιστοποίηση για μηχανές αναζήτησης (SEO). Αυτό περιλαμβάνει on-page SEO (meta titles, descriptions, headings), τεχνική βελτιστοποίηση (ταχύτητα φόρτωσης, mobile-friendly σχεδιασμό, δομή URL), και βασική τοπική βελτιστοποίηση για την περιοχή σας. Στα πακέτα Professional και Premium προσφέρουμε πιο εκτεταμένη βελτιστοποίηση SEO, ενώ για συνεχή βελτίωση της κατάταξης και στοχευμένες καμπάνιες προσφέρουμε ξεχωριστά πακέτα μηνιαίου SEO."
+  },
+  {
+    question: "Ποια είναι η διαφορά μεταξύ μιας απλής και μιας ιατρικής ιστοσελίδας;",
+    answer: "Μια ιατρική ιστοσελίδα διαφέρει από μια απλή εταιρική ιστοσελίδα σε πολλά σημεία: 1) Συμμόρφωση με ιατρικούς κανονισμούς και GDPR για τα ευαίσθητα προσωπικά δεδομένα, 2) Εξειδικευμένη δομή περιεχομένου για παρουσίαση ιατρικών υπηρεσιών, παθήσεων και θεραπειών, 3) Συστήματα online κράτησης ραντεβού και διαχείρισης ασθενών, 4) Ειδική βελτιστοποίηση SEO για ιατρικούς όρους και τοπικές αναζητήσεις, 5) Σχεδιασμός που εμπνέει εμπιστοσύνη και επαγγελματισμό, απαραίτητα στοιχεία για τον ιατρικό κλάδο. Οι ιατρικές ιστοσελίδες απαιτούν εξειδικευμένη γνώση του κλάδου και των αναγκών των ασθενών."
   },
   {
     question: "Μπορεί να εμφανίζεται ψηλά στην Google;",
@@ -250,10 +242,10 @@ export default function WebsitesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Κατασκευή Ιστοσελίδων για Ιατρούς & Κλινικές
+                Κατασκευή Ιατρικών Ιστοσελίδων για Γιατρούς & Κλινικές
               </h1>
               <p className="text-xl text-text-light mb-8 max-w-xl">
-                Σύγχρονες, responsive και <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">SEO-ready</Link> ιστοσελίδες, ειδικά σχεδιασμένες για τις ανάγκες του ιατρικού κλάδου. Ένα ισχυρό θεμέλιο για επιτυχημένο <Link href="/" className="text-brand-200 hover:underline">Ιατρικό Μάρκετινγκ</Link>.
+                Εξειδικευμένη κατασκευή ιατρικών ιστοσελίδων με σύγχρονο, responsive και <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">SEO-ready</Link> σχεδιασμό, ειδικά προσαρμοσμένο για τις ανάγκες του ιατρικού κλάδου. Η επαγγελματική δημιουργία ιστοσελίδας για γιατρούς αποτελεί ισχυρό θεμέλιο για επιτυχημένο <Link href="/" className="text-brand-200 hover:underline">Ιατρικό Μάρκετινγκ</Link> και προσέλκυση νέων ασθενών.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/epikoinonia" className="btn-primary text-center">
@@ -268,10 +260,10 @@ export default function WebsitesPage() {
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/images/Κατασκευή Ιστοσελίδων για Ιατρούς.webp"
-                  alt="Κατασκευή ιστοσελίδων για ιατρούς και κλινικές"
-                  width={600}
-                  height={400}
+                  src="/images/kataskevi-iatrikon-istoselidon.webp"
+                  alt="Επαγγελματική κατασκευή ιατρικών ιστοσελίδων για γιατρούς και κλινικές με responsive σχεδιασμό"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto object-cover"
                   priority
                 />
@@ -293,7 +285,7 @@ export default function WebsitesPage() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-6 text-center">
-                Γιατί Χρειάζεστε Μια Επαγγελματική Ιατρική Ιστοσελίδα
+                Γιατί η Κατασκευή Ιατρικών Ιστοσελίδων Απαιτεί Εξειδίκευση
               </h2>
               <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
               <p className="text-lg text-text-light mb-8">
@@ -342,7 +334,7 @@ export default function WebsitesPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Η Διαδικασία Κατασκευής Ιστοσελίδας Για Ιατρούς
+              Η Διαδικασία Σχεδιασμού & Δημιουργίας Ιατρικού Site
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-3xl mx-auto">
@@ -375,6 +367,199 @@ export default function WebsitesPage() {
               title="Εκπαίδευση & Υποστήριξη"
               description="Σας εκπαιδεύουμε στη διαχείριση και παρέχουμε συνεχή υποστήριξη."
             />
+          </div>
+          
+          {/* Timeline Visualization */}
+          <div className="max-w-5xl mx-auto mb-12 bg-gray-50 p-6 rounded-xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-brand-700 bg-brand-100 py-2 px-4 rounded-md inline-block">Χρονοδιάγραμμα Κατασκευής Ιατρικής Ιστοσελίδας</h3>
+              <p className="text-text-light mt-2">Ολοκληρωμένη παράδοση σε μόλις 2-3 εβδομάδες</p>
+            </div>
+            
+            {/* Desktop Timeline (hidden on mobile) */}
+            <div className="relative mt-12 hidden md:block">
+              {/* Main Timeline Line */}
+              <div className="absolute h-2 bg-brand-200 top-10 left-0 right-0 z-0"></div>
+              
+              {/* Timeline Container */}
+              <div className="relative">
+                <div className="flex justify-between">
+                  {/* Phase 1: Consultation */}
+                  <div className="relative flex flex-col items-center w-1/5">
+                    <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white">
+                      1
+                    </div>
+                    <div className="mt-4 text-center">
+                      <h4 className="font-bold text-brand-800">Αρχική Συνάντηση</h4>
+                      <p className="text-sm text-text-light">2-3 ημέρες</p>
+                      <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                        <p className="text-sm">Ανάλυση αναγκών</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Phase 2: Design */}
+                  <div className="relative flex flex-col items-center w-1/5">
+                    <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white">
+                      2
+                    </div>
+                    <div className="mt-4 text-center">
+                      <h4 className="font-bold text-brand-800">Σχεδιασμός</h4>
+                      <p className="text-sm text-text-light">3-5 ημέρες</p>
+                      <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                        <p className="text-sm">Mockups & UI/UX</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Phase 3: Development */}
+                  <div className="relative flex flex-col items-center w-1/5">
+                    <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white">
+                      3
+                    </div>
+                    <div className="mt-4 text-center">
+                      <h4 className="font-bold text-brand-800">Ανάπτυξη</h4>
+                      <p className="text-sm text-text-light">5-7 ημέρες</p>
+                      <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                        <p className="text-sm">Κατασκευή & Λειτουργίες</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Phase 4: Content & SEO */}
+                  <div className="relative flex flex-col items-center w-1/5">
+                    <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white">
+                      4
+                    </div>
+                    <div className="mt-4 text-center">
+                      <h4 className="font-bold text-brand-800">Περιεχόμενο & SEO</h4>
+                      <p className="text-sm text-text-light">3-4 ημέρες</p>
+                      <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                        <p className="text-sm">Βελτιστοποίηση</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Phase 5: Launch */}
+                  <div className="relative flex flex-col items-center w-1/5">
+                    <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <div className="mt-4 text-center">
+                      <h4 className="font-bold text-brand-800">Παράδοση</h4>
+                      <p className="text-sm text-text-light">1-2 ημέρες</p>
+                      <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                        <p className="text-sm">Έναρξη λειτουργίας</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Mobile Timeline (visible only on mobile) */}
+            <div className="md:hidden mt-8">
+              {/* Mobile Timeline Header */}
+              <div className="bg-brand-100 rounded-lg p-4 mb-6 text-center">
+                <h4 className="font-bold text-brand-800">Συνολικός χρόνος: 2-3 εβδομάδες</h4>
+              </div>
+              
+              {/* Mobile Timeline Steps */}
+              <div className="relative">
+                {/* Vertical Timeline Line */}
+                <div className="absolute w-2 bg-brand-200 top-0 bottom-0 left-7 z-0"></div>
+                
+                {/* Phase 1: Consultation */}
+                <div className="relative flex items-start mb-8">
+                  <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white flex-shrink-0">
+                    1
+                  </div>
+                  <div className="ml-6 bg-white p-4 rounded-lg shadow-sm border border-gray-100 w-full">
+                    <h4 className="font-bold text-brand-800">Αρχική Συνάντηση</h4>
+                    <p className="text-sm text-text-light">2-3 ημέρες</p>
+                    <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                      <p className="text-sm">Ανάλυση αναγκών</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Phase 2: Design */}
+                <div className="relative flex items-start mb-8">
+                  <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white flex-shrink-0">
+                    2
+                  </div>
+                  <div className="ml-6 bg-white p-4 rounded-lg shadow-sm border border-gray-100 w-full">
+                    <h4 className="font-bold text-brand-800">Σχεδιασμός</h4>
+                    <p className="text-sm text-text-light">3-5 ημέρες</p>
+                    <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                      <p className="text-sm">Mockups & UI/UX</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Phase 3: Development */}
+                <div className="relative flex items-start mb-8">
+                  <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white flex-shrink-0">
+                    3
+                  </div>
+                  <div className="ml-6 bg-white p-4 rounded-lg shadow-sm border border-gray-100 w-full">
+                    <h4 className="font-bold text-brand-800">Ανάπτυξη</h4>
+                    <p className="text-sm text-text-light">5-7 ημέρες</p>
+                    <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                      <p className="text-sm">Κατασκευή & Λειτουργίες</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Phase 4: Content & SEO */}
+                <div className="relative flex items-start mb-8">
+                  <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white flex-shrink-0">
+                    4
+                  </div>
+                  <div className="ml-6 bg-white p-4 rounded-lg shadow-sm border border-gray-100 w-full">
+                    <h4 className="font-bold text-brand-800">Περιεχόμενο & SEO</h4>
+                    <p className="text-sm text-text-light">3-4 ημέρες</p>
+                    <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                      <p className="text-sm">Βελτιστοποίηση</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Phase 5: Launch */}
+                <div className="relative flex items-start mb-4">
+                  <div className="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center text-white font-bold text-2xl z-10 shadow-lg border-4 border-white flex-shrink-0">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div className="ml-6 bg-white p-4 rounded-lg shadow-sm border border-gray-100 w-full">
+                    <h4 className="font-bold text-brand-800">Έλεγχος & Παράδοση</h4>
+                    <p className="text-sm text-text-light">1-2 ημέρες</p>
+                    <div className="mt-2 bg-[#e6f7f1] p-2 rounded-md">
+                      <p className="text-sm">Έναρξη λειτουργίας</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-5 rounded-lg shadow-sm border border-gray-100 mt-10">
+              <div className="flex items-start">
+                <div className="text-brand-200 mr-3 mt-1 flex-shrink-0">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-bold text-brand-800 mb-1">Γρήγορη παράδοση χωρίς συμβιβασμούς στην ποιότητα</h4>
+                  <p className="text-sm text-text-light">
+                    Επιταχύνουμε τη διαδικασία χάρη στην εξειδίκευσή μας στον ιατρικό κλάδο και τα έτοιμα πρότυπα που προσαρμόζουμε στις ανάγκες σας. Σε επείγουσες περιπτώσεις, μπορούμε να παραδώσουμε βασικές ιστοσελίδες σε μόλις 7-10 ημέρες.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 max-w-5xl mx-auto">
@@ -411,7 +596,7 @@ export default function WebsitesPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Χαρακτηριστικά Των Ιατρικών Ιστοσελίδων Μας
+              Παραδείγματα Επαγγελματικών Ιστοσελίδων για Ιατρούς
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
@@ -419,13 +604,12 @@ export default function WebsitesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <WebsiteShowcase
-              clientName="Δρ. Παπαδόπουλος Αθανάσιος"
-              specialty="Καρδιολόγος, Αθήνα"
-              beforeImgSrc="/images/Κατασκευή Ιστοσελίδων για Ιατρούς.webp"
-              afterImgSrc="/images/Ιατρικό μάρκετινγκ για γιατρούς στην Ελλάδα.webp"
-              improvements={[
+              title="Καρδιολόγος Κατ' Οίκον"
+              description="Ιατρικές υπηρεσίες στο σπίτι"
+              imageSrc="/images/kataskevi-istoselidon-kardiologos-paradeigma.webp"
+              features={[
                 "Responsive design για όλες τις συσκευές",
                 "Online σύστημα κράτησης ραντεβού",
                 "SEO βελτιστοποίηση για αύξηση επισκεψιμότητας",
@@ -434,22 +618,33 @@ export default function WebsitesPage() {
             />
 
             <WebsiteShowcase
-              clientName="Ορθοπαιδικό Κέντρο Αθηνών"
-              specialty="Ορθοπαιδική Κλινική"
-              beforeImgSrc="/images/blood-test-application.webp"
-              afterImgSrc="/images/patient-scheduling-application.webp"
-              improvements={[
+              title="Φροντίδα Κατ' Οίκον"
+              description="Υπηρεσίες φροντίδας ηλικιωμένων"
+              imageSrc="/images/kataskevi-istoselidon-frontida-ilikiomenon-paradeigma.webp"
+              features={[
                 "Μοντέρνος σχεδιασμός με εταιρική ταυτότητα",
-                "Παρουσίαση για κάθε ιατρό της κλινικής",
-                "Αναλυτικές σελίδες για κάθε θεραπεία",
+                "Παρουσίαση υπηρεσιών φροντίδας",
+                "Αναλυτικές σελίδες για κάθε υπηρεσία",
                 "Βελτιστοποίηση για τοπικές αναζητήσεις"
+              ]}
+            />
+
+            <WebsiteShowcase
+              title="Doctor Home Care"
+              description="Ολοκληρωμένες ιατρικές υπηρεσίες"
+              imageSrc="/images/kataskevi-istoselidon-doctor-homecare-paradeigma.webp"
+              features={[
+                "Premium σχεδιασμός ιστοσελίδας",
+                "Πλήρες σύστημα διαχείρισης ραντεβού",
+                "Ενσωματωμένο blog ιατρικών άρθρων",
+                "Προηγμένη SEO βελτιστοποίηση"
               ]}
             />
           </div>
 
           <div className="text-center mt-10">
             <Link href="/case-studies" className="text-brand-200 hover:text-brand-300 inline-flex items-center font-medium">
-              Δείτε όλα τα έργα μας
+              Δείτε Όλα Τα Case Studies
               <ArrowRightIcon className="ml-2" size={16} />
             </Link>
           </div>
@@ -461,7 +656,7 @@ export default function WebsitesPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Πακέτα & Τιμές Ιατρικών Ιστοσελίδων
+              Πακέτα & Κόστος Κατασκευής Ιατρικών Ιστοσελίδων
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
@@ -472,9 +667,9 @@ export default function WebsitesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <PricingPackage
               title="Βασικό"
-              price="480€"
+              price="350€"
               features={[
-                "Απλή παρουσία με 3–4 σελίδες",
+                "Απλή παρουσία με 3–5 σελίδες",
                 "Responsive design",
                 "Φόρμα επικοινωνίας",
                 "Βασικό SEO setup",
@@ -485,11 +680,11 @@ export default function WebsitesPage() {
 
             <PricingPackage
               title="Επαγγελματικό"
-              price="890€"
+              price="690€"
               features={[
                 "Πλήρης ιατρική ιστοσελίδα",
                 "Έως 10 σελίδες περιεχομένου",
-                "Blog για άρθρα",
+                "Δημουργία Blog για άρθρα",
                 "Προηγμένο SEO setup",
                 "Χάρτης Google & οδηγίες",
                 "Φόρμες επικοινωνίας",
@@ -501,7 +696,7 @@ export default function WebsitesPage() {
 
             <PricingPackage
               title="Premium"
-              price="1250€+"
+              price="1250€"
               features={[
                 "Custom design",
                 "Απεριόριστες σελίδες",
@@ -523,7 +718,7 @@ export default function WebsitesPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Τι Έχουν Πετύχει Οι Πελάτες Μας
+              Αποτελέσματα από τη Δημιουργία Ιατρικών Sites για Πελάτες μας
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
@@ -577,7 +772,7 @@ export default function WebsitesPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Συχνές Ερωτήσεις Για Τις Ιατρικές Ιστοσελίδες
+              Συχνές Ερωτήσεις για την Κατασκευή Ιστοσελίδας Ιατρείου
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
@@ -606,7 +801,7 @@ export default function WebsitesPage() {
 
             <div className="relative z-10">
               <div className="text-center mb-8">
-                <h2 className="text-2xl font-bold mb-4">Ζητήστε Επαγγελματική Ιστοσελίδα για το Ιατρείο σας</h2>
+                <h2 className="text-2xl font-bold mb-4">Ζητήστε Προσφορά για την Ιατρική σας Ιστοσελίδα</h2>
                 <p className="text-text-light max-w-2xl mx-auto mb-8">
                   Επικοινωνήστε μαζί μας για μια εξατομικευμένη πρόταση που θα αυξήσει την online παρουσία του ιατρείου σας και θα προσελκύσει νέους ασθενείς.
                 </p>
@@ -628,6 +823,12 @@ export default function WebsitesPage() {
       {/* Related Services Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 text-center">
+              Σχετικές Υπηρεσίες Ιατρικού Digital Marketing
+            </h2>
+            <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+          </div>
           <RelatedServices currentService="/ypiresies/kataskevi-istoselidon-gia-giatrous" />
         </div>
       </section>

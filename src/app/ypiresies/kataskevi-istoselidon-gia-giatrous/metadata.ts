@@ -6,16 +6,16 @@ import { Metadata } from 'next';
  * This metadata is used for SEO and social sharing for the website development services page
  */
 export const metadata: Metadata = {
-  title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Doctor Digital',
-  description: 'Σύγχρονες, responsive και SEO-ready ιατρικές ιστοσελίδες, ειδικά σχεδιασμένες για ιατρούς. Αυξήστε τους ασθενείς σας με μια επαγγελματική διαδικτυακή παρουσία.',
-  keywords: ['Κατασκευή Ιστοσελίδων για Γιατρούς', 'Ιατρικές Ιστοσελίδες', 'Web Design για Ιατρούς', 'Website για Ιατρεία', 'Ιστοσελίδα για Κλινικές', 'Ιστοσελίδα για Οδοντιάτρους'],
+  title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Δημιουργία Site για Γιατρούς | Doctor Digital',
+  description: 'Εξειδικευμένη κατασκευή ιατρικών ιστοσελίδων & σχεδιασμός site για γιατρούς. Σύγχρονα, responsive ιατρικά websites που αυξάνουν τους ασθενείς και την αξιοπιστία σας.',
+  keywords: ['Κατασκευή Ιατρικών Ιστοσελίδων', 'Ιστοσελίδες για Ιατρούς', 'Δημιουργία Site για Γιατρούς', 'Σχεδιασμός Ιατρικών Website', 'Ιατρικό Web Design', 'Κόστος Ιατρικής Ιστοσελίδας', 'Ιατρικό Digital Marketing'],
   alternates: {
     canonical: `${SITE.url}/ypiresies/kataskevi-istoselidon-gia-giatrous`,
   },
   openGraph: {
     type: 'website',
-    title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Doctor Digital',
-    description: 'Σύγχρονες, responsive και SEO-ready ιατρικές ιστοσελίδες, ειδικά σχεδιασμένες για ιατρούς. Αυξήστε τους ασθενείς σας με μια επαγγελματική παρουσία.',
+    title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Δημιουργία Site για Γιατρούς | Doctor Digital',
+    description: 'Εξειδικευμένη κατασκευή ιατρικών ιστοσελίδων & σχεδιασμός site για γιατρούς. Σύγχρονα, responsive ιατρικά websites που αυξάνουν τους ασθενείς και την αξιοπιστία σας.',
     url: `${SITE.url}/ypiresies/kataskevi-istoselidon-gia-giatrous`,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Doctor Digital',
-    description: 'Σύγχρονες, responsive και SEO-ready ιατρικές ιστοσελίδες, ειδικά σχεδιασμένες για ιατρούς. Αυξήστε τους ασθενείς σας.',
+    title: 'Κατασκευή Ιατρικών Ιστοσελίδων | Δημιουργία Site για Γιατρούς | Doctor Digital',
+    description: 'Εξειδικευμένη κατασκευή ιατρικών ιστοσελίδων & σχεδιασμός site για γιατρούς. Σύγχρονα, responsive ιατρικά websites που αυξάνουν τους ασθενείς.',
     images: [`${SITE.url}/og/website-dev.jpg`],
   },
   robots: {
