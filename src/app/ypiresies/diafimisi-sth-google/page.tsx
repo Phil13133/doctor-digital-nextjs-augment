@@ -12,8 +12,8 @@ import RelatedBlogPosts from '@/components/blog/RelatedBlogPosts';
 
 export const metadata: Metadata = {
   title: 'Διαφήμιση Google για Γιατρούς | Προώθηση Ιατρείου | Doctor Digital',
-  description: 'Προώθηση ιατρείου μέσω διαφημίσεων Google (Google Ads) με στοχευμένες καμπάνιες που φέρνουν νέους ασθενείς. Εξειδικευμένο ιατρικό marketing με μετρήσιμα αποτελέσματα.',
-  keywords: ['Διαφήμιση Google για Γιατρούς', 'Google Ads Ιατρεία', 'PPC Κλινικές', 'Καμπάνιες Google', 'Διαφήμιση Γιατρών Αθήνα', 'Ιατρικό Marketing'],
+  description: 'Επαγγελματική διαφήμιση στη Google για ιατρεία. Στοχευμένες καμπάνιες Google Ads που προσελκύουν νέους ασθενείς με μετρήσιμα αποτελέσματα και χαμηλότερο κόστος.',
+  keywords: ['διαφήμιση στο google', 'διαφημιση google τιμες', 'πως κανω διαφημιση στο google', 'Διαφήμιση Google για Γιατρούς', 'Google Ads Ιατρεία', 'PPC Κλινικές', 'Καμπάνιες Google', 'Διαφήμιση Γιατρών Αθήνα', 'Ιατρικό Marketing', 'προώθηση ιατρείου', 'διαφήμιση ιατρείου', 'κόστος διαφήμισης google'],
 };
 
 // Feature Item Component
@@ -88,7 +88,7 @@ const ResultItem = ({ number, title, description }: { number: string; title: str
 // FAQ data
 const faqQuestions = [
   {
-    question: "Πόσο κοστίζει η διαφήμιση Google;",
+    question: "Πόσο κοστίζει η διαφήμιση στη Google;",
     answer: "Το κόστος εξαρτάται από την ειδικότητα, την περιοχή στόχευσης και το διαθέσιμο διαφημιστικό budget. Προτείνουμε minimum 300€/μήνα για να έχετε ανταγωνιστική παρουσία. Το συνολικό κόστος περιλαμβάνει το διαφημιστικό budget (πληρώνεται στη Google) και το management fee της υπηρεσίας μας."
   },
   {
@@ -96,16 +96,28 @@ const faqQuestions = [
     answer: "Ναι. Το μοντέλο της Google Ads είναι Pay-Per-Click (PPC), που σημαίνει ότι χρεώνεστε μόνο όταν κάποιος κάνει κλικ στη διαφήμισή σας. Αυτό εξασφαλίζει ότι πληρώνετε μόνο για πραγματικό ενδιαφέρον και επισκέψεις, όχι απλά για εμφανίσεις."
   },
   {
+    question: "Πώς κάνω διαφήμιση για το ιατρείο μου στο Google;",
+    answer: "Για να διαφημίσετε το ιατρείο σας στη Google, χρειάζεται να δημιουργήσετε λογαριασμό Google Ads, να επιλέξετε τις κατάλληλες λέξεις-κλειδιά για την ειδικότητά σας, να ορίσετε το ημερήσιο ή μηνιαίο budget και να δημιουργήσετε διαφημίσεις που στοχεύουν στην περιοχή σας. Εμείς αναλαμβάνουμε όλη τη διαδικασία, από τη δημιουργία έως τη διαχείριση της καμπάνιας, ώστε να έχετε το καλύτερο δυνατό αποτέλεσμα."
+  },
+  {
     question: "Είναι η Google Ads κατάλληλη για κάθε γιατρό;",
-    answer: "Η Google Ads είναι ιδανική για επαγγελματίες υγείας με υψηλό ανταγωνισμό και ανάγκη για νέους ασθενείς σε σύντομο χρονικό διάστημα. Είναι ιδιαίτερα αποτελεσματική για ειδικότητες όπως οδοντίατροι, πλαστικοί χειρουργοί, ορθοπαιδικοί, γυναικολόγοι και ψυχίατροι, καθώς και για διαγνωστικά κέντρα, κλινικές και πολυϊατρεία."
+    answer: "Η διαφήμιση στη Google είναι ιδανική για επαγγελματίες υγείας με υψηλό ανταγωνισμό και ανάγκη για νέους ασθενείς σε σύντομο χρονικό διάστημα. Είναι ιδιαίτερα αποτελεσματική για ειδικότητες όπως οδοντίατροι, πλαστικοί χειρουργοί, ορθοπαιδικοί, γυναικολόγοι και ψυχίατροι, καθώς και για διαγνωστικά κέντρα, κλινικές και πολυϊατρεία."
+  },
+  {
+    question: "Ποια είναι η διαφορά των Google Ads από το SEO για ιατρικές ιστοσελίδες;",
+    answer: "Η βασική διαφορά είναι στο χρόνο απόδοσης και το κόστος. Η διαφήμιση στη Google φέρνει άμεσα αποτελέσματα αλλά απαιτεί συνεχή επένδυση. Το SEO χρειάζεται περισσότερο χρόνο (3-6 μήνες) για να αποδώσει αλλά προσφέρει πιο μακροπρόθεσμα αποτελέσματα. Ιδανικά, ένα ιατρείο χρειάζεται και τα δύο: Google Ads για άμεσα αποτελέσματα και SEO για μακροπρόθεσμη βιωσιμότητα."
   },
   {
     question: "Είναι δωρεάν η πλατφόρμα Google Ads;",
     answer: "Η πλατφόρμα Google Ads δεν είναι δωρεάν. Για να διαφημιστείτε χρειάζεται να επενδύσετε σε διαφημιστικό budget (που πληρώνεται στη Google) και στη διαχείριση της καμπάνιας. Το πλεονέκτημα είναι ότι εσείς ελέγχετε πλήρως το κόστος και την επένδυση, με δυνατότητα προσαρμογής ανά πάσα στιγμή."
   },
   {
+    question: "Υπάρχει τρόπος να προωθήσω το ιατρείο μου στη Google δωρεάν;",
+    answer: "Ναι, μπορείτε να προωθήσετε το ιατρείο σας στη Google δωρεάν μέσω της βελτιστοποίησης για μηχανές αναζήτησης (SEO), δημιουργώντας ποιοτικό περιεχόμενο στην ιστοσελίδα σας, αξιοποιώντας το Google My Business, και ενθαρρύνοντας τους ασθενείς σας να αφήνουν θετικές κριτικές. Ωστόσο, αυτές οι μέθοδοι απαιτούν περισσότερο χρόνο για να αποδώσουν σε σύγκριση με τις πληρωμένες διαφημίσεις."
+  },
+  {
     question: "Πόσο γρήγορα βλέπω αποτελέσματα;",
-    answer: "Η Google Ads είναι η ταχύτερη μέθοδος digital marketing για να αποκτήσετε νέους ασθενείς. Συνήθως βλέπετε τα πρώτα αποτελέσματα (κλικ, επισκέψεις, τηλεφωνήματα) μέσα στις πρώτες 2–4 εβδομάδες λειτουργίας της καμπάνιας, ανάλογα με τον ανταγωνισμό, την ειδικότητα και την περιοχή σας."
+    answer: "Η διαφήμιση στη Google είναι η ταχύτερη μέθοδος digital marketing για να αποκτήσετε νέους ασθενείς. Συνήθως βλέπετε τα πρώτα αποτελέσματα (κλικ, επισκέψεις, τηλεφωνήματα) μέσα στις πρώτες 2–4 εβδομάδες λειτουργίας της καμπάνιας, ανάλογα με τον ανταγωνισμό, την ειδικότητα και την περιοχή σας."
   }
 ];
 
@@ -113,7 +125,7 @@ export default function GoogleAdsPage() {
   return (
     <>
       <ServiceSchema
-        name="Google Ads για Γιατρούς & Κλινικές"
+        name="Διαφήμιση στη Google για Ιατρεία & Κλινικές"
         url="https://doctordigital.gr/ypiresies/diafimisi-sth-google"
         description="Αποκτήστε νέους ασθενείς μέσω στοχευμένων καμπανιών Google Ads ειδικά για τον ιατρικό σας κλάδο."
         provider={{
@@ -152,7 +164,7 @@ export default function GoogleAdsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Google Ads για Γιατρούς & Κλινικές
+                Διαφήμιση στη Google για Ιατρεία & Κλινικές
               </h1>
               <p className="text-xl text-text-light mb-8 max-w-xl">
                 Αποκτήστε νέους ασθενείς μέσω στοχευμένων καμπανιών Google Ads ειδικά για τον ιατρικό σας κλάδο.
@@ -193,7 +205,7 @@ export default function GoogleAdsPage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Πώς λειτουργούν οι διαφημίσεις Google για ιατρεία</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Πώς Λειτουργεί η Διαφήμιση στη Google για Ιατρεία</h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <div className="bg-gray-50 p-8 rounded-lg mb-8 relative">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-full shadow-md">
@@ -202,7 +214,7 @@ export default function GoogleAdsPage() {
                 </svg>
               </div>
               <p className="text-lg mb-4 leading-relaxed">
-                Η Google Ads (πρώην AdWords) είναι ένα σύστημα <strong>πληρωμής ανά κλικ (PPC)</strong> που σας επιτρέπει να εμφανίζεστε στην κορυφή των αποτελεσμάτων αναζήτησης της Google, όταν οι ασθενείς αναζητούν υπηρεσίες όπως οι δικές σας. Σε συνδυασμό με <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">στρατηγικές SEO</Link>, μπορείτε να κυριαρχήσετε στα αποτελέσματα αναζήτησης.
+                Η διαφήμιση στη Google μέσω Google Ads είναι ένα σύστημα <strong>πληρωμής ανά κλικ (PPC)</strong> που επιτρέπει στο ιατρείο σας να εμφανίζεται στην κορυφή των αποτελεσμάτων αναζήτησης, όταν οι ασθενείς αναζητούν υπηρεσίες όπως οι δικές σας. Συμπληρώνοντας τις <Link href="/ypiresies/seo-gia-iatrous" className="text-brand-200 hover:underline">στρατηγικές SEO</Link>, η διαφήμιση Google σάς βοηθά να κυριαρχήσετε στα αποτελέσματα αναζήτησης.
               </p>
               <p className="text-lg leading-relaxed">
                 Είναι η πιο άμεση και μετρήσιμη μέθοδος για να αυξήσετε τα ραντεβού σας, επιτρέποντάς σας να στοχεύσετε με ακρίβεια δυνητικούς ασθενείς που αναζητούν ενεργά έναν γιατρό της ειδικότητάς σας στην περιοχή σας. Η διαφήμιση Google Ads είναι βασικό συστατικό του <Link href="/" className="text-brand-200 hover:underline">Ιατρικού Μάρκετινγκ</Link> για άμεσα αποτελέσματα.
@@ -216,10 +228,10 @@ export default function GoogleAdsPage() {
       <section className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Γιατί η Διαφήμιση Google είναι Ιδανική για Γιατρούς</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Γιατί η Διαφήμιση στη Google είναι Ιδανική για Ιατρεία</h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
-              Η διαφήμιση Google προσφέρει μοναδικά πλεονεκτήματα για ιατρούς και κλινικές που θέλουν να προσελκύσουν νέους ασθενείς.
+              Η διαφήμιση στο Google προσφέρει μοναδικά πλεονεκτήματα για ιατρούς και κλινικές που θέλουν να προσελκύσουν νέους ασθενείς με χαμηλότερο κόστος και στοχευμένη προσέγγιση.
             </p>
           </div>
 
@@ -288,6 +300,125 @@ export default function GoogleAdsPage() {
         </div>
       </section>
 
+      {/* Advanced Google Ads Benefits Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-6">Πλεονεκτήματα της Διαφήμισης στη Google για Ιατρικές Υπηρεσίες</h2>
+              <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
+              <p className="text-text-light max-w-2xl mx-auto">
+                Ανακαλύψτε πώς η διαφήμιση στη Google μπορεί να μεταμορφώσει το ιατρείο σας με μετρήσιμα αποτελέσματα και χαμηλότερο κόστος.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Cost Comparison */}
+              <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-brand-200">
+                <div className="flex items-center mb-5">
+                  <div className="bg-brand-50 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-7 h-7 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold">Σύγκριση Κόστους Διαφήμισης</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Η διαφήμιση στο Google είναι σημαντικά πιο οικονομική από τις παραδοσιακές μεθόδους διαφήμισης (έντυπα, τηλεόραση, ραδιόφωνο) για ιατρεία.
+                </p>
+                <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="font-medium">Google Ads:</span>
+                    <span className="text-brand-700 font-bold">0,50€-2€/κλικ</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium">Εξοικονόμηση:</span>
+                    <span className="text-green-600 font-bold">Έως 70%</span>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm italic">
+                  Με το μοντέλο πληρωμής ανά κλικ (PPC), πληρώνετε μόνο για πραγματικό ενδιαφέρον, αντί για απλή προβολή.
+                </p>
+              </div>
+
+              {/* How to Utilize */}
+              <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-brand-200">
+                <div className="flex items-center mb-5">
+                  <div className="bg-brand-50 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-7 h-7 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold">Αξιοποίηση Διαφημίσεων</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Για βέλτιστη αξιοποίηση της διαφήμισης στη Google, το ιατρείο σας πρέπει να εστιάσει στη δημιουργία στοχευμένων διαφημίσεων:
+                </p>
+                <ul className="space-y-2 mb-4">
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-brand-200 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-600">Ανά ειδικότητα και υπηρεσία</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-brand-200 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-600">Με όρους που χρησιμοποιούν οι ασθενείς</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-5 h-5 text-brand-200 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-600">Συνδυάζοντας search ads με remarketing</span>
+                  </li>
+                </ul>
+                <p className="text-gray-600 text-sm italic">
+                  Με προσθήκη επεκτάσεων όπως τηλέφωνο και τοποθεσία, αυξάνετε σημαντικά την αποτελεσματικότητα.
+                </p>
+              </div>
+
+              {/* Success Examples */}
+              <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-t-4 border-brand-200">
+                <div className="flex items-center mb-5">
+                  <div className="bg-brand-50 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                    <svg className="w-7 h-7 text-brand-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold">Ιστορίες Επιτυχίας</h3>
+                </div>
+                
+                <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold text-lg mb-1">Οδοντιατρικό Κέντρο</h4>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm">Αύξηση ασθενών:</span>
+                    <span className="text-brand-700 font-bold">+43%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Κόστος ανά ασθενή:</span>
+                    <span className="text-green-600 font-bold">35€ (αντί 150€)</span>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-50 p-4 rounded-lg mb-4">
+                  <h4 className="font-semibold text-lg mb-1">Ορθοπαιδικό Ιατρείο</h4>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">Αύξηση ραντεβού:</span>
+                    <span className="text-brand-700 font-bold">+62%</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-600 text-sm italic">
+                  *Με στοχευμένες καμπάνιες για συγκεκριμένες παθήσεις και επεμβάσεις
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
 
       {/* Our Strategy for Medical Google Ads Campaigns */}
@@ -296,7 +427,7 @@ export default function GoogleAdsPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-center">
-                Η Στρατηγική Μας Για Καμπάνιες Google Ads Ιατρείων
+                Η Στρατηγική Μας για Επιτυχημένη Διαφήμιση στη Google για Ιατρεία
               </h2>
               <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
               <p className="text-text-light max-w-2xl mx-auto text-lg">
@@ -354,7 +485,7 @@ export default function GoogleAdsPage() {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Αποτελέσματα Από Καμπάνιες Ιατρείων
+              Αποτελέσματα από Επιτυχημένες Διαφημίσεις στη Google για Ιατρεία
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto text-lg">
@@ -400,7 +531,7 @@ export default function GoogleAdsPage() {
       <section id="pricing" className="py-16 bg-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6 text-center">Πακέτα & Τιμές Google Ads</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">Κόστος & Πακέτα Διαφήμισης στη Google για Ιατρεία</h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">
               Επιλέξτε το πακέτο που ταιριάζει καλύτερα στις ανάγκες του ιατρείου σας και στους στόχους σας.
@@ -475,7 +606,7 @@ export default function GoogleAdsPage() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-center">
-              Συχνές Ερωτήσεις Για Τις Διαφημίσεις Google
+              Συχνές Ερωτήσεις για τη Διαφήμιση στη Google για Ιατρεία
             </h2>
             <div className="w-24 h-1 bg-brand-200 mx-auto mb-6"></div>
             <p className="text-text-light max-w-2xl mx-auto">

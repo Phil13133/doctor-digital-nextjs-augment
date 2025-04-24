@@ -7,15 +7,15 @@ import { Metadata } from 'next';
  */
 export const metadata: Metadata = {
   title: 'Διαφήμιση Google για Γιατρούς | Προώθηση Ιατρείου | Doctor Digital',
-  description: 'Προώθηση ιατρείου μέσω διαφημίσεων Google (Google Ads) με στοχευμένες καμπάνιες που φέρνουν νέους ασθενείς. Εξειδικευμένο ιατρικό marketing με μετρήσιμα αποτελέσματα.',
-  keywords: ['Google Ads για Ιατρούς', 'Διαφήμιση στη Google', 'PPC για Ιατρούς', 'Διαφημίσεις για Ιατρεία', 'Προώθηση Ιατρικών Υπηρεσιών', 'Medical Google Ads'],
+  description: 'Επαγγελματική διαφήμιση στη Google για ιατρεία. Στοχευμένες καμπάνιες Google Ads που προσελκύουν νέους ασθενείς με μετρήσιμα αποτελέσματα και χαμηλότερο κόστος.',
+  keywords: ['διαφήμιση στο google', 'διαφημιση google τιμες', 'πως κανω διαφημιση στο google', 'Google Ads για Ιατρούς', 'Διαφήμιση στη Google', 'PPC για Ιατρούς', 'Διαφημίσεις για Ιατρεία', 'Προώθηση Ιατρικών Υπηρεσιών', 'Medical Google Ads'],
   alternates: {
     canonical: `${SITE.url}/ypiresies/diafimisi-sth-google`,
   },
   openGraph: {
     type: 'website',
     title: 'Διαφήμιση Google για Γιατρούς | Προώθηση Ιατρείου | Doctor Digital',
-    description: 'Προώθηση ιατρείου μέσω διαφημίσεων Google (Google Ads) με στοχευμένες καμπάνιες που φέρνουν νέους ασθενείς.',
+    description: 'Επαγγελματική διαφήμιση στη Google για ιατρεία. Στοχευμένες καμπάνιες Google Ads που προσελκύουν νέους ασθενείς με μετρήσιμα αποτελέσματα.',
     url: `${SITE.url}/ypiresies/diafimisi-sth-google`,
     siteName: SITE.name,
     locale: SITE.locale,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Διαφήμιση Google για Γιατρούς | Προώθηση Ιατρείου | Doctor Digital',
-    description: 'Προώθηση ιατρείου μέσω διαφημίσεων Google με στοχευμένες καμπάνιες που φέρνουν νέους ασθενείς. Εξειδικευμένο ιατρικό marketing.',
+    description: 'Επαγγελματική διαφήμιση στη Google για ιατρεία. Στοχευμένες καμπάνιες που προσελκύουν νέους ασθενείς με χαμηλότερο κόστος.',
     images: [`${SITE.url}/og/google-ads.jpg`],
   },
   robots: {
