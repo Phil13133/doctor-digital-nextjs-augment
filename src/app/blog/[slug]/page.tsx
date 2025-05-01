@@ -101,11 +101,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   let post;
   try {
     post = await getBlogPostBySlug(params.slug);
-    if (post) {
-      console.log(`Successfully fetched post with slug ${params.slug} from Contentful`);
-    } else {
-      console.log(`Post with slug ${params.slug} not found in Contentful`);
-    }
   } catch (error) {
     console.error(`Error fetching blog post with slug ${params.slug}:`, error);
   }
@@ -119,17 +114,12 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   const { title, featuredImage, content, author, seoFields, excerpt, subtitle, publishedDate } = post.fields;
   const authorName = getFieldValue<any>(author)?.fields?.name || 'Doctor Digital';
 
-  // Debug author object
-  console.log('Author object:', JSON.stringify(getFieldValue<any>(author), null, 2));
-
   // Get author avatar with proper nested field access
   const authorAvatar = getFieldValue<any>(author)?.fields?.avatar;
-  console.log('Author avatar:', JSON.stringify(authorAvatar, null, 2));
-
+  
   // Get the URL with proper nested field access
   // In Contentful, the avatar field is a reference to an Asset
   const authorAvatarUrl = authorAvatar?.fields?.file?.url || null;
-  console.log('Author avatar URL:', authorAvatarUrl);
   const imageUrl = getFieldValue<any>(featuredImage)?.fields?.file?.url;
   const imageAlt = getFieldValue<any>(featuredImage)?.fields?.title || title;
   const seoData = getFieldValue<any>(seoFields)?.fields;

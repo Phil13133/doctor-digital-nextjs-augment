@@ -23,22 +23,11 @@ export default async function BlogPage() {
   let blogPostsCollection;
   try {
     blogPostsCollection = await getAllBlogPosts();
-    // Detailed logging for debugging
-    console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
-    console.log('Raw blogPostsCollection:', JSON.stringify({
-      total: blogPostsCollection.total,
-      skip: blogPostsCollection.skip,
-      limit: blogPostsCollection.limit,
-      includes: blogPostsCollection.includes ? 'present' : 'missing',
-      items: blogPostsCollection.items.map(item => ({
-        id: item.sys.id,
-        contentType: item.sys.contentType?.sys?.id,
-        fields: Object.keys(item.fields || {}),
-        publishedDate: item.fields.publishedDate || 'missing',
-        title: item.fields.title || 'missing',
-        slug: item.fields.slug || 'missing'
-      }))
-    }, null, 2));
+    // Log information about fetched posts
+    // console.log(`Successfully fetched ${blogPostsCollection.items.length} posts from Contentful`);
+    // if (blogPostsCollection?.items?.length) {
+    //   console.log('Available slugs:', blogPostsCollection.items.map(post => post.fields.slug));
+    // }
   } catch (error) {
     console.error('Error fetching blog posts from Contentful:', error);
     blogPostsCollection = {
