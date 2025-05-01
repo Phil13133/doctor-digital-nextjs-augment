@@ -15,9 +15,10 @@ export type AuthorEntry = Entry<AuthorSkeleton, undefined>;
 // Skeleton for the SEO content type (assuming API ID is 'componentSeo')
 // NOTE: Adjust 'componentSeo' if your template used a different API ID
 export type SeoSkeleton = EntrySkeletonType<{
-  seoTitle?: EntryFieldTypes.Symbol; // Re-added EntryFieldTypes.
-  seoDescription?: EntryFieldTypes.Text; // Re-added EntryFieldTypes.
-  // Add other SEO fields if they exist
+  pageTitle?: EntryFieldTypes.Symbol;
+  pageDescription?: EntryFieldTypes.Text;
+  canonical?: EntryFieldTypes.Symbol;
+  ogImage?: EntryFieldTypes.AssetLink;
 }>;
 export type SeoEntry = Entry<SeoSkeleton, undefined>;
 
@@ -109,11 +110,22 @@ export async function getBlogPostBySlug(slug: string, isPreview = false): Promis
       content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
       'fields.slug': slug,
       limit: 1,
-      include: 2, // Restore include
+      include: 2, // Include linked entries (like SEO fields)
     });
 
     if (entries.items && entries.items.length > 0) {
-      return entries.items[0];
+      // Log SEO fields for debugging
+      const post = entries.items[0];
+      const seoFields = post.fields.seoFields;
+      if (process.env.NODE_ENV !== 'production') {
+        if (seoFields) {
+          console.log(`SEO fields found for post: ${slug}`);
+        } else {
+          console.warn(`No SEO fields found for post: ${slug}`);
+        }
+      }
+      
+      return post;
     }
 
     return null;

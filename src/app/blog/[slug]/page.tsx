@@ -48,7 +48,7 @@ export async function generateMetadata(
 
   try {
     // Try to get the post from Contentful
-    post = await getBlogPostBySlug(params.slug);
+    post = await getBlogPostBySlug(params.slug, false);
   } catch (error) {
     console.error(`Error generating metadata for blog post with slug ${params.slug}:`, error);
   }
@@ -59,19 +59,35 @@ export async function generateMetadata(
     };
   }
 
+  // Get SEO data with proper fallbacks
   const seoData = getFieldValue<any>(post.fields.seoFields)?.fields;
+  const defaultDescription = 'Εξειδικευμένες συμβουλές και οδηγοί για ιατρικές ιστοσελίδες από την Doctor Digital';
+  const seoDescription = seoData?.pageDescription || post.fields.excerpt || post.fields.subtitle || defaultDescription;
   const imageUrl = getFieldValue<any>(post.fields.featuredImage)?.fields?.file?.url;
   const fullImageUrl = imageUrl ? `https:${imageUrl}` : `${SITE.url}/og/blog.jpg`; // Fallback image
+  
+  // Log SEO description for debugging in development
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`Meta description for ${params.slug}:`, seoDescription ? seoDescription.substring(0, 50) + '...' : 'Missing');
+    // Log the actual field names from Contentful for debugging
+    console.log(`SEO fields from Contentful:`, seoData ? Object.keys(seoData).join(', ') : 'No SEO data');
+  }
+
+  // Log the actual description value for debugging
+  if (process.env.NODE_ENV !== 'production') {
+    console.log(`Final SEO description value: "${seoDescription}"`);
+  }
 
   return {
-    title: seoData?.seoTitle || post.fields.title,
-    description: seoData?.seoDescription || post.fields.excerpt || post.fields.subtitle,
+    metadataBase: new URL(SITE.url),
+    title: seoData?.pageTitle || post.fields.title,
+    description: seoDescription, // This is the key field that needs to be populated correctly
     alternates: {
       canonical: `${SITE.url}/blog/${post.fields.slug}`,
     },
     openGraph: {
-      title: seoData?.seoTitle || post.fields.title,
-      description: seoData?.seoDescription || post.fields.excerpt || post.fields.subtitle,
+      title: seoData?.pageTitle || post.fields.title,
+      description: seoDescription,
       url: `${SITE.url}/blog/${post.fields.slug}`,
       type: 'article',
       publishedTime: post.fields.publishedDate || post.sys.createdAt,
@@ -87,8 +103,8 @@ export async function generateMetadata(
     },
     twitter: {
       card: 'summary_large_image',
-      title: seoData?.seoTitle || post.fields.title,
-      description: seoData?.seoDescription || post.fields.excerpt || post.fields.subtitle,
+      title: seoData?.pageTitle || post.fields.title,
+      description: seoDescription,
       images: [fullImageUrl],
     },
   };
@@ -129,7 +145,7 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       {/* Add BlogPost Schema */}
       <BlogPostSchema
         headline={title}
-        description={seoData?.seoDescription || excerpt || subtitle || ''}
+        description={seoData?.pageDescription || excerpt || subtitle || ''}
         image={imageUrl ? `https:${imageUrl}` : ''}
         datePublished={publishedDate || new Date().toISOString()} // Use published date or fallback to current date
         dateModified={post.sys.updatedAt} // Use the system updatedAt field
