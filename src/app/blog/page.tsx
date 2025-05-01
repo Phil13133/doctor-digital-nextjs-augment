@@ -92,7 +92,7 @@ export default async function BlogPage() {
                   {/* <span className="mx-3">•</span> */}
                   {/* <span>{featuredPost.fields.readTime}</span> */}
                 </div>
-                <h2 className="heading-2 mb-3 hover:text-primary transition-colors">
+                <h2 className="text-2xl font-bold mb-3 hover:text-primary transition-colors">
                    <Link href={`/blog/${featuredPost.fields.slug}`}>{featuredPost.fields.title}</Link>
                 </h2>
                 {/* Use excerpt or subtitle */}
@@ -214,7 +214,7 @@ export default async function BlogPage() {
                     {/* <span className="mx-3">•</span> */}
                     {/* <span>{post.fields.readTime}</span> */}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold mb-2 hover:text-primary transition-colors">
                     <Link href={`/blog/${post.fields.slug}`}>{post.fields.title}</Link>
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.fields.excerpt || post.fields.subtitle}</p>
