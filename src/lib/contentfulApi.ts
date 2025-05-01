@@ -53,14 +53,54 @@ export type BlogPostCollection = EntryCollection<BlogPostSkeleton, undefined>;
  */
 export async function getAllBlogPosts(isPreview = false): Promise<BlogPostCollection> {
   try {
+    console.log('getAllBlogPosts called, isPreview:', isPreview);
     const client = getContentfulClient(isPreview);
-
+    
+    console.log('Fetching entries with content_type: pageBlogPost');
+    
     // Use the BlogPostSkeleton for type safety
     const entries = await client.getEntries<BlogPostSkeleton>({
       content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
       // order: ['-fields.publicationDate'], // Remove ordering - API rejects this field
       // select: [...] // Remove select - API rejects publicationDate in select
     });
+
+    console.log('Contentful API response stats:', {
+      total: entries.total,
+      limit: entries.limit,
+      skip: entries.skip,
+      contentTypeId: 'pageBlogPost'
+    });
+    
+    // Check if we need to look for 'Published date' instead of 'publishedDate'
+    if (entries.items.length > 0) {
+      const firstItem = entries.items[0];
+      console.log('First item field names:', Object.keys(firstItem.fields || {}));
+      
+      // Check for publishDate vs publishedDate field naming
+      if (!firstItem.fields.publishedDate && firstItem.fields.publishDate) {
+        console.log('FIELD MISMATCH DETECTED: Found publishDate instead of publishedDate');
+        // Map the field for compatibility 
+        entries.items.forEach(item => {
+          if (item.fields.publishDate && !item.fields.publishedDate) {
+            // @ts-ignore - Adding compatibility field
+            item.fields.publishedDate = item.fields.publishDate;
+          }
+        });
+      }
+      
+      // Check for Published date vs publishedDate field naming (with space)
+      if (!firstItem.fields.publishedDate && firstItem.fields['Published date']) {
+        console.log('FIELD MISMATCH DETECTED: Found "Published date" instead of publishedDate');
+        // Map the field for compatibility 
+        entries.items.forEach(item => {
+          if (item.fields['Published date'] && !item.fields.publishedDate) {
+            // @ts-ignore - Adding compatibility field
+            item.fields.publishedDate = item.fields['Published date'];
+          }
+        });
+      }
+    }
 
     // Note: Sorting will be done client-side due to API limitations with publicationDate
     return entries;
