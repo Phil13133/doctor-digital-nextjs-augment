@@ -236,5 +236,5 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
   );
 }
 
-// Optional: Enable ISR (Incremental Static Regeneration)
-// export const revalidate = 60; // Revalidate every 60 seconds
+// Enable ISR (Incremental Static Regeneration)
+export const revalidate = 300; // Revalidate every 5 minutes

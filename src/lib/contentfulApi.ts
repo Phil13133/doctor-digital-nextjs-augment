@@ -59,8 +59,8 @@ export async function getAllBlogPosts(isPreview = false): Promise<BlogPostCollec
     // Use the BlogPostSkeleton for type safety
     const entries = await client.getEntries<BlogPostSkeleton>({
       content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
-      // order: ['-fields.publicationDate'], // Remove ordering - API rejects this field
-      // select: [...] // Remove select - API rejects publicationDate in select
+      // Note: Content is stored in en-US locale in Contentful
+      include: 2, // Include linked entries for authors and SEO
     });
     
     // Handle field name compatibility - checking for alternative field names
@@ -104,11 +104,12 @@ export async function getAllBlogPosts(isPreview = false): Promise<BlogPostCollec
 export async function getBlogPostBySlug(slug: string, isPreview = false): Promise<BlogPostEntry | null> {
   try {
     const client = getContentfulClient(isPreview);
-
+    
     // Use the BlogPostSkeleton for type safety
     const entries = await client.getEntries<BlogPostSkeleton>({
       content_type: 'pageBlogPost', // Use the API ID of your Blog Post content type
       'fields.slug': slug,
+      // Note: Content is stored in en-US locale in Contentful
       limit: 1,
       include: 2, // Include linked entries (like SEO fields)
     });
